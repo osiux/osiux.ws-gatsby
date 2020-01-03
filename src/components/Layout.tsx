@@ -1,10 +1,23 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Global } from '@emotion/core';
+import styled from '@emotion/styled';
 
-import mainStyles from '../styles/main';
+import mainStyles from '../styles/global';
 
-import Header from './Header';
+import Footer from './Footer';
+import Navigation from './Navigation';
+
+const Container = styled.div`
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    & > * {
+        flex: 1 100%;
+    }
+`;
 
 const Layout: React.FC = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -20,22 +33,11 @@ const Layout: React.FC = ({ children }) => {
     return (
         <>
             <Global styles={mainStyles} />
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <div
-                style={{
-                    margin: `0 auto`,
-                    maxWidth: 960,
-                    padding: `0px 1.0875rem 1.45rem`,
-                    paddingTop: 0,
-                }}
-            >
+            <Container>
+                <Navigation siteTitle={data.site.siteMetadata.title} />
                 <main>{children}</main>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
-            </div>
+                <Footer />
+            </Container>
         </>
     );
 };
