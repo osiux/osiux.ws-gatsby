@@ -74,39 +74,17 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `Eduardo Reveles`,
+                short_name: `Eduardo Reveles`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#fdfffc`,
+                theme_color: `#0a090c`,
                 display: `minimal-ui`,
                 icon: `src/images/salem.png`, // This path is relative to the root of the site.
             },
         },
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-offline`,
-        {
-            resolve: `gatsby-plugin-favicon`,
-            options: {
-                logo: './src/images/salem.png',
-                lang: 'en-US',
-                background: '#121619',
-                theme_color: '#121619',
-                icons: {
-                    android: true,
-                    appleIcon: true,
-                    appleStartup: true,
-                    coast: false,
-                    favicons: true,
-                    firefox: true,
-                    opengraph: false,
-                    twitter: false,
-                    yandex: false,
-                    windows: false,
-                },
-            },
-        },
-
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
