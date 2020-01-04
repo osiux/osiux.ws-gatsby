@@ -2,7 +2,7 @@
     "name": "osiux.ws",
     "private": true,
     "description": "Personal website",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "author": "Eduardo Reveles <me@osiux.ws>",
     "dependencies": {
         "@emotion/core": "^10.0.27",
