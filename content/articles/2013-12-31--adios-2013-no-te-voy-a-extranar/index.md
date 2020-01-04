@@ -1,5 +1,5 @@
 ---
-title: "Adiós 2013, no te voy a extrañar"
+title: 'Adiós 2013, no te voy a extrañar'
 category: Personal
 date: 2013-12-31T21:52:59-0600
 ---

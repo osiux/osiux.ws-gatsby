@@ -1,5 +1,5 @@
 ---
-title: "Sencillas preguntas para pensar"
+title: 'Sencillas preguntas para pensar'
 category: Textos
 date: 2008-09-04T06:59:21-0500
 ---
@@ -8,9 +8,9 @@ date: 2008-09-04T06:59:21-0500
 
 **Pregunta 2** Se va a elegir a un nuevo líder mundial, tu tienes la oportunidad de votar por él. Hay 3 candidatos, a continuación te presentamos algunos hechos conocidos en la vida de los mismos:
 
-*   Candidato 1: Ha sido asociado con políticos corruptos. Consulta a varios astrólogos. Tuvo 2 amantes. Fuma y toma entre 8 y 10 martinis al día.
-*   Candidato 2: Ha sido despedido en 2 ocasiones de su trabajo. Duerme hasta medio día. Consumía opio en la universidad y todas las noches se toma una botella de whisky de un cuarto.
-*   Candidato 3: Es un héroe de guerra condecorado. Es vegetariano, no fuma y toma cerveza ocasionalmente. No se le conocen relaciones extramaritales.
+-   Candidato 1: Ha sido asociado con políticos corruptos. Consulta a varios astrólogos. Tuvo 2 amantes. Fuma y toma entre 8 y 10 martinis al día.
+-   Candidato 2: Ha sido despedido en 2 ocasiones de su trabajo. Duerme hasta medio día. Consumía opio en la universidad y todas las noches se toma una botella de whisky de un cuarto.
+-   Candidato 3: Es un héroe de guerra condecorado. Es vegetariano, no fuma y toma cerveza ocasionalmente. No se le conocen relaciones extramaritales.
 
 ¿Por cúal de los tres candidatos votarías?
 
@@ -24,7 +24,7 @@ El Candidato 3 es [Adolph Hitler](http://es.wikipedia.org/wiki/Adolf_Hitler)
 
 Por cierto, la respuesta a la pregunta 1:
 
-Recomendarías que esta mujer se practicase un aborto? Si respondiste sí, acabas de matar a [Beethoven](http://es.wikipedia.org/wiki/Ludwig_van_Beethoven). 
+Recomendarías que esta mujer se practicase un aborto? Si respondiste sí, acabas de matar a [Beethoven](http://es.wikipedia.org/wiki/Ludwig_van_Beethoven).
 
 **Enlace:** [Sencillas preguntas para pensar | Digital Norte](http://www.digitalnorte.com.ar/forum/la-pregunta-del-millon/8030-sencillas-preguntas-para-pensar.html)
 

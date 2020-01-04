@@ -1,5 +1,5 @@
 ---
-title: "United We Rise"
+title: 'United We Rise'
 category: Videos
 date: 2011-12-08T06:47:38-0600
 ---

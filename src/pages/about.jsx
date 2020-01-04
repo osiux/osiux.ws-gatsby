@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactHintFactory from 'react-hint';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../components/Layout';
@@ -7,19 +9,31 @@ import SEO from '../components/SEO';
 
 import Dog from '../components/images/dog';
 import Cats from '../components/images/cats';
+import Me from '../components/images/me';
 
 const ReactHint = ReactHintFactory(React);
 
-const onRenderContent = (target) => {
+const onRenderContent = target => {
     const { rhImage } = target.dataset;
 
     return (
         <div className="react-hint__image">
             {rhImage === 'cats' ? <Cats /> : <Dog />}
-            <p>{rhImage === 'cats' ? 'Salem, Kiki and Mike' : 'Amelia'}</p>
+            <p
+                css={css`
+                    text-align: center;
+                `}
+            >
+                {rhImage === 'cats' ? 'Salem, Mike and Kiki' : 'Amelia'}
+            </p>
         </div>
     );
 };
+
+const UnderlineSpan = styled.span`
+    text-decoration: underline dotted;
+    cursor: pointer;
+`;
 
 const About = () => (
     <Fragment>
@@ -33,6 +47,7 @@ const About = () => (
         <Layout>
             <SEO title="About" />
             <section>
+                <Me />
                 <p>
                     Hi! I'm Eduardo.{' '}
                     <span data-rh="Laravel, React">Full stack developer</span>{' '}
@@ -47,13 +62,19 @@ const About = () => (
                         photographer
                     </OutboundLink>
                     , we have{' '}
-                    <span data-rh-image="cats" data-rh-image-at="bottom">
+                    <UnderlineSpan
+                        data-rh-image="cats"
+                        data-rh-image-at="bottom"
+                    >
                         3 cats
-                    </span>{' '}
+                    </UnderlineSpan>{' '}
                     and{' '}
-                    <span data-rh-image="dog" data-rh-image-at="bottom">
+                    <UnderlineSpan
+                        data-rh-image="dog"
+                        data-rh-image-at="bottom"
+                    >
                         a dog
-                    </span>
+                    </UnderlineSpan>
                 </p>
             </section>
         </Layout>

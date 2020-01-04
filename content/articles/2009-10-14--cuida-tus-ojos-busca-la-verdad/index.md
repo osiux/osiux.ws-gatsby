@@ -1,5 +1,5 @@
 ---
-title: "Cuida tus ojos: busca la verdad"
+title: 'Cuida tus ojos: busca la verdad'
 category: Textos
 date: 2009-10-14T07:25:47-0500
 ---

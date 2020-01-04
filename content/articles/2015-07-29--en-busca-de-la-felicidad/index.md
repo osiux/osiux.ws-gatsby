@@ -1,12 +1,12 @@
 ---
-title: "En busca de la felicidad"
+title: 'En busca de la felicidad'
 category: Personal, Viajes
 date: 2015-07-29T20:05:37-0500
 tags:
     - Sudamérica 2015
 ---
 
-Escribo esto desde [Aguas Calientes](https://es.wikipedia.org/wiki/Aguas_Calientes_(Machupicchu)), también conocido como Machu Picchu Pueblo, a casi un mes de haber comenzado una de la experiencias mas gratificantes que he tenido en mi vida, y de la cual aún queda un mes (o tal vez mas :P).
+Escribo esto desde [Aguas Calientes](<https://es.wikipedia.org/wiki/Aguas_Calientes_(Machupicchu)>), también conocido como Machu Picchu Pueblo, a casi un mes de haber comenzado una de la experiencias mas gratificantes que he tenido en mi vida, y de la cual aún queda un mes (o tal vez mas :P).
 
 En febrero me enteré de una promoción que tenían en Aeroméxico para viajar a distintos lados, y eso junto con unos puntos de viajero que tenía acumulados me animó (después de mucho pensarlo) a comprar un viaje redondo a Bogotá. Cuando hubo que elegir las fechas de ida y vuelta, decidí que partiría el 1 de julio y regresaría el 4 de agosto... ¡dos meses de viaje!
 

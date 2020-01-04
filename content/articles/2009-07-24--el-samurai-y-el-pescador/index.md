@@ -1,5 +1,5 @@
 ---
-title: "El Samurai y el Pescador"
+title: 'El Samurai y el Pescador'
 category: Textos
 date: 2009-07-24T07:23:58-0500
 ---

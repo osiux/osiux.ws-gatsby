@@ -41,15 +41,14 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <h1>Hi people</h1>
-            <p>Welcome to your new Gatsby site.</p>
-            <p>Now go build something great.</p>
             <h1>Latests Articles</h1>
             {latestArticles.allMarkdownRemark.edges.map(({ node }) => {
                 return (
                     <Fragment key={node.id}>
                         <ArticleTitle>
-                            <Link to={`/articles/${node.fields.slug}`}>{node.frontmatter.title}</Link>
+                            <Link to={`/articles/${node.fields.slug}`}>
+                                {node.frontmatter.title}
+                            </Link>
                         </ArticleTitle>
                         <Meta>Published on {node.frontmatter.date}</Meta>
                         <p>{node.excerpt}</p>

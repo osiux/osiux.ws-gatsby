@@ -1,5 +1,5 @@
 ---
-title: "Detectar BloqMayus con Javascript"
+title: 'Detectar BloqMayus con Javascript'
 category: Programación
 date: 2007-10-12T06:18:14-0500
 ---
@@ -9,10 +9,11 @@ El otro día tuve una pequeña y sencilla entrevista de trabajo (en la que creo 
 Primero la funcion en JavaScript:
 
 ```javascript
-function capLock(e){
-    kc = e.keyCode ? e.keyCode : e.which ;
-    sk = e.shiftKey ? e.shiftKey: ( (kc == 16) ? true : false ) ;
-    if(((kc >= 65 && kc <= 90) && !sk ) || ((kc >= 97 && kc <= 122 ) && sk)) document.getElementById('caplock').style.visibility = 'visible';
+function capLock(e) {
+    kc = e.keyCode ? e.keyCode : e.which;
+    sk = e.shiftKey ? e.shiftKey : kc == 16 ? true : false;
+    if ((kc >= 65 && kc <= 90 && !sk) || (kc >= 97 && kc <= 122 && sk))
+        document.getElementById('caplock').style.visibility = 'visible';
     else document.getElementById('caplock').style.visibility = 'hidden';
 }
 ```
@@ -26,7 +27,9 @@ Luego, en el campo del formulario debemos agregar un evento que llame a la funci
 Y por último, el div que muestra el mensaje de advertencia.
 
 ```html
-<div id="caplock" style="visibility: hidden">Tienes la tecla BloqMayus activada.</div>
+<div id="caplock" style="visibility: hidden">
+    Tienes la tecla BloqMayus activada.
+</div>
 ```
 
 En fin, como es fácil encontrar lo mismo en otros lados y aqui lo pongo solo como apunte personal, no me pondré a comentar el código xD

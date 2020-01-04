@@ -1,5 +1,5 @@
 ---
-title: "gulp.js y sus tareas"
+title: 'gulp.js y sus tareas'
 category: Programación
 date: 2014-03-04T20:58:15-0600
 tags:
@@ -16,38 +16,33 @@ grunt.initConfig({
         dev: {
             options: {
                 style: 'expanded',
-                banner: '<%= tag.banner %>'
+                banner: '<%= tag.banner %>',
             },
             files: {
-                '<%= project.publicPath %>/app.css': '<%= project.css %>'
-            }
+                '<%= project.publicPath %>/app.css': '<%= project.css %>',
+            },
         },
         dist: {
             options: {
-                style: 'compressed'
+                style: 'compressed',
             },
             files: {
-                '<%= project.publicPath %>/app.css': '<%= project.css %>'
-            }
-        }
+                '<%= project.publicPath %>/app.css': '<%= project.css %>',
+            },
+        },
     },
- 
+
     watch: {
         /* */
-    }
+    },
 });
- 
-grunt.registerTask('default', [
-    'sass:dev',
-    'watch'
-]);
- 
-grunt.registerTask('build', [
-    'sass:dist',
-]);
+
+grunt.registerTask('default', ['sass:dev', 'watch']);
+
+grunt.registerTask('build', ['sass:dist']);
 ```
 
-De este modo tenemos un CSS comprimido (`grunt build`) listo para subir al servidor, y cuando estas desarrollando (`grunt`), el CSS sin comprimir y ademas se queda vigilando por cualquier cambio que se haga para volver a compilarlo. Con  gulp podemos conseguir algo similar usando [gulp-if](https://github.com/robrich/gulp-if):
+De este modo tenemos un CSS comprimido (`grunt build`) listo para subir al servidor, y cuando estas desarrollando (`grunt`), el CSS sin comprimir y ademas se queda vigilando por cualquier cambio que se haga para volver a compilarlo. Con gulp podemos conseguir algo similar usando [gulp-if](https://github.com/robrich/gulp-if):
 
 ```javascript
 var isProduction = gutil.env.type === 'production';
@@ -76,11 +71,11 @@ Es bastante sencillo. Toma de parámetro una condición y una tarea a correr y s
 ¡Y listo! Con solo eso, me basta correr `gulp` o `gulp build` para diferenciar cuando es desarrollo y producción, sin parámetros extra. Al final queda algo similar a esto:
 
 ```javascript
-var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    gulpif      = require('gulp-if'),
-    csso        = require('gulp-csso'),
-    gutil       = require('gulp-util');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    gulpif = require('gulp-if'),
+    csso = require('gulp-csso'),
+    gutil = require('gulp-util');
 
 var isProduction = gutil.env._[0] === 'build';
 

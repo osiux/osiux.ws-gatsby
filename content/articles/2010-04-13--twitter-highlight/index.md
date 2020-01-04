@@ -1,5 +1,5 @@
 ---
-title: "Twitter Highlight"
+title: 'Twitter Highlight'
 category: Programación
 date: 2010-04-13T07:37:53-0500
 tags:
@@ -8,7 +8,7 @@ tags:
     - Wordpress
 ---
 
-Twitter Highlight es un plugin para Wordpress que se encarga de convertir texto en tus entradas a un enlace hacia twitter. Actualmente convierte usuarios (@oso96\_2000), listas (@oso96\_2000/pinpones) y hashtags (#yoconfieso).
+Twitter Highlight es un plugin para Wordpress que se encarga de convertir texto en tus entradas a un enlace hacia twitter. Actualmente convierte usuarios (@oso96_2000), listas (@oso96_2000/pinpones) y hashtags (#yoconfieso).
 
 Una de las diferencias con otros plugins es que no confunde direcciones de correo (tu@correo.com) y que te permite especificar mediante un sencillo panel de opciones en donde quieres que sean reemplazados los enlaces, ya sea dentro de entradas, paginas, comentarios e incluso el feed RSS de tu blog.
 

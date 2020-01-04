@@ -1,5 +1,5 @@
 ---
-title: "Recuerdos"
+title: 'Recuerdos'
 category: Textos
 date: 2011-10-15T07:46:51-0500
 tags:

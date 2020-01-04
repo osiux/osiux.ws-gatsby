@@ -54,7 +54,10 @@ const Article = ({ data, pageContext }) => {
             <Nav>
                 <li>
                     {previous && (
-                        <Link to={`/articles/${previous.fields.slug}`} rel="prev">
+                        <Link
+                            to={`/articles/${previous.fields.slug}`}
+                            rel="prev"
+                        >
                             ← {previous.frontmatter.title}
                         </Link>
                     )}

@@ -1,5 +1,5 @@
 ---
-title: "Colombia: Bogotá"
+title: 'Colombia: Bogotá'
 category: Viajes
 date: 2015-10-28T16:46:14-0600
 tags:

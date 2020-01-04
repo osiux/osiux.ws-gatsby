@@ -1,5 +1,5 @@
 ---
-title: "Tutoriales de Laravel"
+title: 'Tutoriales de Laravel'
 category: Programación
 date: 2013-12-26T20:54:19-0600
 tags:

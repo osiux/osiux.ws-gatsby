@@ -1,5 +1,5 @@
 ---
-title: "BarCamp México 5: Querétaro"
+title: 'BarCamp México 5: Querétaro'
 category: Infórmatica
 date: 2010-04-12T07:32:49-0500
 tags:
@@ -8,7 +8,7 @@ tags:
     - Querétaro
 ---
 
-![BarCamp Logo](9c61f48c-bc33-4aa9-a452-9f69c5f8fc46.png) 
+![BarCamp Logo](9c61f48c-bc33-4aa9-a452-9f69c5f8fc46.png)
 
 Este sábado 10 de Abril fue el BarCamp5 en México, en la hermosa ciudad de Querétaro, y tuve la fortuna de poder asistir. Un BarCamp es una serie de desconferencias, donde los asistentes son los mismos ponentes y quienes generan el contenido dando charlas, talleres, debates, etc.
 
@@ -30,8 +30,8 @@ Por último asistí a la charla de [@esparta](https://twitter.com/esparta) llama
 
 Terminando esta conferencia, llegó la hora de partir para nosotros. Un viaje con mucha platica de lo que pasó en el día y una entrada al DF con algo de tráfico, pero llegamos todos bien a nuestras respectivas casas. Cansados, pero después de un día por demás provechoso. Fue mi primer BarCamp, pero estoy seguro que no será el último, y espero a la próxima participar dando algún taller o charla :D
 
-Enlaces de interés: 
+Enlaces de interés:
 
-* [Página wiki del BarCamp5](http://barcamp.org/BarCampMexico5) 
-* [Conferencias y talleres](http://barcamp.42simios.com/) 
-* Hashtag Twitter: #barcampQRO
+-   [Página wiki del BarCamp5](http://barcamp.org/BarCampMexico5)
+-   [Conferencias y talleres](http://barcamp.42simios.com/)
+-   Hashtag Twitter: #barcampQRO

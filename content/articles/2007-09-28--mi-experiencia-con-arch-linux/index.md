@@ -1,5 +1,5 @@
 ---
-title: "Mi experiencia con Arch-Linux"
+title: 'Mi experiencia con Arch-Linux'
 category: Infórmatica
 date: 2007-09-28T06:15:51-0500
 tags:

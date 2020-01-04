@@ -1,5 +1,5 @@
 ---
-title: "Colombia: Medellín"
+title: 'Colombia: Medellín'
 category: Viajes
 date: 2015-10-30T04:54:49-0600
 tags:

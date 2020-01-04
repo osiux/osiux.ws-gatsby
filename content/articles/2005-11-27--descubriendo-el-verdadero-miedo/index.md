@@ -1,5 +1,5 @@
 ---
-title: "Descubriendo el verdadero miedo"
+title: 'Descubriendo el verdadero miedo'
 category: Textos
 date: 2005-11-27T04:22:25-0600
 ---

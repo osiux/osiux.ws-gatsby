@@ -1,5 +1,5 @@
 ---
-title: "Usar Font Awesome con Grunt"
+title: 'Usar Font Awesome con Grunt'
 category: Programación
 date: 2013-12-28T00:34:58-0600
 tags:
@@ -18,7 +18,7 @@ Primero que nada es instalar los assets con Bower, nuestro `.bowerrc` es:
 
 ```json
 {
-   "directory": "./app/assets/bower"
+    "directory": "./app/assets/bower"
 }
 ```
 
@@ -26,12 +26,12 @@ Y el `bower.json`:
 
 ```json
 {
-  "name": "App Name",
-  "version": "0.0.1",
-  "dependencies": {
-    "foundation": "~5.0.2",
-    "Font-Awesome": "~4.0.3"
-  }
+    "name": "App Name",
+    "version": "0.0.1",
+    "dependencies": {
+        "foundation": "~5.0.2",
+        "Font-Awesome": "~4.0.3"
+    }
 }
 ```
 

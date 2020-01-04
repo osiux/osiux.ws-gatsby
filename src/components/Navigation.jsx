@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { colors, breakpoints } from '../styles/variables';
 
@@ -11,6 +13,7 @@ const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 
     ${breakpoints.desktop} {
         justify-content: space-between;
@@ -27,7 +30,7 @@ const ToggleButton = styled.button`
     border-radius: 0.25rem;
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    outline: none;
+    outline: 0;
     order: 2;
     align-self: flex-end;
     margin: 3px 10px 0 0;
@@ -35,17 +38,6 @@ const ToggleButton = styled.button`
     ${breakpoints.desktop} {
         display: none;
     }
-`;
-
-const ToggleButtonIcon = styled.span`
-    display: inline-block;
-    width: 1em;
-    vertical-align: middle;
-    height: 1em;
-    content: '';
-    background: no-repeat center center;
-    background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 `;
 
 const NavListItem = styled.li`
@@ -119,7 +111,7 @@ const Navigation = ({ siteTitle }) => {
                     font-family: 'Oswald', sans-serif;
                     order: 1;
                     width: auto;
-                    outline: 0;
+                    outline: none;
 
                     @media all and (min-width: 900px) {
                         padding: 5px 0 0;
@@ -129,7 +121,7 @@ const Navigation = ({ siteTitle }) => {
                 {siteTitle}
             </Link>
             <ToggleButton role="button" onClick={_toggleMenu}>
-                <ToggleButtonIcon />
+                <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
             </ToggleButton>
             <NavList>
                 <NavListItem>

@@ -1,5 +1,5 @@
 ---
-title: "Simplificar código"
+title: 'Simplificar código'
 category: Programación
 date: 2006-03-22T05:06:27-0600
 tags:
@@ -24,7 +24,7 @@ on 1:INPUT:#{
 
 Lo que hace es que al escribir yo mismo +o nick, le daría status de operador al nick mencionado. Pero entonces, despues de una pequeña charla, resulto que un amigo tenia en una sola linea lo necesario para hacer lo que yo hacia.. y la linea tenia 100 caracteres aproximadamente.. y como no quiso decirme como lo tenia, fue mi turno de ponerme a investigar y tratar de realizarla en menos caracteres.
 
-Después de un rato pensando e intentando cosas, deje mi función en aproximadamente 120 caracteres, lo que aun hacia que perdiera el pequeño reto, ya que la de el tenia aun menos.. como parte de eso, habíamos quedado que el que tuviera mas caracteres mostraría su código, así que me toco hacerlo.. cuando lo vio, dijo que podía hacer su código aun mas corto.. y después de un rato dijo que ahora eran solo alrededor de 85 caracteres.. entonces yo seguí pensando como hacerlo, pero en lo mas que pude dejarlo fueron 90 caracteres u\_u..
+Después de un rato pensando e intentando cosas, deje mi función en aproximadamente 120 caracteres, lo que aun hacia que perdiera el pequeño reto, ya que la de el tenia aun menos.. como parte de eso, habíamos quedado que el que tuviera mas caracteres mostraría su código, así que me toco hacerlo.. cuando lo vio, dijo que podía hacer su código aun mas corto.. y después de un rato dijo que ahora eran solo alrededor de 85 caracteres.. entonces yo seguí pensando como hacerlo, pero en lo mas que pude dejarlo fueron 90 caracteres u_u..
 
 Al fin, me mostró como tenia su código, eran ya como 70-80 caracteres.. y de ahí, discutiendo sobre algunas cosas fuimos reduciendo el código hasta que quedo en esto:
 
@@ -41,4 +41,3 @@ En fin, solo quería escribir esto xD.. ya que fue algo que me pareció por dem�
 ```
 on 1:INPUT:#:{if ($regex(,$1,^([+-][aohv]+)+$)){ mode # $1- } }
 ```
-

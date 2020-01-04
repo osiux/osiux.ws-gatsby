@@ -1,5 +1,5 @@
 ---
-title: "El 2009"
+title: 'El 2009'
 category: Personal
 date: 2009-12-31T06:32:03-0600
 ---
@@ -10,7 +10,7 @@ Ocurrieron tantas cosas, crecí como persona y maduré bastante.
 
 Conocí a muchísimas personas increíbles, personas que sin duda dejaron huella en mi, y sin las cuales este año no habria sido lo mismo. También tuve perdidas, personas muy queridas por mi de las cuales me alejé.
 
- Este año fue un punto de inflexión en varios aspectos, y solo me queda luchar porque el año que se viene sea mejor, por conseguir los objetivos que me propongo.
+Este año fue un punto de inflexión en varios aspectos, y solo me queda luchar porque el año que se viene sea mejor, por conseguir los objetivos que me propongo.
 
 Gracias a todos los que hicieron de este un gran año.
 

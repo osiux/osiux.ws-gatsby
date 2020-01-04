@@ -1,5 +1,5 @@
 ---
-title: "Útiles plugins para gulp"
+title: 'Útiles plugins para gulp'
 category: Programación
 date: 2014-12-12T00:30:42-0600
 tags:
@@ -18,8 +18,8 @@ var plugins = require('gulp-load-plugins')();
 
 gulp.task('js', function() {
     gulp.src('file.js')
-        .pipe( plugins.uglify() )
-        .pipe( gulp.dest('file.min.js') );
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest('file.min.js'));
 });
 ```
 
@@ -38,11 +38,13 @@ Deja de escribir a mano los prefijos para estilos en distintos navegadores, tamp
 ```javascript
 gulp.task('css', function() {
     gulp.src('file.css')
-        .pipe( plugins.autoprefixer({
-            browsers: ['last 3 versions', '> 1%', 'ie >= 8'],
-            cascade: false
-        }) )
-        .pipe( gulp.dest('file.build.css') )
+        .pipe(
+            plugins.autoprefixer({
+                browsers: ['last 3 versions', '> 1%', 'ie >= 8'],
+                cascade: false,
+            }),
+        )
+        .pipe(gulp.dest('file.build.css'));
 });
 ```
 
@@ -74,49 +76,49 @@ Para juntar varios archivos en uno mismo. ¡Menos peticiones al servidor!
 
 Se queda observando cambios a nuestros archivos para compilarlos de nuevo de forma automática.
 
-
-
 Al final, un ejemplo de mi gulpfile.js podría ser algo así:
 
 ```javascript
-var gulp    = require('gulp'),
+var gulp = require('gulp'),
     plugins = require('gulp-load-plugins')(),
     production = plugins.util.env._[0] === 'build';
 
 var paths = {
     css: {
-        src: [ './src/less/**.*' ],
-        dist: './assets/css/'
+        src: ['./src/less/**.*'],
+        dist: './assets/css/',
     },
     js: {
-        src: [ './src/js/**.*' ],
-        dist: './assets/js/'
-    }
+        src: ['./src/js/**.*'],
+        dist: './assets/js/',
+    },
 };
 
 gulp.task('css', function() {
-    gulp.src( paths.css.src )
-        .pipe( plugins.if(!production, plugins.sourcemaps.init()) )
-        .pipe( plugins.less() )
-        .pipe( plugins.autoprefixer({
-            browsers: ['last 3 versions', '> 1%', 'ie >= 8'],
-            cascade: false
-        }) )
-        .pipe( plugins.combineMediaQueries({ log: false }) )
-        .pipe( plugins.concat('style.css') )
-        .pipe( plugins.if(production, plugins.csso()) )
-        .pipe( plugins.if(!production, plugins.sourcemaps.write()) )
-        .pipe( gulp.dest( paths.css.dist ) )
+    gulp.src(paths.css.src)
+        .pipe(plugins.if(!production, plugins.sourcemaps.init()))
+        .pipe(plugins.less())
+        .pipe(
+            plugins.autoprefixer({
+                browsers: ['last 3 versions', '> 1%', 'ie >= 8'],
+                cascade: false,
+            }),
+        )
+        .pipe(plugins.combineMediaQueries({ log: false }))
+        .pipe(plugins.concat('style.css'))
+        .pipe(plugins.if(production, plugins.csso()))
+        .pipe(plugins.if(!production, plugins.sourcemaps.write()))
+        .pipe(gulp.dest(paths.css.dist))
         .on('error', plugins.util.log);
 });
 
 gulp.task('js', function() {
-    gulp.src( paths.js.src )
-        .pipe( plugins.if(!production, plugins.sourcemaps.init()) )
-        .pipe( plugins.concat('app.js') )
-        .pipe( plugins.if(production, plugins.uglify()) )
-        .pipe( plugins.if(!production, plugins.sourcemaps.write()) )
-        .pipe( gulp.dest(paths.js.dist) )
+    gulp.src(paths.js.src)
+        .pipe(plugins.if(!production, plugins.sourcemaps.init()))
+        .pipe(plugins.concat('app.js'))
+        .pipe(plugins.if(production, plugins.uglify()))
+        .pipe(plugins.if(!production, plugins.sourcemaps.write()))
+        .pipe(gulp.dest(paths.js.dist))
         .on('error', plugins.util.log);
 });
 
@@ -129,4 +131,3 @@ gulp.task('build', ['css', 'js']);
 
 gulp.task('default', ['build', 'watch']);
 ```
-

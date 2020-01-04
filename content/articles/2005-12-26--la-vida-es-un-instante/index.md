@@ -1,5 +1,5 @@
 ---
-title: "La vida es un instante"
+title: 'La vida es un instante'
 category: Textos
 date: 2005-12-26T04:37:25-0600
 tags:
@@ -21,11 +21,9 @@ _Lo citado aqui está sacado de el manga de Saint Seiya, lo demás es comentario
 Me pregunto... ¿de verdad venimos a la tierra solo para vivir en medio del sufrimiento? Muchos nos pasamos la vida quejándonos de todo, pero no hacemos nada por tratar de vivir mejor... podemos hecharle la culpa a alguien mas: Dios, amigos, familia, étc.. pero... lo único que estamos haciendo es buscar la sálida mas fácil, evadiendo nuestras responsabilidades... como humanidad, hemos aprendido a ver solo lo malo que sucede cada día, evitando ver que no todo es así... vivimos en un mundo hermoso... ¿alguna vez has salido en un día lluvioso, solo para sentir las gotas de lluvia correr por tu cara? Es una sensación unica... no estarse quejando de que nos estamos mojando, de que nos enfermaremos... sólo disfrutando la lluvia... es una libertad inmensa... Pero, ¿por qué buscamos solo ver lo malo de la vida? ¿acaso nos gusta el sufrimiento? Yo creo que a nadie le gusta sufrir... ¿Han deseado morir? Yo si.. y estoy seguro que hay muchas otras personas que así lo han deseado... pero, ¿por qué? Creemos que así no tendremos que volver a sufrir, no volveremos a preocuparnos... aunque en realidad no sea asi... al menos eso es lo que creo...
 
 > -Shaka… Shaka… No debes olvidarlo… la muerte nunca será el final.. aquellos que en este mundo llamaron “santos”, son quienes aprendieron a superar la muerte… si llegas a comprender eso, Shaka… viviras como el hombre mas cercano a Dios…
->
 
 La muerte no es el final... ¿es eso cierto? Veamos... hace tiempo deje de preocuparme por morir... cuando muera, es porque ya había cumplido en este mundo lo que debía hacer... y desde que deje de preocuparme por morir, he visto que la vida no es tan mala.. cuando algo malo sucede, pienso que llegará el momento en que se arregle... pero claro, no debo olvidar que algunas cosas dependen de mi... no puedo sentarme y esperar que todo lo que deseo se cumpla como por arte de magia... si deseo algo, debo luchar por ello.. hacer mi mayor esfuerzo por conseguirlo... pero, ¿y si caigo en medio de esa lucha? ¡Pues no importa! Siempre podré levantarme y seguir adelante.. y con mas fuerza aún...
 
 > Las flores se abren y se marchitan, las estrellas brillan y se extinguen. A este planeta, a este sol, a esta galaxia… e incluso al inmenso universo les llega su hora de muerte. Lo mismo con la vida humana, sólo que comparada con el universo, la vida humana dura un instante… en ese pequeño momento, la gente nace, ama y odia con pasión, ríe y llora, lucha y se lastima, se alegra y se entristece… y al final es envuelta en ese sueño eterno llamado muerte. **Shaka de Virgo**
->
 
 Si.. la vida es solo un instante en el universo, un instante que debemos disfrutar, pase lo que pase... trataré de ya no quejarme tanto, de no quedarme callado cuando debo hablar, y de no hablar cuando debo quedarme callado... trataré de dar un mejor esfuerzo para lograr lo que deseo... de disfrutar cada instante de mi vida... de vivir..

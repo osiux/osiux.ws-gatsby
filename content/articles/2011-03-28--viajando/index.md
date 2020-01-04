@@ -1,5 +1,5 @@
 ---
-title: "Viajando"
+title: 'Viajando'
 category: Personal
 date: 2011-03-28T06:45:51-0600
 tags:

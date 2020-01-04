@@ -1,5 +1,5 @@
 ---
-title: "Patrones de diseño en Javascript"
+title: 'Patrones de diseño en Javascript'
 category: Programación
 date: 2014-01-01T19:47:23-0600
 tags:

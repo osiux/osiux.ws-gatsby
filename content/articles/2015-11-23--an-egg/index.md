@@ -1,6 +1,6 @@
 ---
-title: "An Egg"
-category: "Citas"
+title: 'An Egg'
+category: 'Citas'
 date: 2015-11-23T19:36:05-0600
 ---
 

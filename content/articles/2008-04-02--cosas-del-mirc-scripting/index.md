@@ -1,5 +1,5 @@
 ---
-title: "Cosas del mIRC Scripting"
+title: 'Cosas del mIRC Scripting'
 category: Programación
 date: 2008-04-02T05:27:44-0600
 tags:
@@ -16,8 +16,6 @@ on 1:INPUT:*: {
 }
 ```
 
-
-
 1. Acciones a relizar cuando escribimos algo.
-2. Si el texto que escribimos comienza con + o -, seguido de una letra que sea &#39;qaohvmb&#39;, le damos el status correspondiente al nick. Ej: +o oso96\_2000
+2. Si el texto que escribimos comienza con + o -, seguido de una letra que sea &#39;qaohvmb&#39;, le damos el status correspondiente al nick. Ej: +o oso96_2000
 3. Realiza un kick al azar de entre los usuarios del canal (uno mismo incluido).

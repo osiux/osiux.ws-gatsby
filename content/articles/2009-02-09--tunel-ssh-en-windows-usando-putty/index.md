@@ -1,5 +1,5 @@
 ---
-title: "Túnel SSH en windows usando Putty"
+title: 'Túnel SSH en windows usando Putty'
 category: Infórmatica
 date: 2009-02-09T06:08:39-0600
 tags:
@@ -22,15 +22,15 @@ En fin, a lo que venía. Este fin de semana estuve leyendo sobre los [túneles S
 
 1. Abrimos Putty y en la sección de _Session_ configuramos los datos de nuestro servidor donde tenemos la cuenta SSH:
 
-   ![Putty 1](d3b319c4-1164-43b3-afab-8cc5cc558890.jpg)
+    ![Putty 1](d3b319c4-1164-43b3-afab-8cc5cc558890.jpg)
 
-   Ahora vamos a la sección de _Connection - SSH - Tunnels_ y lo configuramos de la siguiente manera: 
+    Ahora vamos a la sección de _Connection - SSH - Tunnels_ y lo configuramos de la siguiente manera:
 
-   **Source port** escribe cualquiera, en este ejemplo usaremos 9876
+    **Source port** escribe cualquiera, en este ejemplo usaremos 9876
 
-   **Destination** déjalo en blanco Selecciona las opciones de _Dynamic_ y _Auto_ Da click al botón de _Add_
-   
-   ![Putty 2](d8aac2be-8d37-4818-b466-90a9cac0c316.jpg)
+    **Destination** déjalo en blanco Selecciona las opciones de _Dynamic_ y _Auto_ Da click al botón de _Add_
+
+    ![Putty 2](d8aac2be-8d37-4818-b466-90a9cac0c316.jpg)
 
 2. Damos click al botón de **_Open_**
 
@@ -38,11 +38,11 @@ En fin, a lo que venía. Este fin de semana estuve leyendo sobre los [túneles S
 
 4. Ahora nos vamos a nuestro navegador, en este caso será Firefox. Vayamos a la pestaña de \_Herramientas\_ y de ahí al submenú de _Opciones_. En la pestaña _Avanzadas_, subpestaña _Red_, bajo la sección de _Conexión_ damos click al botón de _Configuración..._
 
-   ![tunelssh3](c6f1c42e-63c0-47b9-a6cb-d20dfd7597f2.jpg)
+    ![tunelssh3](c6f1c42e-63c0-47b9-a6cb-d20dfd7597f2.jpg)
 
 5. Llenamos los datos como en la siguiente pantalla: En _Servidor SOCKS_ ponemos la ip 127.0.0.1 y al lado en el puerto ponemos el que hayamos usado al configurar Putty, en este caso el 9876.
 
-   ![tunelssh4](7d024d5d-3c37-4511-a391-367a7b5ed4cd.jpg)
+    ![tunelssh4](7d024d5d-3c37-4511-a391-367a7b5ed4cd.jpg)
 
 6. Damos click a Aceptar y guardamos todos los cambios. Y ahora la prueba de fuego: trata de entrar a cualquier sitio (yo me fui directo por un sitio bloqueado, Twitter) y si todo salío bien, entonces no deberías tener problemas para entrar al sitio :)
 
@@ -52,4 +52,4 @@ Y si amigos, eso es todo. En si este pequeño How-to es una traducción de lo qu
 
 ### Notas
 
-Cabe mencionar que si el navegador que usas es Firefox, hay otro detalle a tener en cuenta. El tráfico web va a pasar a través de el túnel, sin embargo las peticiones DNS van a pasar por tu red local, por lo que podrán seguir monitoreando los sitios que visitas. Para cambiar esto escribe **about:config** en la barra de direcciones y cambia el valor de configuracion **network.proxy.socks\_remote\_dns** a **true**.
+Cabe mencionar que si el navegador que usas es Firefox, hay otro detalle a tener en cuenta. El tráfico web va a pasar a través de el túnel, sin embargo las peticiones DNS van a pasar por tu red local, por lo que podrán seguir monitoreando los sitios que visitas. Para cambiar esto escribe **about:config** en la barra de direcciones y cambia el valor de configuracion **network.proxy.socks_remote_dns** a **true**.

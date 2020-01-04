@@ -1,16 +1,16 @@
 ---
-title: "¿Cómo empecé a programar?"
+title: '¿Cómo empecé a programar?'
 category: Infórmatica, Personal, Programación
 date: 2015-06-12T03:36:56-0500
 tags:
-    - #MyCodingStory
+    -  #MyCodingStory
 ---
 
 Estoy aburrido y me topé con un [post](http://littlej.in/2015/06/mycodingstory-womenintech/) de [@juliettemaxwell](https://twitter.com/juliettemaxwell) sobre cómo fue que empezó a programar. Me gustó la idea, así que va mi historia.
 
 Recuerdo vagamente que cuando tenía alrededor de 10 años mi mamá nos mandó a uno de mis hermanos y a mi a un curso de MS-DOS. Creo que en aquel entonces se usaba Windows 3.1 y nos enseñaron comandos básicos como copiar archivos, moverlos, las unidades (C:, D:, etc), editar archivos y todo con disquetes de 5 1/4 y 3 1/2 :D
 
-Poco tiempo después fuimos a otro "curso" donde se supone veíamos mas usos de la PC (aun con mucho MS-DOS), pero lo que hacíamos era llegar y poner los disquetes que todos teníamos con juegos. [Principe de Persia](http://en.wikipedia.org/wiki/Prince_of_Persia_(1989_video_game)) era el favorito de todos.
+Poco tiempo después fuimos a otro "curso" donde se supone veíamos mas usos de la PC (aun con mucho MS-DOS), pero lo que hacíamos era llegar y poner los disquetes que todos teníamos con juegos. [Principe de Persia](<http://en.wikipedia.org/wiki/Prince_of_Persia_(1989_video_game)>) era el favorito de todos.
 
 Un par de años después tomamos otro curso que duró dos años donde nos enseñaron desde armar y desarmar computadoras, las piezas que la componen, la instalación de windows y office (?) y otras cosas mas. Pero sobre todo fue el primer acercamiento de verdad a la programación, ya que los últimos módulos fue hacer programas sencillos en BASIC y Pascal. Creo recordar que se me daba bien eso y me gustaba mucho.
 

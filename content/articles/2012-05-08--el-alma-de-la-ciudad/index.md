@@ -1,5 +1,5 @@
 ---
-title: "El Alma de la ciudad"
+title: 'El Alma de la ciudad'
 category: Personal
 date: 2012-05-08T07:51:19-0500
 tags:

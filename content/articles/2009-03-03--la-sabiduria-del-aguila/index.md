@@ -1,5 +1,5 @@
 ---
-title: "La sabiduría del águila"
+title: 'La sabiduría del águila'
 category: Textos
 date: 2009-03-03T06:22:48-0600
 ---

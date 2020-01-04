@@ -44,7 +44,9 @@ const IndexPage = () => {
                 return (
                     <Fragment key={node.id}>
                         <ArticleTitle>
-                            <Link to={`/articles/${node.fields.slug}`}>{node.frontmatter.title}</Link>
+                            <Link to={`/articles/${node.fields.slug}`}>
+                                {node.frontmatter.title}
+                            </Link>
                         </ArticleTitle>
                         <Meta>Published on {node.frontmatter.date}</Meta>
                         <p>{node.excerpt}</p>

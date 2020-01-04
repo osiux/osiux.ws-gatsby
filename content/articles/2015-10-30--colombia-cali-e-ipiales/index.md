@@ -1,5 +1,5 @@
 ---
-title: "Colombia: Cali e Ipiales"
+title: 'Colombia: Cali e Ipiales'
 category: Viajes
 date: 2015-10-30T19:52:34-0600
 tags:
