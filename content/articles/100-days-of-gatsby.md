@@ -6,7 +6,7 @@ category: Development
 
 A few days ago I saw a [tweet](https://twitter.com/gatsbyjs/status/1212388261315911680) about a challenge to learn more about [Gatsby](https://www.gatsbyjs.org/), and since my site was already a simple landing page and a separate blog, both built with it, thought this could be a good opportunity to improve both the site and my knowledge of it, so here we go!
 
-# Challenge 1: Create a Gatsby Blog from Scratch
+## Challenge 1: Create a Gatsby Blog from Scratch
 
 The old version of the site used a starter for the blog and I modified another starter for the landing, but I think it was over bloated with all the things it had for a simple landing page, this time I wanted something simple but functional and to unify the landing and the blog.
 
