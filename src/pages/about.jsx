@@ -50,7 +50,9 @@ const About = () => (
                 <Me />
                 <p>
                     Hi! I'm Eduardo.{' '}
-                    <span data-rh="Laravel, React">Full stack developer</span>{' '}
+                    <UnderlineSpan data-rh="Laravel, React">
+                        Full Stack Developer
+                    </UnderlineSpan>{' '}
                     living in Mexico City, currently working remotely at{' '}
                     <OutboundLink href="https://gumgum.com/sports">
                         GumGum Sports

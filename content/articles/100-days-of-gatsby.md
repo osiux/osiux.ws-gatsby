@@ -19,4 +19,3 @@ Initially the idea was to use [TypeScript](https://www.typescriptlang.org/) beca
 Overall I'm happy with how it looks and with this initial version, there is still [some work to do](https://github.com/osiux/osiux.ws/issues), but I know myself and for sure I could have left it unfinished if I tried to do everything I have in mind in one go.
 
 [Github repository](https://github.com/osiux/osiux.ws)
-

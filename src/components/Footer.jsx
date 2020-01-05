@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const FooterComponent = styled.footer`
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
 `;
 
 const Footer = () => (
