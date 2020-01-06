@@ -56,12 +56,15 @@ const ItemLink = styled(Link)`
 `;
 
 const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
+    const isFirstPage = currentPage === 1;
+    const isLastPage = currentPage === totalPages;
+
     const prevLink =
-        currentPage === 1 || currentPage === 2
+        isFirstPage || currentPage === 2
             ? basePath
             : `${basePath}${prefix}${currentPage - 1}`;
     const nextLink =
-        currentPage === totalPages
+        isLastPage
             ? `${basePath}${prefix}${currentPage}`
             : `${basePath}${prefix}${currentPage + 1}`;
 
@@ -69,7 +72,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
         <PaginationContainer>
             <Paginator>
                 <Item>
-                    {currentPage === 1 ? (
+                    {isFirstPage ? (
                         <FontAwesomeIcon
                             icon={faStepBackward}
                             color="#ccc"
@@ -85,7 +88,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                     )}
                 </Item>
                 <Item>
-                    {currentPage === 1 ? (
+                    {isFirstPage ? (
                         <FontAwesomeIcon
                             icon={faChevronLeft}
                             color="#ccc"
@@ -120,7 +123,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                     );
                 })}
                 <Item>
-                    {currentPage === totalPages ? (
+                    {isLastPage ? (
                         <FontAwesomeIcon
                             icon={faChevronRight}
                             color="#ccc"
@@ -138,7 +141,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                     )}
                 </Item>
                 <Item>
-                    {currentPage === totalPages ? (
+                    {isLastPage ? (
                         <FontAwesomeIcon
                             icon={faStepForward}
                             color="#ccc"
