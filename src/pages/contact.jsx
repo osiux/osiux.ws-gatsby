@@ -40,16 +40,31 @@ const Field = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
+    flex-direction: column;
+
+    ${breakpoints.desktop} {
+        flex-direction: row;
+    }
 `;
 
 const Label = styled.label`
-    flex: 1 0 30%;
+    flex: 1;
+    margin-bottom: 2px;
+
+    ${breakpoints.desktop} {
+        flex: 1 0 30%;
+        margin-bottom: 0;
+    }
 `;
 
 const baseInput = css`
     padding: 5px;
     border: 1px solid ${colors.secondary};
-    flex: 2 0 70%;
+    flex: 1;
+
+    ${breakpoints.desktop} {
+        flex: 2 0 70%;
+    }
 `;
 
 const Input = styled.input`
@@ -65,7 +80,7 @@ const Button = styled.button`
     color: ${colors.primary};
     border: 0;
     padding: 10px;
-    width: 68%;
+    width: 100%;
     align-self: flex-end;
     outline: 0;
 
@@ -75,6 +90,7 @@ const Button = styled.button`
 
     ${breakpoints.desktop} {
         width: auto;
+        padding: 10px 20px;
     }
 `;
 

@@ -21,7 +21,7 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-    padding: 0 10px;
+    padding: 0 15px 0 10px;
     max-width: 100%;
 
     ${breakpoints.desktop} {
