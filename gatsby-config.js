@@ -21,13 +21,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-google-fonts`,
-            options: {
-                fonts: [`PT Sans`, `Oswald`],
-                display: 'swap',
-            },
-        },
-        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,

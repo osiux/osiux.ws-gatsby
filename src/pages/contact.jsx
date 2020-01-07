@@ -43,23 +43,21 @@ const Field = styled.div`
 `;
 
 const Label = styled.label`
-    flex: 1;
+    flex: 1 0 30%;
 `;
 
 const baseInput = css`
     padding: 5px;
     border: 1px solid ${colors.secondary};
-    width: 100%;
+    flex: 2 0 70%;
 `;
 
 const Input = styled.input`
     ${baseInput}
-    flex: 2;
 `;
 
 const TextArea = styled.textarea`
     ${baseInput}
-    flex: 2;
 `;
 
 const Button = styled.button`
