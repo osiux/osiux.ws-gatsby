@@ -20,8 +20,11 @@ const Footer = () => (
             </span>{' '}
             , cats and{' '}
             <OutboundLink href="https://www.gatsbyjs.org">Gatsby</OutboundLink>.{' '}
-            <OutboundLink href="https://github.com/osiux/osiux.ws">
-                <FontAwesomeIcon icon={faGithub} />
+            <OutboundLink
+                href="https://github.com/osiux/osiux.ws"
+                title="Github Repository"
+            >
+                <FontAwesomeIcon icon={faGithub} size="xs" fixedWidth />
             </OutboundLink>
         </p>
     </FooterComponent>

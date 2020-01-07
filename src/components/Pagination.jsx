@@ -63,10 +63,9 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
         isFirstPage || currentPage === 2
             ? basePath
             : `${basePath}${prefix}${currentPage - 1}`;
-    const nextLink =
-        isLastPage
-            ? `${basePath}${prefix}${currentPage}`
-            : `${basePath}${prefix}${currentPage + 1}`;
+    const nextLink = isLastPage
+        ? `${basePath}${prefix}${currentPage}`
+        : `${basePath}${prefix}${currentPage + 1}`;
 
     return (
         <PaginationContainer>
@@ -80,6 +79,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                         />
                     ) : (
                         <Link
+                            title="First Page"
                             to={`${basePath}`}
                             className={currentPage === 1 ? 'disabled' : ''}
                         >
@@ -96,6 +96,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                         />
                     ) : (
                         <Link
+                            title="Previous Page"
                             to={prevLink}
                             className={currentPage === 1 ? 'disabled' : ''}
                         >
@@ -112,6 +113,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                     return (
                         <Item key={page} className="number">
                             <ItemLink
+                                title={`Go to Page ${page + 1}`}
                                 to={pageLink}
                                 className={
                                     currentPage === page + 1 ? 'current' : ''
@@ -131,6 +133,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                         />
                     ) : (
                         <Link
+                            title="Next Page"
                             to={nextLink}
                             className={
                                 currentPage === totalPages ? 'disabled' : ''
@@ -149,6 +152,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
                         />
                     ) : (
                         <Link
+                            title="Last Page"
                             to={`${basePath}${prefix}${totalPages}`}
                             className={
                                 currentPage === totalPages ? 'disabled' : ''

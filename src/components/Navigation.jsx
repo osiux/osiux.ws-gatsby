@@ -120,7 +120,11 @@ const Navigation = ({ siteTitle }) => {
             >
                 {siteTitle}
             </Link>
-            <ToggleButton role="button" onClick={_toggleMenu}>
+            <ToggleButton
+                role="button"
+                aria-label="Toggle Menu"
+                onClick={_toggleMenu}
+            >
                 <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
             </ToggleButton>
             <NavList>
