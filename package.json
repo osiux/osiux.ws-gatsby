@@ -68,9 +68,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+        "url": "https://github.com/osiux/osiux.ws"
     },
     "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
+        "url": "https://github.com/osiux/osiux.ws/issues"
+    },
+    "engines": {
+        "node": "12.x"
     }
 }
