@@ -147,11 +147,10 @@ const Contact = () => {
                 body: new URLSearchParams(formData),
             });
 
-            const responseJson = await response.json();
-
             if (!response.ok) {
-                console.log(responseJson);
-                throw new Error(responseJson.error);
+                throw new Error(
+                    'Error sending the form, please try again or send me an email.',
+                );
             }
 
             setSuccess(true);
