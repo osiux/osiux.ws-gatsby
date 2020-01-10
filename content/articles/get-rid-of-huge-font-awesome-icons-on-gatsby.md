@@ -5,7 +5,7 @@ date: 2020-01-09
 tags: ['gatsbyjs', 'fontawesome']
 ---
 
-When building this site I noticed that on first load, before anything is cached on the browser, the Font Awesome icons used in the footer and contact section were really huge for a second or two, it looks ugly so it needed to be fixed.
+When building this site I noticed that on the first load before anything is cached on the browser, the Font Awesome icons used in the footer and contact section were huge for a second or two, it looks ugly so it needed to be fixed.
 
 ## Why it happens?
 
@@ -15,16 +15,14 @@ The usage of a Font Awesome icon on React/Gatsby/etc is like this:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const MyComponent = () => (
-	<FontAwesomeIcon icon={faGithub} />
-);
+const MyComponent = () => <FontAwesomeIcon icon={faGithub} />;
 ```
 
-On a normal app it works fine because the CSS is loaded right before the icon is rendered, so there is no visible change of the size, but on a <abbr title="Server Side Rendering">SSR</abbr> app (like with Gatsby), the code for the icon already exists before the CSS is loaded, so it gets the needed style after a few milliseconds, resulting in the flickering of the icon size.
+On a normal app, it works fine because the CSS is loaded right before the icon is rendered, so there is no visible change of the size, but on an <abbr title="Server Side Rendering">SSR</abbr> app (like with Gatsby), the code for the icon already exists before the CSS is loaded, so it gets the needed style after a few milliseconds, resulting in the flickering of the icon size.
 
 ## Solution
 
-We need to disable the auto loading of CSS by FontAwesome and add the styles ourselves, this way they are already embedded when Gatsby build the site. 
+We need to disable the auto-loading of CSS by FontAwesome and add the styles ourselves, this way they are already embedded when Gatsby builds the site.
 
 in my case it was accomplished by modifying the `gatsby-browser.js` file and adding:
 
