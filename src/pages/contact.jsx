@@ -136,6 +136,7 @@ const Contact = () => {
             formData.append('name', name);
             formData.append('email', email);
             formData.append('message', message);
+            formData.append('form-name', 'Contact');
 
             const response = await fetch('/contact', {
                 method: 'POST',
