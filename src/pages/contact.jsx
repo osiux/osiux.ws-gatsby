@@ -134,13 +134,12 @@ const Contact = () => {
         try {
             const formData = new FormData();
             formData.append('name', name);
-            formData.append('_replyto', email);
+            formData.append('email', email);
             formData.append('message', message);
 
-            const response = await fetch('https://formspree.io/mayqgpke', {
-                method: 'post',
+            const response = await fetch('/contact', {
+                method: 'POST',
                 headers: {
-                    Accept: 'application/json',
                     'Content-Type':
                         'application/x-www-form-urlencoded; charset=utf-8',
                 },
@@ -232,7 +231,13 @@ const Contact = () => {
                 )}
                 {error && <Error>{error}</Error>}
 
-                <Form onSubmit={_onSubmit}>
+                <Form
+                    name="Contact"
+                    onSubmit={_onSubmit}
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                >
+                    <input type="hidden" name="form-name" value="Contact" />
                     <Field>
                         <Label htmlFor="name">Name:</Label>
                         <Input
