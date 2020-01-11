@@ -3,6 +3,7 @@ module.exports = {
         title: `Eduardo Reveles`,
         description: `Full Stack Developer`,
         author: `@osiux`,
+        siteUrl: `https://www.osiux.ws/`,
     },
     plugins: [
         `gatsby-plugin-emotion`,
@@ -60,6 +61,65 @@ module.exports = {
                     `gatsby-remark-smartypants`,
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-responsive-iframe`,
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                feeds: [
+                    {
+                        serialize: ({ query: { site, allMarkdownRemark } }) => {
+                            return allMarkdownRemark.edges.map(edge => {
+                                return Object.assign(
+                                    {},
+                                    edge.node.frontmatter,
+                                    {
+                                        description: edge.node.excerpt,
+                                        date: edge.node.frontmatter.date,
+                                        url:
+                                            site.siteMetadata.siteUrl +
+                                            '/blog/' +
+                                            edge.node.fields.slug,
+                                        guid:
+                                            site.siteMetadata.siteUrl +
+                                            '/blog/' +
+                                            edge.node.fields.slug,
+                                        custom_elements: [
+                                            {
+                                                'content:encoded':
+                                                    edge.node.html,
+                                            },
+                                        ],
+                                    },
+                                );
+                            });
+                        },
+                        query: `
+                            {
+                                allMarkdownRemark (
+                                    sort: { order: DESC, fields: frontmatter___date }
+                                    filter: { frontmatter: { draft: { ne: true } } }
+                                ) {
+                                    edges {
+                                        node {
+                                            excerpt
+                                            html
+                                            fields {
+                                                slug
+                                            }
+                                            frontmatter {
+                                                date(formatString: "MMM D, YYYY")
+                                                title
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        `,
+                        output: 'rss.xml',
+                        title: 'Eduardo Reveles',
+                    },
                 ],
             },
         },

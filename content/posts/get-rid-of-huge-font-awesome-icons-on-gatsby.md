@@ -3,6 +3,7 @@ title: 'Get rid of huge Font Awesome icons on Gatsby'
 category: Development
 date: 2020-01-09
 tags: ['gatsbyjs', 'fontawesome']
+draft: false
 ---
 
 When building this site I noticed that on the first load before anything is cached on the browser, the Font Awesome icons used in the footer and contact section were huge for a second or two, it looks ugly so it needed to be fixed.
