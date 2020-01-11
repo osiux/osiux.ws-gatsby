@@ -3,6 +3,7 @@ title: '#100DaysOfGatsby'
 date: 2020-01-04
 category: Development
 tags: ['gatsbyjs']
+draft: false
 ---
 
 A few days ago I saw a [tweet](https://twitter.com/gatsbyjs/status/1212388261315911680) about a challenge to learn more about [Gatsby](https://www.gatsbyjs.org/), and since my site was already a simple landing page and a separate blog, both built with it, thought this could be a good opportunity to improve both the site and my knowledge of it, so here we go!

@@ -26,14 +26,17 @@ exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
 
     const postTemplate = path.resolve('src/templates/post.jsx');
-    const postsListingTemplate = path.resolve(
-        'src/templates/postsListing.jsx',
-    );
+    const postsListingTemplate = path.resolve('src/templates/postsListing.jsx');
 
     return graphql(`
         {
             allMarkdownRemark(
-                sort: { order: DESC, fields: frontmatter___date }
+                sort: { order: DESC, fields: frontmatter___date },
+                ${
+                    process.env.NODE_ENV === 'production'
+                        ? 'filter: {frontmatter: {draft: {ne: true}}}'
+                        : ''
+                }
             ) {
                 edges {
                     node {
@@ -60,10 +63,7 @@ exports.createPages = ({ actions, graphql }) => {
 
         [...Array(pageCount)].forEach((_val, pageNum) => {
             createPage({
-                path:
-                    pageNum === 0
-                        ? `/blog/`
-                        : `/blog/page-${pageNum + 1}/`,
+                path: pageNum === 0 ? `/blog/` : `/blog/page-${pageNum + 1}/`,
                 component: postsListingTemplate,
                 context: {
                     limit: POSTS_PER_PAGE,

@@ -21,6 +21,7 @@ export const pageQuery = graphql`
             sort: { fields: [frontmatter___date], order: DESC }
             limit: $limit
             skip: $skip
+            filter: { frontmatter: { draft: { ne: true } } }
         ) {
             edges {
                 node {

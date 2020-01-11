@@ -20,6 +20,7 @@ const IndexPage = () => {
             allMarkdownRemark(
                 sort: { order: DESC, fields: frontmatter___date }
                 limit: 3
+                filter: { frontmatter: { draft: { ne: true } } }
             ) {
                 edges {
                     node {
