@@ -39,17 +39,17 @@ export const pageQuery = graphql`
     }
 `;
 
-const ArticlesListing = ({ data, pageContext }) => {
+const PostsListing = ({ data, pageContext }) => {
     const { pageCount, currentPageNum } = pageContext;
 
     return (
         <Layout>
-            <SEO title={`Articles - Page ${currentPageNum}`} />
+            <SEO title={`Blog - Page ${currentPageNum}`} />
             {data.allMarkdownRemark.edges.map(({ node }) => {
                 return (
                     <Fragment key={node.id}>
                         <ArticleTitle>
-                            <Link to={`/articles/${node.fields.slug}`}>
+                            <Link to={`/blog/${node.fields.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </ArticleTitle>
@@ -63,4 +63,4 @@ const ArticlesListing = ({ data, pageContext }) => {
     );
 };
 
-export default ArticlesListing;
+export default PostsListing;

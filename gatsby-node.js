@@ -2,7 +2,7 @@ const path = require('path');
 const _ = require('lodash');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const ARTICLES_PER_PAGE = 5;
+const POSTS_PER_PAGE = 5;
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         if (_.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
             slug = _.kebabCase(node.frontmatter.title.toLowerCase());
         } else {
-            slug = createFilePath({ node, getNode, basePath: `articles` });
+            slug = createFilePath({ node, getNode, basePath: `posts` });
         }
 
         createNodeField({
@@ -25,9 +25,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
 
-    const articleTemplate = path.resolve('src/templates/article.jsx');
-    const articlesListingTemplate = path.resolve(
-        'src/templates/articlesListing.jsx',
+    const postTemplate = path.resolve('src/templates/post.jsx');
+    const postsListingTemplate = path.resolve(
+        'src/templates/postsListing.jsx',
     );
 
     return graphql(`
@@ -53,21 +53,21 @@ exports.createPages = ({ actions, graphql }) => {
             return Promise.reject(result.errors);
         }
 
-        const articles = result.data.allMarkdownRemark.edges;
+        const posts = result.data.allMarkdownRemark.edges;
 
         // Pagination
-        const pageCount = Math.ceil(articles.length / ARTICLES_PER_PAGE);
+        const pageCount = Math.ceil(posts.length / POSTS_PER_PAGE);
 
         [...Array(pageCount)].forEach((_val, pageNum) => {
             createPage({
                 path:
                     pageNum === 0
-                        ? `/articles/`
-                        : `/articles/page-${pageNum + 1}/`,
-                component: articlesListingTemplate,
+                        ? `/blog/`
+                        : `/blog/page-${pageNum + 1}/`,
+                component: postsListingTemplate,
                 context: {
-                    limit: ARTICLES_PER_PAGE,
-                    skip: pageNum * ARTICLES_PER_PAGE,
+                    limit: POSTS_PER_PAGE,
+                    skip: pageNum * POSTS_PER_PAGE,
                     pageCount,
                     currentPageNum: pageNum + 1,
                 },
@@ -75,16 +75,16 @@ exports.createPages = ({ actions, graphql }) => {
         });
 
         // Individual Article
-        articles.forEach((article, index) => {
+        posts.forEach((post, index) => {
             const previous =
-                index === articles.length - 1 ? null : articles[index + 1].node;
-            const next = index === 0 ? null : articles[index - 1].node;
+                index === posts.length - 1 ? null : posts[index + 1].node;
+            const next = index === 0 ? null : posts[index - 1].node;
 
             createPage({
-                path: `articles/${article.node.fields.slug}`,
-                component: articleTemplate,
+                path: `blog/${post.node.fields.slug}`,
+                component: postTemplate,
                 context: {
-                    slug: article.node.fields.slug,
+                    slug: post.node.fields.slug,
                     previous,
                     next,
                 },

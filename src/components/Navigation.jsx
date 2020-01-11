@@ -130,16 +130,16 @@ const Navigation = ({ siteTitle }) => {
             <NavList>
                 <NavListItem>
                     <NavLink
-                        to="/articles/"
+                        to="/blog"
                         activeClassName="current"
                         partiallyActive
                     >
-                        Articles
+                        Blog
                     </NavLink>
                 </NavListItem>
                 <NavListItem>
                     <NavLink
-                        to="/about/"
+                        to="/about"
                         activeClassName="current"
                         partiallyActive
                     >
@@ -147,7 +147,7 @@ const Navigation = ({ siteTitle }) => {
                     </NavLink>
                 </NavListItem>
                 <NavListItem>
-                    <NavLink to="/contact/" activeClassName="current">
+                    <NavLink to="/contact" activeClassName="current">
                         Contact
                     </NavLink>
                 </NavListItem>

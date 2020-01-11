@@ -168,7 +168,7 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
 };
 
 Pagination.defaultProps = {
-    basePath: '/articles/',
+    basePath: '/blog/',
     prefix: 'page-',
 };
 

@@ -15,7 +15,7 @@ const Meta = styled.p`
 `;
 
 const IndexPage = () => {
-    const latestArticles = useStaticQuery(graphql`
+    const latestPosts = useStaticQuery(graphql`
         {
             allMarkdownRemark(
                 sort: { order: DESC, fields: frontmatter___date }
@@ -41,12 +41,12 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <h1>Latests Articles</h1>
-            {latestArticles.allMarkdownRemark.edges.map(({ node }) => {
+            <h1>Latests Blog Posts</h1>
+            {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
                 return (
                     <Fragment key={node.id}>
                         <ArticleTitle>
-                            <Link to={`/articles/${node.fields.slug}`}>
+                            <Link to={`/blog/${node.fields.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </ArticleTitle>

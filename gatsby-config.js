@@ -30,8 +30,8 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `articles`,
-                path: `${__dirname}/content/articles`,
+                name: `posts`,
+                path: `${__dirname}/content/posts`,
             },
         },
         `gatsby-transformer-sharp`,

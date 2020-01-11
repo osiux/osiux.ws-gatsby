@@ -23,7 +23,7 @@ const Content = styled.div`
 `;
 
 export const pageQuery = graphql`
-    query ArticlePostBySlug($slug: String!) {
+    query PostBySlug($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             id
             excerpt
@@ -36,7 +36,7 @@ export const pageQuery = graphql`
     }
 `;
 
-const Article = ({ data, pageContext }) => {
+const Post = ({ data, pageContext }) => {
     const article = data.markdownRemark;
     const { previous, next } = pageContext;
 
@@ -55,7 +55,7 @@ const Article = ({ data, pageContext }) => {
                 <li>
                     {previous && (
                         <Link
-                            to={`/articles/${previous.fields.slug}`}
+                            to={`/blog/${previous.fields.slug}`}
                             rel="prev"
                         >
                             ← {previous.frontmatter.title}
@@ -64,7 +64,7 @@ const Article = ({ data, pageContext }) => {
                 </li>
                 <li>
                     {next && (
-                        <Link to={`/articles/${next.fields.slug}`} rel="next">
+                        <Link to={`/blog/${next.fields.slug}`} rel="next">
                             {next.frontmatter.title} →
                         </Link>
                     )}
@@ -74,4 +74,4 @@ const Article = ({ data, pageContext }) => {
     );
 };
 
-export default Article;
+export default Post;
