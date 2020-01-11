@@ -138,7 +138,11 @@ const Navigation = ({ siteTitle }) => {
                     </NavLink>
                 </NavListItem>
                 <NavListItem>
-                    <NavLink to="/about/" activeClassName="current">
+                    <NavLink
+                        to="/about/"
+                        activeClassName="current"
+                        partiallyActive
+                    >
                         About
                     </NavLink>
                 </NavListItem>

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactHintFactory from 'react-hint';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../components/Layout';
@@ -13,27 +13,27 @@ import Me from '../components/images/me';
 
 const ReactHint = ReactHintFactory(React);
 
+const UnderlineSpan = styled.span`
+    text-decoration: underline dotted;
+    cursor: pointer;
+`;
+
+const ImageCaption = styled.p`
+    text-align: center;
+`;
+
 const onRenderContent = target => {
     const { rhImage } = target.dataset;
 
     return (
         <div className="react-hint__image">
             {rhImage === 'cats' ? <Cats /> : <Dog />}
-            <p
-                css={css`
-                    text-align: center;
-                `}
-            >
+            <ImageCaption>
                 {rhImage === 'cats' ? 'Salem, Mike and Kiki' : 'Amelia'}
-            </p>
+            </ImageCaption>
         </div>
     );
 };
-
-const UnderlineSpan = styled.span`
-    text-decoration: underline dotted;
-    cursor: pointer;
-`;
 
 const About = () => (
     <Fragment>
@@ -77,6 +77,13 @@ const About = () => (
                     >
                         a dog
                     </UnderlineSpan>
+                </p>
+                <p>
+                    Right now I do mostly Javascript, but for the majority of my
+                    career PHP was my main language.
+                </p>
+                <p>
+                    <Link to="/about/uses">My Uses page.</Link>
                 </p>
             </section>
         </Layout>
