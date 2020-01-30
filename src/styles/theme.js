@@ -19,8 +19,8 @@ const darkTheme = {
     colors: {
         ...lightTheme.colors,
         background: '#292d35',
-        text: '#fdfffc',
-        link: '#fdfffc',
+        text: '#f4f9ff',
+        link: '#f4f9ff',
     },
 };
 

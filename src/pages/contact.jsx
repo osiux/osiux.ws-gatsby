@@ -59,6 +59,8 @@ const baseInput = theme => css`
     padding: 5px;
     border: 1px solid ${theme.colors.text};
     flex: 1;
+    background-color: ${theme.colors.background};
+    color: ${theme.colors.text};
 
     ${theme.breakpoints.desktop} {
         flex: 2 0 70%;

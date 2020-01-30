@@ -4,7 +4,10 @@
 import { useCallback, useEffect, useState } from 'react';
 
 const useMedia = (queries, values, defaultValue) => {
-    const mediaQueryLists = queries.map(q => window.matchMedia(q));
+    const mediaQueryLists =
+        typeof window !== `undefined`
+            ? queries.map(q => window.matchMedia(q))
+            : [];
 
     const getValue = useCallback(() => {
         const index = mediaQueryLists.findIndex(mql => mql.matches);
