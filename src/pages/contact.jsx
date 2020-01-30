@@ -15,8 +15,6 @@ import {
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-import { colors, breakpoints } from '../styles/variables';
-
 const SocialNetworksList = styled.ul`
     list-style: none;
     display: flex;
@@ -31,7 +29,7 @@ const Form = styled.form`
     margin: 10px auto 0;
     flex-direction: column;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         width: 80%;
     }
 `;
@@ -42,7 +40,7 @@ const Field = styled.div`
     margin-bottom: 10px;
     flex-direction: column;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         flex-direction: row;
     }
 `;
@@ -51,33 +49,33 @@ const Label = styled.label`
     flex: 1;
     margin-bottom: 2px;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         flex: 1 0 30%;
         margin-bottom: 0;
     }
 `;
 
-const baseInput = css`
+const baseInput = theme => css`
     padding: 5px;
-    border: 1px solid ${colors.secondary};
+    border: 1px solid ${theme.colors.text};
     flex: 1;
 
-    ${breakpoints.desktop} {
+    ${theme.breakpoints.desktop} {
         flex: 2 0 70%;
     }
 `;
 
 const Input = styled.input`
-    ${baseInput}
+    ${props => baseInput(props.theme)}
 `;
 
 const TextArea = styled.textarea`
-    ${baseInput}
+    ${props => baseInput(props.theme)}
 `;
 
 const Button = styled.button`
-    background: ${colors.secondary};
-    color: ${colors.primary};
+    background: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.background};
     border: 0;
     padding: 10px;
     width: 100%;
@@ -88,7 +86,7 @@ const Button = styled.button`
         background-color: #ccc;
     }
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         width: auto;
         padding: 10px 20px;
     }
@@ -101,7 +99,7 @@ const baseMessage = css`
     padding: 5px;
     border: 1px dotted;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         width: 80%;
     }
 `;

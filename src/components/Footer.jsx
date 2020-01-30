@@ -4,8 +4,6 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import { breakpoints } from '../styles/variables';
-
 const FooterComponent = styled.footer`
     text-align: center;
     font-size: 14px;
@@ -14,7 +12,7 @@ const FooterComponent = styled.footer`
     flex: 0 1 80%;
     margin: 0 auto;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         flex: 1 0 100%;
     }
 `;

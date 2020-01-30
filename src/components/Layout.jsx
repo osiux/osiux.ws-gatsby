@@ -2,9 +2,10 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Global } from '@emotion/core';
 import styled from '@emotion/styled';
+import { ThemeProvider } from 'emotion-theming';
 
 import mainStyles from '../styles/global';
-import { breakpoints } from '../styles/variables';
+import theme from '../styles/theme';
 
 import Footer from './Footer';
 import Navigation from './Navigation';
@@ -24,7 +25,7 @@ const Main = styled.main`
     padding: 0 15px 0 10px;
     max-width: 100%;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         margin-top: 10px;
         padding: 0;
     }
@@ -42,14 +43,14 @@ const Layout = ({ children }) => {
     `);
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <Global styles={mainStyles} />
             <Container>
                 <Navigation siteTitle={data.site.siteMetadata.title} />
                 <Main>{children}</Main>
                 <Footer />
             </Container>
-        </>
+        </ThemeProvider>
     );
 };
 

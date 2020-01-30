@@ -9,8 +9,6 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { breakpoints } from '../styles/variables';
-
 const PaginationContainer = styled.nav`
     display: flex;
     justify-content: center;
@@ -34,7 +32,7 @@ const Item = styled.li`
     &.number {
         display: none;
 
-        ${breakpoints.desktop} {
+        ${props => props.theme.breakpoints.desktop} {
             display: inline-block;
         }
     }

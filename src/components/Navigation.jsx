@@ -5,8 +5,6 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { colors, breakpoints } from '../styles/variables';
-
 const Nav = styled.nav`
     display: flex;
     flex-direction: row;
@@ -15,7 +13,7 @@ const Nav = styled.nav`
     flex-wrap: wrap;
     margin-bottom: 10px;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         justify-content: space-between;
         align-items: center;
     }
@@ -35,7 +33,7 @@ const ToggleButton = styled.button`
     align-self: flex-end;
     margin: 3px 10px 0 0;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         display: none;
     }
 `;
@@ -46,7 +44,7 @@ const NavListItem = styled.li`
     width: 100%;
     text-align: center;
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         width: auto;
         display: block;
     }
@@ -56,7 +54,7 @@ const NavLink = styled(Link)`
     display: inline-block;
     text-decoration: none;
     padding: 5px 0;
-    color: ${colors.secondary};
+    color: ${props => props.theme.colors.text};
     font-family: 'Oswald', sans-serif;
     width: 100%;
 
@@ -64,7 +62,7 @@ const NavLink = styled(Link)`
         text-decoration: underline;
     }
 
-    ${breakpoints.desktop} {
+    ${props => props.theme.breakpoints.desktop} {
         padding: 10px 15px;
     }
 `;
@@ -84,7 +82,7 @@ const Navigation = ({ siteTitle }) => {
         width: 100%;
         order: 3;
 
-        ${breakpoints.desktop} {
+        ${props => props.theme.breakpoints.desktop} {
             width: auto;
             display: flex;
             flex-flow: row wrap;
@@ -100,11 +98,11 @@ const Navigation = ({ siteTitle }) => {
         <Nav>
             <Link
                 to="/"
-                css={css`
+                css={theme => css`
                     align-self: flex-start;
                     padding-left: 10px;
                     display: inline-block;
-                    color: ${colors.secondary};
+                    color: ${theme.colors.text};
                     font-size: 30px;
                     text-decoration: none;
                     text-transform: capitalize;
@@ -113,7 +111,7 @@ const Navigation = ({ siteTitle }) => {
                     width: auto;
                     outline: none;
 
-                    @media all and (min-width: 900px) {
+                    ${theme.breakpoints.desktop} {
                         padding: 5px 0 0;
                     }
                 `}
