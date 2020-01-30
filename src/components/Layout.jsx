@@ -2,13 +2,13 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Global } from '@emotion/core';
 import styled from '@emotion/styled';
-import { ThemeProvider } from 'emotion-theming';
 
 import mainStyles from '../styles/global';
-import theme from '../styles/theme';
 
 import Footer from './Footer';
 import Navigation from './Navigation';
+
+import { DarkModeProvider } from '../context/DarkModeContext';
 
 const Container = styled.div`
     max-width: 900px;
@@ -43,14 +43,14 @@ const Layout = ({ children }) => {
     `);
 
     return (
-        <ThemeProvider theme={theme}>
+        <DarkModeProvider>
             <Global styles={mainStyles} />
             <Container>
                 <Navigation siteTitle={data.site.siteMetadata.title} />
                 <Main>{children}</Main>
                 <Footer />
             </Container>
-        </ThemeProvider>
+        </DarkModeProvider>
     );
 };
 

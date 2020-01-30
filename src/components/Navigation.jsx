@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBars,
+    faTimes,
+    faSun,
+    faMoon,
+} from '@fortawesome/free-solid-svg-icons';
+
+import { DarkModeContext } from '../context/DarkModeContext';
 
 const Nav = styled.nav`
     display: flex;
@@ -14,22 +21,36 @@ const Nav = styled.nav`
     margin-bottom: 10px;
 
     ${props => props.theme.breakpoints.desktop} {
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
     }
 `;
 
-const ToggleButton = styled.button`
+const DarkModeButton = styled.button`
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    order: 2;
+    outline: 0;
+    color: ${props => props.theme.colors.text};
+
+    ${props => props.theme.breakpoints.desktop} {
+        order: 3;
+    }
+`;
+
+const ToggleMenuButton = styled.button`
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid ${props => props.theme.colors.text};
     border-radius: 0.25rem;
-    color: rgba(0, 0, 0, 0.5);
+    color: ${props => props.theme.colors.text};
     cursor: pointer;
     outline: 0;
-    order: 2;
+    order: 3;
     align-self: flex-end;
     margin: 3px 10px 0 0;
 
@@ -69,6 +90,7 @@ const NavLink = styled(Link)`
 
 const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { dark, toggle } = useContext(DarkModeContext);
 
     const _toggleMenu = () => setMenuOpen(prev => !prev);
 
@@ -83,6 +105,7 @@ const Navigation = ({ siteTitle }) => {
         order: 3;
 
         ${props => props.theme.breakpoints.desktop} {
+            order: 2;
             width: auto;
             display: flex;
             flex-flow: row wrap;
@@ -112,19 +135,27 @@ const Navigation = ({ siteTitle }) => {
                     outline: none;
 
                     ${theme.breakpoints.desktop} {
+                        flex-grow: 1;
                         padding: 5px 0 0;
                     }
                 `}
             >
                 {siteTitle}
             </Link>
-            <ToggleButton
+            <DarkModeButton
+                role="button"
+                aria-label="Toggle Dark Mode"
+                onClick={toggle}
+            >
+                <FontAwesomeIcon icon={dark ? faSun : faMoon} />
+            </DarkModeButton>
+            <ToggleMenuButton
                 role="button"
                 aria-label="Toggle Menu"
                 onClick={_toggleMenu}
             >
                 <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
-            </ToggleButton>
+            </ToggleMenuButton>
             <NavList>
                 <NavListItem>
                     <NavLink

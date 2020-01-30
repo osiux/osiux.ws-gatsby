@@ -92,26 +92,26 @@ const Button = styled.button`
     }
 `;
 
-const baseMessage = css`
+const baseMessage = theme => css`
     width: 100%;
     text-align: center;
     margin: 0 auto;
     padding: 5px;
     border: 1px dotted;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${theme.breakpoints.desktop} {
         width: 80%;
     }
 `;
 
 const Success = styled.p`
-    ${baseMessage}
+    ${props => baseMessage(props.theme)}
     color: #4f8a10;
     background: #dff2bf;
 `;
 
 const Error = styled.p`
-    ${baseMessage}
+    ${props => baseMessage(props.theme)}
     color: #d8000c;
     background: #ffd2d2;
 `;

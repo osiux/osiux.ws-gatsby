@@ -188,7 +188,7 @@ const global = theme => css`
         padding-top: 0.75rem;
         padding-bottom: calc(0.75rem - 1px);
 
-        &:first-child {
+        &:first-of-type {
             padding-left: 0;
         }
 
