@@ -7,7 +7,7 @@ const lightTheme = {
     colors: {
         background: '#fdfffc',
         text: '#0a090c',
-        link: '#292d35',
+        link: '#ff3366',
     },
     breakpoints: {
         desktop: '@media all and (min-width: 900px)',
@@ -18,9 +18,9 @@ const darkTheme = {
     ...lightTheme,
     colors: {
         ...lightTheme.colors,
-        background: '#292d35',
+        background: '#2f4858',
         text: '#f4f9ff',
-        link: '#f4f9ff',
+        link: '#ff3366',
     },
 };
 

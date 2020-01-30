@@ -15,7 +15,7 @@ import { DarkModeContext } from '../context/DarkModeContext';
 const Nav = styled.nav`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
@@ -29,7 +29,7 @@ const Nav = styled.nav`
 const DarkModeButton = styled.button`
     background-color: transparent;
     padding: 0;
-    margin: 0;
+    margin: 0 1em 0 0;
     border: 0;
     order: 2;
     outline: 0;
@@ -51,7 +51,6 @@ const ToggleMenuButton = styled.button`
     cursor: pointer;
     outline: 0;
     order: 3;
-    align-self: flex-end;
     margin: 3px 10px 0 0;
 
     ${props => props.theme.breakpoints.desktop} {
@@ -123,7 +122,7 @@ const Navigation = ({ siteTitle }) => {
                 to="/"
                 css={theme => css`
                     align-self: flex-start;
-                    padding-left: 10px;
+                    padding: 5px 0 0 10px;
                     display: inline-block;
                     color: ${theme.colors.text};
                     font-size: 30px;
@@ -133,9 +132,9 @@ const Navigation = ({ siteTitle }) => {
                     order: 1;
                     width: auto;
                     outline: none;
+                    flex-grow: 1;
 
                     ${theme.breakpoints.desktop} {
-                        flex-grow: 1;
                         padding: 5px 0 0;
                     }
                 `}

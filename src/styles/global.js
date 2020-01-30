@@ -128,7 +128,7 @@ const global = theme => css`
 
     blockquote {
         border-left: 0.28125rem solid ${theme.colors.link};
-        color: hsla(0, 0%, 0%, 0.65);
+        color: ${theme.colors.text};
         font-style: italic;
         margin: 0 0 1.5rem -1.125rem;
         padding: 0 0 0 0.84375rem;
@@ -240,6 +240,10 @@ const global = theme => css`
     a {
         color: ${theme.colors.link};
         text-decoration: 'none';
+
+        &.anchor svg {
+            fill: ${theme.colors.link};
+        }
     }
 
     ${theme.breakpoints.desktop} {
