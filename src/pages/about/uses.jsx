@@ -21,7 +21,7 @@ const Uses = () => (
             <h2>Hardware</h2>
             <ul>
                 <li>
-                    Lenovo T420s running{' '}
+                    Lenovo T450s running{' '}
                     <OutboundLink href="https://www.archlinux.org/">
                         ArchLinux
                     </OutboundLink>{' '}
