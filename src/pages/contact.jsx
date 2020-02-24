@@ -61,6 +61,8 @@ const baseInput = theme => css`
     flex: 1;
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
+    transition: background-color ${theme.transition}, color ${theme.transition},
+        border ${theme.transition};
 
     ${theme.breakpoints.desktop} {
         flex: 2 0 70%;
@@ -83,8 +85,9 @@ const Button = styled.button`
     width: 100%;
     align-self: flex-end;
     outline: 0;
-
-    &[disabled] {
+    transition: ${props =>
+            `background-color ${props.theme.transition}, color ${props.theme.transition}`}
+        &[disabled] {
         background-color: #ccc;
     }
 

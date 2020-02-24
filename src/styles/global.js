@@ -29,6 +29,7 @@ const global = theme => css`
         word-wrap: break-word;
         font-kerning: normal;
         font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+        transition: background-color ${theme.transition}, color ${theme.transition};
     }
 
     img {
@@ -240,6 +241,7 @@ const global = theme => css`
     a {
         color: ${theme.colors.link};
         text-decoration: 'none';
+        transition: color ${theme.transition};
 
         &.anchor svg {
             fill: ${theme.colors.link};

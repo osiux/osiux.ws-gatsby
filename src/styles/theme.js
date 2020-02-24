@@ -12,6 +12,7 @@ const lightTheme = {
     breakpoints: {
         desktop: '@media all and (min-width: 900px)',
     },
+    transition: '.5s ease',
 };
 
 const darkTheme = {
