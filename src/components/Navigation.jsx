@@ -34,6 +34,7 @@ const DarkModeButton = styled.button`
     order: 2;
     outline: 0;
     color: ${props => props.theme.colors.text};
+    transition: color ${props => props.theme.transition};
 
     ${props => props.theme.breakpoints.desktop} {
         order: 3;
@@ -77,6 +78,7 @@ const NavLink = styled(Link)`
     color: ${props => props.theme.colors.text};
     font-family: 'Oswald', sans-serif;
     width: 100%;
+    transition: ${props => `color ${props.theme.transition}`};
 
     &:hover {
         text-decoration: underline;
@@ -133,6 +135,7 @@ const Navigation = ({ siteTitle }) => {
                     width: auto;
                     outline: none;
                     flex-grow: 1;
+                    transition: color ${theme.transition};
 
                     ${theme.breakpoints.desktop} {
                         padding: 5px 0 0;
