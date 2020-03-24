@@ -5,6 +5,8 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
+import useDarkMode from '../hooks/useDarkMode';
+
 const Meta = styled.p`
     font-size: 15px;
     margin: 5px 0 20px;
@@ -37,6 +39,8 @@ export const pageQuery = graphql`
 `;
 
 const Post = ({ data, pageContext }) => {
+    const [darkModeEnabled] = useDarkMode();
+
     const article = data.markdownRemark;
     const { previous, next } = pageContext;
 
@@ -44,7 +48,7 @@ const Post = ({ data, pageContext }) => {
         <Layout>
             <SEO title={article.frontmatter.title} />
 
-            <article>
+            <article className={`use-${darkModeEnabled ? 'dark' : 'light'}-theme`}>
                 <h1>{article.frontmatter.title}</h1>
                 <Meta>Published on {article.frontmatter.date}</Meta>
 

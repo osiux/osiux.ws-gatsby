@@ -45,9 +45,17 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: `gatsby-remark-prismjs`,
+                        resolve: `gatsby-remark-vscode`,
                         options: {
-                            showLineNumbers: true,
+                            injectStyles: false,
+                            theme: {
+                                default: 'Monokai Dimmed',
+                                parentSelector: {
+                                    '.use-light-theme':
+                                        'Solarized Light',
+                                    '.use-dark-theme': 'Monokai Dimmed',
+                                },
+                            },
                         },
                     },
                     `gatsby-remark-embedder`,
@@ -63,7 +71,7 @@ module.exports = {
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
-                            return allMarkdownRemark.edges.map(edge => {
+                            return allMarkdownRemark.edges.map((edge) => {
                                 return Object.assign(
                                     {},
                                     edge.node.frontmatter,
