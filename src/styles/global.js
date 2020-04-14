@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
  * Most of typography styles were taken from Elk Glen Typography.js theme:
  * https://github.com/KyleAMathews/typography.js/tree/master/packages/typography-theme-elk-glen
  */
-const global = theme => css`
+const global = (theme) => css`
     ${normalize}
 
     html {
@@ -29,7 +29,8 @@ const global = theme => css`
         word-wrap: break-word;
         font-kerning: normal;
         font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-        transition: background-color ${theme.transition}, color ${theme.transition};
+        transition: background-color ${theme.transition},
+            color ${theme.transition};
     }
 
     img {

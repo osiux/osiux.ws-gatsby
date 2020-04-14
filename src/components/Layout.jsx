@@ -25,7 +25,7 @@ const Main = styled.main`
     padding: 0 15px 0 10px;
     max-width: 100%;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         margin-top: 10px;
         padding: 0;
     }

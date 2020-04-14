@@ -6,11 +6,11 @@ import { useCallback, useEffect, useState } from 'react';
 const useMedia = (queries, values, defaultValue) => {
     const mediaQueryLists =
         typeof window !== `undefined`
-            ? queries.map(q => window.matchMedia(q))
+            ? queries.map((q) => window.matchMedia(q))
             : [];
 
     const getValue = useCallback(() => {
-        const index = mediaQueryLists.findIndex(mql => mql.matches);
+        const index = mediaQueryLists.findIndex((mql) => mql.matches);
 
         return typeof values[index] !== 'undefined'
             ? values[index]
@@ -22,10 +22,10 @@ const useMedia = (queries, values, defaultValue) => {
     useEffect(() => {
         const handler = () => setValue(getValue);
 
-        mediaQueryLists.forEach(mql => mql.addListener(handler));
+        mediaQueryLists.forEach((mql) => mql.addListener(handler));
 
         return () =>
-            mediaQueryLists.forEach(mql => mql.removeListener(handler));
+            mediaQueryLists.forEach((mql) => mql.removeListener(handler));
     }, [getValue, mediaQueryLists]);
 
     return value;

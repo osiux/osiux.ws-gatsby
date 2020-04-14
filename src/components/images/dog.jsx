@@ -15,7 +15,7 @@ const Dog = () => (
                 }
             }
         `}
-        render={data => (
+        render={(data) => (
             <Img
                 style={{ margin: '0 auto', clipPath: 'circle(50% at 50% 50%)' }}
                 fixed={data.placeholderImage.childImageSharp.fixed}

@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-const NonStretchedImage = props => {
+const NonStretchedImage = (props) => {
     let normalizedProps = props;
     if (props.fluid && props.fluid.presentationWidth) {
         normalizedProps = {
@@ -41,7 +41,7 @@ const Me = () => (
                 }
             }
         `}
-        render={data => (
+        render={(data) => (
             <Fragment>
                 <NonStretchedImage
                     fluid={data.placeholderImage.childImageSharp.fluid}

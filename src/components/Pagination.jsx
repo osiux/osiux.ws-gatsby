@@ -32,7 +32,7 @@ const Item = styled.li`
     &.number {
         display: none;
 
-        ${props => props.theme.breakpoints.desktop} {
+        ${(props) => props.theme.breakpoints.desktop} {
             display: inline-block;
         }
     }
@@ -40,7 +40,7 @@ const Item = styled.li`
 
 const ItemLink = styled(Link)`
     text-decoration: none;
-    border: 1px solid ${props => props.theme.colors.text};
+    border: 1px solid ${(props) => props.theme.colors.text};
     padding: 2px 2px;
     min-width: 25px;
     text-align: center;
@@ -48,8 +48,8 @@ const ItemLink = styled(Link)`
     display: inline-block;
 
     &.current {
-        background: ${props => props.theme.colors.text};
-        color: ${props => props.theme.colors.background};
+        background: ${(props) => props.theme.colors.text};
+        color: ${(props) => props.theme.colors.background};
     }
 `;
 

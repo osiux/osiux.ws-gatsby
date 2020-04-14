@@ -48,7 +48,9 @@ const Post = ({ data, pageContext }) => {
         <Layout>
             <SEO title={article.frontmatter.title} />
 
-            <article className={`use-${darkModeEnabled ? 'dark' : 'light'}-theme`}>
+            <article
+                className={`use-${darkModeEnabled ? 'dark' : 'light'}-theme`}
+            >
                 <h1>{article.frontmatter.title}</h1>
                 <Meta>Published on {article.frontmatter.date}</Meta>
 

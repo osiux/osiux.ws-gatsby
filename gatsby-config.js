@@ -51,8 +51,7 @@ module.exports = {
                             theme: {
                                 default: 'Monokai Dimmed',
                                 parentSelector: {
-                                    '.use-light-theme':
-                                        'Solarized Light',
+                                    '.use-light-theme': 'Solarized Light',
                                     '.use-dark-theme': 'Monokai Dimmed',
                                 },
                             },

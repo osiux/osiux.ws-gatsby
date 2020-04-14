@@ -29,7 +29,7 @@ const Form = styled.form`
     margin: 10px auto 0;
     flex-direction: column;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         width: 80%;
     }
 `;
@@ -40,7 +40,7 @@ const Field = styled.div`
     margin-bottom: 10px;
     flex-direction: column;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         flex-direction: row;
     }
 `;
@@ -49,13 +49,13 @@ const Label = styled.label`
     flex: 1;
     margin-bottom: 2px;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         flex: 1 0 30%;
         margin-bottom: 0;
     }
 `;
 
-const baseInput = theme => css`
+const baseInput = (theme) => css`
     padding: 5px;
     border: 1px solid ${theme.colors.text};
     flex: 1;
@@ -70,34 +70,34 @@ const baseInput = theme => css`
 `;
 
 const Input = styled.input`
-    ${props => baseInput(props.theme)}
+    ${(props) => baseInput(props.theme)}
 `;
 
 const TextArea = styled.textarea`
-    ${props => baseInput(props.theme)}
+    ${(props) => baseInput(props.theme)}
 `;
 
 const Button = styled.button`
-    background: ${props => props.theme.colors.text};
-    color: ${props => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.background};
     border: 0;
     padding: 10px;
     width: 100%;
     align-self: flex-end;
     outline: 0;
-    transition: ${props =>
+    transition: ${(props) =>
             `background-color ${props.theme.transition}, color ${props.theme.transition}`}
         &[disabled] {
         background-color: #ccc;
     }
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         width: auto;
         padding: 10px 20px;
     }
 `;
 
-const baseMessage = theme => css`
+const baseMessage = (theme) => css`
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -110,13 +110,13 @@ const baseMessage = theme => css`
 `;
 
 const Success = styled.p`
-    ${props => baseMessage(props.theme)}
+    ${(props) => baseMessage(props.theme)}
     color: #4f8a10;
     background: #dff2bf;
 `;
 
 const Error = styled.p`
-    ${props => baseMessage(props.theme)}
+    ${(props) => baseMessage(props.theme)}
     color: #d8000c;
     background: #ffd2d2;
 `;
@@ -129,7 +129,7 @@ const Contact = () => {
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    const _onSubmit = async e => {
+    const _onSubmit = async (e) => {
         e.preventDefault();
 
         setIsSubmitting(true);
@@ -248,7 +248,7 @@ const Contact = () => {
                             name="name"
                             id="name"
                             value={name}
-                            onChange={e => setName(e.target.value)}
+                            onChange={(e) => setName(e.target.value)}
                             required
                         />
                     </Field>
@@ -260,7 +260,7 @@ const Contact = () => {
                             name="email"
                             id="email"
                             value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                         />
                     </Field>
@@ -271,7 +271,7 @@ const Contact = () => {
                             name="message"
                             id="message"
                             rows="10"
-                            onChange={e => setMessage(e.target.value)}
+                            onChange={(e) => setMessage(e.target.value)}
                             value={message}
                             required
                         />

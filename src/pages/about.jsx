@@ -22,7 +22,7 @@ const ImageCaption = styled.p`
     text-align: center;
 `;
 
-const onRenderContent = target => {
+const onRenderContent = (target) => {
     const { rhImage } = target.dataset;
 
     return (

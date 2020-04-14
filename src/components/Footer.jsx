@@ -12,7 +12,7 @@ const FooterComponent = styled.footer`
     flex: 0 1 80%;
     margin: 0 auto;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         flex: 1 0 100%;
     }
 `;

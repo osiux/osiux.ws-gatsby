@@ -20,7 +20,7 @@ const Nav = styled.nav`
     flex-wrap: wrap;
     margin-bottom: 10px;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         justify-content: flex-end;
         align-items: center;
     }
@@ -33,10 +33,10 @@ const DarkModeButton = styled.button`
     border: 0;
     order: 2;
     outline: 0;
-    color: ${props => props.theme.colors.text};
-    transition: color ${props => props.theme.transition};
+    color: ${(props) => props.theme.colors.text};
+    transition: color ${(props) => props.theme.transition};
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         order: 3;
     }
 `;
@@ -46,15 +46,15 @@ const ToggleMenuButton = styled.button`
     font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
-    border: 1px solid ${props => props.theme.colors.text};
+    border: 1px solid ${(props) => props.theme.colors.text};
     border-radius: 0.25rem;
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
     cursor: pointer;
     outline: 0;
     order: 3;
     margin: 3px 10px 0 0;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         display: none;
     }
 `;
@@ -65,7 +65,7 @@ const NavListItem = styled.li`
     width: 100%;
     text-align: center;
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         width: auto;
         display: block;
     }
@@ -75,16 +75,16 @@ const NavLink = styled(Link)`
     display: inline-block;
     text-decoration: none;
     padding: 5px 0;
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
     font-family: 'Oswald', sans-serif;
     width: 100%;
-    transition: ${props => `color ${props.theme.transition}`};
+    transition: ${(props) => `color ${props.theme.transition}`};
 
     &:hover {
         text-decoration: underline;
     }
 
-    ${props => props.theme.breakpoints.desktop} {
+    ${(props) => props.theme.breakpoints.desktop} {
         padding: 10px 15px;
     }
 `;
@@ -93,7 +93,7 @@ const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { dark, toggle } = useContext(DarkModeContext);
 
-    const _toggleMenu = () => setMenuOpen(prev => !prev);
+    const _toggleMenu = () => setMenuOpen((prev) => !prev);
 
     const NavList = styled.ul`
         list-style: none;
@@ -105,7 +105,7 @@ const Navigation = ({ siteTitle }) => {
         width: 100%;
         order: 3;
 
-        ${props => props.theme.breakpoints.desktop} {
+        ${(props) => props.theme.breakpoints.desktop} {
             order: 2;
             width: auto;
             display: flex;
@@ -122,7 +122,7 @@ const Navigation = ({ siteTitle }) => {
         <Nav>
             <Link
                 to="/"
-                css={theme => css`
+                css={(theme) => css`
                     align-self: flex-start;
                     padding: 5px 0 0 10px;
                     display: inline-block;

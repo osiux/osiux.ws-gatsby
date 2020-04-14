@@ -25,6 +25,6 @@ const darkTheme = {
     },
 };
 
-const theme = mode => (mode === 'dark' ? darkTheme : lightTheme);
+const theme = (mode) => (mode === 'dark' ? darkTheme : lightTheme);
 
 export default theme;
