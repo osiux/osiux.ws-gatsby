@@ -5,8 +5,8 @@ const lightTheme = {
         headings: "'Oswald', sans-serif",
     },
     colors: {
-        background: '#fdfffc',
-        text: '#0a090c',
+        background: '#fff',
+        text: '#111',
         link: '#ec003b',
     },
     breakpoints: {
@@ -20,8 +20,8 @@ const darkTheme = {
     colors: {
         ...lightTheme.colors,
         background: '#292d35',
-        text: '#f4f9ff',
-        link: '#ff557f',
+        text: '#fff',
+        link: '#7fdbff',
     },
 };
 

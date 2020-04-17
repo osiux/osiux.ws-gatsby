@@ -21,15 +21,12 @@ const useLocalStorage = (key, initialValue) => {
     const setValue = useCallback(
         (value) => {
             try {
-                const valueToStore =
-                    value instanceof Function ? value(storedValue) : value;
-
-                setStoredValue(valueToStore);
+                setStoredValue(value);
 
                 if (typeof window !== `undefined`) {
                     window.localStorage.setItem(
                         key,
-                        JSON.stringify(valueToStore),
+                        JSON.stringify(value),
                     );
                 }
             } catch (error) {
