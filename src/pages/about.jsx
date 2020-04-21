@@ -53,10 +53,8 @@ const About = () => (
                     <UnderlineSpan data-rh="Laravel, React">
                         Full Stack Developer
                     </UnderlineSpan>{' '}
-                    living in Mexico City, currently working remotely at{' '}
-                    <OutboundLink href="https://gumgum.com/sports">
-                        GumGum Sports
-                    </OutboundLink>
+                    living in Mexico City, currently looking for job
+                    opportunities (remote prefered).
                 </p>
                 <p>
                     Proudly married to a great{' '}
