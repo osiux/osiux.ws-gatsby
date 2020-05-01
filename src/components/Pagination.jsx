@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,16 +11,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const PaginationContainer = styled.nav`
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    ${tw`flex justify-center mb-5`};
 `;
 
 const Paginator = styled.ul`
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    ${tw`list-none m-0 p-0 flex`};
 `;
 
 const Item = styled.li`

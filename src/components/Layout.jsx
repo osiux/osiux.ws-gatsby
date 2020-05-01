@@ -19,12 +19,7 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-    ${tw`max-w-full py-0 pt-4 pb-2`}
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        margin-top: 10px;
-        padding: 0;
-    }
+    ${tw`max-w-full py-0 pt-4 pb-2 md:p-0 md:mt-2`}
 `;
 
 const Layout = ({ children }) => {

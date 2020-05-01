@@ -1,23 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Post from '../components/posts/Post';
 
 const Title = styled.h1`
     ${tw`text-3xl font-bold`};
-`;
-
-const ArticleTitle = styled.h2`
-    ${tw`text-2xl font-bold`};
-    margin: 5px 0;
-`;
-
-const Meta = styled.p`
-    ${tw`text-base`};
-    margin: 5px 0;
 `;
 
 const IndexPage = () => {
@@ -50,17 +41,7 @@ const IndexPage = () => {
             <SEO title="Home" />
             <Title>Latests Blog Posts</Title>
             {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
-                return (
-                    <Fragment key={node.id}>
-                        <ArticleTitle>
-                            <Link to={`/blog/${node.fields.slug}`}>
-                                {node.frontmatter.title}
-                            </Link>
-                        </ArticleTitle>
-                        <Meta>Published on {node.frontmatter.date}</Meta>
-                        <p>{node.excerpt}</p>
-                    </Fragment>
-                );
+                return <Post key={node.id} node={node} />;
             })}
         </Layout>
     );

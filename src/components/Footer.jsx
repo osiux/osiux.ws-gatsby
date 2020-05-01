@@ -1,19 +1,17 @@
 import React from 'react';
+import tw from 'twin.macro';
 import styled from '@emotion/styled';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const FooterComponent = styled.footer`
-    text-align: center;
+    ${tw`text-center my-0 mx-auto flex-grow-0 md:flex-grow flex-shrink md:flex-shrink-0 pt-5 border-t border-dotted border-black`};
     font-size: 14px;
-    border-top: 1px dotted #000;
-    padding-top: 10px;
-    flex: 0 1 80%;
-    margin: 0 auto;
+    flex-basis: 80%;
 
     ${(props) => props.theme.breakpoints.desktop} {
-        flex: 1 0 100%;
+        flex-basis: 100%;
     }
 `;
 
