@@ -1,9 +1,7 @@
 import React from 'react';
+import tw from 'twin.macro';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Global } from '@emotion/core';
 import styled from '@emotion/styled';
-
-import mainStyles from '../styles/global';
 
 import Footer from './Footer';
 import Navigation from './Navigation';
@@ -11,19 +9,17 @@ import Navigation from './Navigation';
 import { DarkModeProvider } from '../context/DarkModeContext';
 
 const Container = styled.div`
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
+    ${tw`font-sans my-0 mx-auto flex flex-row flex-wrap max-w-screen-lg`}
+    /* max-width: 900px; */
 
     & > * {
-        flex: 1 100%;
+        ${tw`flex-initial`}
+        /* flex: 1 100%; */
     }
 `;
 
 const Main = styled.main`
-    padding: 0 15px 0 10px;
-    max-width: 100%;
+    ${tw`max-w-full py-0 pt-4 pb-2`}
 
     ${(props) => props.theme.breakpoints.desktop} {
         margin-top: 10px;
@@ -44,7 +40,6 @@ const Layout = ({ children }) => {
 
     return (
         <DarkModeProvider>
-            <Global styles={mainStyles} />
             <Container>
                 <Navigation siteTitle={data.site.siteMetadata.title} />
                 <Main>{children}</Main>

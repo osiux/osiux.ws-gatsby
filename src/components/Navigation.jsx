@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,12 +14,7 @@ import {
 import { DarkModeContext } from '../context/DarkModeContext';
 
 const Nav = styled.nav`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+    ${tw`flex flex-row justify-start items-center flex-wrap mb-2`}
 
     ${(props) => props.theme.breakpoints.desktop} {
         justify-content: flex-end;
@@ -27,12 +23,7 @@ const Nav = styled.nav`
 `;
 
 const DarkModeButton = styled.button`
-    background-color: transparent;
-    padding: 0;
-    margin: 0 1em 0 0;
-    border: 0;
-    order: 2;
-    outline: 0;
+    ${tw`bg-transparent p-0 border-0 order-2 outline-none m-0 mt-4`};
     color: ${(props) => props.theme.colors.text};
     transition: color ${(props) => props.theme.transition};
 
@@ -60,10 +51,7 @@ const ToggleMenuButton = styled.button`
 `;
 
 const NavListItem = styled.li`
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
+    ${tw`m-0 p-0 w-full text-center`}
 
     ${(props) => props.theme.breakpoints.desktop} {
         width: auto;
@@ -72,16 +60,14 @@ const NavListItem = styled.li`
 `;
 
 const NavLink = styled(Link)`
-    display: inline-block;
-    text-decoration: none;
+    ${tw`inline-block no-underline w-full`}
     padding: 5px 0;
     color: ${(props) => props.theme.colors.text};
     font-family: 'Oswald', sans-serif;
-    width: 100%;
     transition: ${(props) => `color ${props.theme.transition}`};
 
     &:hover {
-        text-decoration: underline;
+        ${tw`underline`};
     }
 
     ${(props) => props.theme.breakpoints.desktop} {

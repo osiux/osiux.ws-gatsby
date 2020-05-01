@@ -1,16 +1,22 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
+const Title = styled.h1`
+    ${tw`text-3xl font-bold`};
+`;
+
 const ArticleTitle = styled.h2`
+    ${tw`text-2xl font-bold`};
     margin: 5px 0;
 `;
 
 const Meta = styled.p`
-    font-size: 15px;
+    ${tw`text-base`};
     margin: 5px 0;
 `;
 
@@ -42,7 +48,7 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <h1>Latests Blog Posts</h1>
+            <Title>Latests Blog Posts</Title>
             {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
                 return (
                     <Fragment key={node.id}>
