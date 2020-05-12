@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import styled from '@emotion/styled';
-import tw from 'twin.macro';
+import tw from '@tailwindcssinjs/macro';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,16 +22,14 @@ const DarkModeButton = styled.button`
 `;
 
 const ToggleMenuButton = styled.button`
+    ${tw`text-black dark:text-white order-3 outline-none`}
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
     border: 1px solid ${(props) => props.theme.colors.text};
     border-radius: 0.25rem;
-    color: ${(props) => props.theme.colors.text};
     cursor: pointer;
-    outline: 0;
-    order: 3;
     margin: 3px 10px 0 0;
 
     ${(props) => props.theme.breakpoints.desktop} {

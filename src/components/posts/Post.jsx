@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
-import tw from 'twin.macro';
+import tw from '@tailwindcssinjs/macro';
 import { Link } from 'gatsby';
 
 const ArticleTitle = styled.h2`

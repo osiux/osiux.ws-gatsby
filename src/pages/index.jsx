@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import tw from 'twin.macro';
+import tw from '@tailwindcssinjs/macro';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from 'emotion-theming';
 
 import theme from '../styles/theme';
@@ -14,6 +14,14 @@ const DarkModeContext = React.createContext(defaultContextData);
 
 const DarkModeProvider = ({ children }) => {
     const [darkModeEnabled, setDarkModeEnabled] = useDarkMode();
+
+    useEffect(() => {
+        if (darkModeEnabled) {
+            document.documentElement.classList.add('theme-dark');
+        } else {
+            document.documentElement.classList.remove('theme-dark');
+        }
+    }, [darkModeEnabled]);
 
     const computedTheme = darkModeEnabled ? theme('dark') : theme('light');
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import tw from 'twin.macro';
+import tw from '@tailwindcssinjs/macro';
 import styled from '@emotion/styled';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
