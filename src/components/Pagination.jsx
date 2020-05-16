@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import tw from '@tailwindcssinjs/macro';
+import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,13 +10,9 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const PaginationContainer = styled.nav`
-    ${tw`flex justify-center mb-5`};
-`;
+const PaginationContainer = tw.nav`flex justify-center mb-5`;
 
-const Paginator = styled.ul`
-    ${tw`list-none m-0 p-0 flex`};
-`;
+const Paginator = tw.ul`list-none m-0 p-0 flex`;
 
 const Item = styled.li`
     margin: 0 5px;

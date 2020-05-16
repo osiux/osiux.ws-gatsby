@@ -1,15 +1,12 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import tw from '@tailwindcssinjs/macro';
+import tw from 'twin.macro';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Post from '../components/posts/Post';
 
-const Title = styled.h1`
-    ${tw`text-3xl font-bold`};
-`;
+const Title = tw.h1`text-3xl font-bold`;
 
 const IndexPage = () => {
     const latestPosts = useStaticQuery(graphql`

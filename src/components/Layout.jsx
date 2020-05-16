@@ -1,13 +1,11 @@
 import React from 'react';
-import tw from '@tailwindcssinjs/macro';
+import tw from 'twin.macro';
 import { css, Global } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 
 import Footer from './Footer';
 import Navigation from './Navigation';
-
-import '../styles/tailwind.base.css';
 
 import { DarkModeProvider } from '../context/DarkModeContext';
 
@@ -20,9 +18,7 @@ const Container = styled.div`
     }
 `;
 
-const Main = styled.main`
-    ${tw`max-w-full py-0 pt-4 pb-2 md:p-0 md:mt-2`}
-`;
+const Main = tw.main`max-w-full py-0 pt-4 pb-2 md:p-0 md:mt-2`;
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`

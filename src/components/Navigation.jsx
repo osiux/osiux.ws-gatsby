@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
+import tw from 'twin.macro';
 import styled from '@emotion/styled';
-import tw from '@tailwindcssinjs/macro';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,16 +13,25 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = styled.nav`
-    ${tw`flex flex-row justify-start items-center flex-wrap mb-2 md:justify-end md:items-center w-full`}
-`;
+const Nav = tw.nav`flex flex-row justify-start items-center flex-wrap mb-2 md:justify-end md:items-center w-full`;
 
-const DarkModeButton = styled.button`
-    ${tw`bg-transparent p-0 border-0 order-2 outline-none m-0 mt-4 text-black transition-colors duration-500 ease-linear md:order-3`};
+const DarkModeButton = tw.button`
+    bg-transparent
+    p-0
+    border-0
+    order-2
+    outline-none
+    m-0
+    mt-4
+    text-black
+    transition-colors
+    duration-500 
+    ease-linear 
+    md:order-3
 `;
 
 const ToggleMenuButton = styled.button`
-    ${tw`text-black dark:text-white order-3 outline-none`}
+    ${tw`text-black order-3 outline-none`}
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
@@ -37,9 +46,7 @@ const ToggleMenuButton = styled.button`
     }
 `;
 
-const NavListItem = styled.li`
-    ${tw`m-0 p-0 w-full text-center md:w-auto md:block`}
-`;
+const NavListItem = tw.li`m-0 p-0 w-full text-center md:w-auto md:block`;
 
 const NavLink = styled(Link)`
     ${tw`inline-block no-underline w-full text-black transition-colors duration-500 ease-linear`}

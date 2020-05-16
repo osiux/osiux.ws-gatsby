@@ -6,7 +6,6 @@ module.exports = {
         siteUrl: `https://www.osiux.ws/`,
     },
     plugins: [
-        `gatsby-plugin-postcss`,
         `gatsby-plugin-emotion`,
         {
             resolve: `gatsby-plugin-lodash`,
