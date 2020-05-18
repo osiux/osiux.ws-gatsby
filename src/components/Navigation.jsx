@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import tw from 'twin.macro';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -13,7 +13,7 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = tw.nav`flex items-center bg-header p-3 flex-wrap border-b border-black h-auto transition-colors duration-500 ease-linear`;
+const Nav = tw.nav`flex items-center bg-header p-3 flex-wrap border-b border-black h-auto w-full z-10 transition-colors duration-500 ease-linear`;
 
 const DarkModeButton = tw.button`
     bg-transparent
@@ -51,6 +51,20 @@ const LinksContainer = tw.div`w-full items-start flex flex-col md:inline-flex md
 const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { dark, toggle } = useContext(DarkModeContext);
+
+    const onScroll = () => {
+        if (window.scrollY > 20) {
+            document.documentElement.classList.add('scrolled');
+        } else {
+            document.documentElement.classList.remove('scrolled');
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll);
+
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     const _toggleMenu = () => setMenuOpen((prev) => !prev);
 

@@ -26,7 +26,7 @@ const IndexPage = () => {
                         fields {
                             slug
                         }
-                        excerpt(pruneLength: 100, truncate: false)
+                        excerpt(pruneLength: 300, truncate: false)
                     }
                 }
             }

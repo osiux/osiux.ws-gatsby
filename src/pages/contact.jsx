@@ -29,9 +29,7 @@ const Form = styled.form`
     margin: 10px auto 0;
     flex-direction: column;
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        width: 80%;
-    }
+    /* width: 80%; */
 `;
 
 const Field = styled.div`
@@ -40,83 +38,69 @@ const Field = styled.div`
     margin-bottom: 10px;
     flex-direction: column;
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        flex-direction: row;
-    }
+    /* flex-direction: row; */
 `;
 
 const Label = styled.label`
     flex: 1;
     margin-bottom: 2px;
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        flex: 1 0 30%;
-        margin-bottom: 0;
-    }
+    /* flex: 1 0 30%;
+        margin-bottom: 0; */
 `;
 
-const baseInput = (theme) => css`
+const baseInput = css`
     padding: 5px;
-    border: 1px solid ${theme.colors.text};
+    border: 1px solid black;
     flex: 1;
-    background-color: ${theme.colors.background};
-    color: ${theme.colors.text};
-    transition: background-color ${theme.transition}, color ${theme.transition},
-        border ${theme.transition};
+    background-color: white;
+    color: black;
 
-    ${theme.breakpoints.desktop} {
-        flex: 2 0 70%;
-    }
+        /* flex: 2 0 70%; */
 `;
 
 const Input = styled.input`
-    ${(props) => baseInput(props.theme)}
+    ${baseInput}
 `;
 
 const TextArea = styled.textarea`
-    ${(props) => baseInput(props.theme)}
+    ${baseInput}
 `;
 
 const Button = styled.button`
-    background: ${(props) => props.theme.colors.text};
-    color: ${(props) => props.theme.colors.background};
+    background: white;
+    color: black;
     border: 0;
     padding: 10px;
     width: 100%;
     align-self: flex-end;
     outline: 0;
-    transition: ${(props) =>
-            `background-color ${props.theme.transition}, color ${props.theme.transition}`}
         &[disabled] {
-        background-color: #ccc;
+        /* background-color: #ccc; */
     }
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        width: auto;
-        padding: 10px 20px;
-    }
+        /* width: auto;
+        padding: 10px 20px; */
 `;
 
-const baseMessage = (theme) => css`
+const baseMessage = css`
     width: 100%;
     text-align: center;
     margin: 0 auto;
     padding: 5px;
     border: 1px dotted;
 
-    ${theme.breakpoints.desktop} {
-        width: 80%;
-    }
+    /* width: 80%; */
 `;
 
 const Success = styled.p`
-    ${(props) => baseMessage(props.theme)}
+    ${baseMessage}
     color: #4f8a10;
     background: #dff2bf;
 `;
 
 const Error = styled.p`
-    ${(props) => baseMessage(props.theme)}
+    ${baseMessage}
     color: #d8000c;
     background: #ffd2d2;
 `;

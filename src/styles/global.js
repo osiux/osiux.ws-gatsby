@@ -1,3 +1,4 @@
+import tw from 'twin.macro';
 import { css } from '@emotion/core';
 
 const global = css`
@@ -38,8 +39,12 @@ const global = css`
         transition-duration: 500ms;
         transition-timing-function: linear;
 
-        &.anchor svg {
-            fill: var(--color-link);
+        &.anchor {
+            top: 17px !important;
+
+            svg {
+                fill: var(--color-link);
+            }
         }
     }
 
@@ -176,10 +181,6 @@ const global = css`
         overflow-x: auto;
         max-width: 100%;
     }
-    pre:hover,
-    pre:focus {
-        width: min-content;
-    }
     tt,
     code {
         background-color: hsla(0, 0%, 0%, 0.04);
@@ -214,6 +215,16 @@ const global = css`
         margin: 2px;
         color: #444;
         text-decoration: none;
+    }
+
+    .scrolled {
+        nav:first-of-type {
+            ${tw`fixed shadow-md`}
+        }
+
+        main {
+            ${tw`mt-32`}
+        }
     }
 `;
 
