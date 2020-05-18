@@ -10,9 +10,9 @@ import { DarkModeProvider } from '../context/DarkModeContext';
 
 import global from '../styles/global';
 
-const Container = tw.div`container mx-auto`;
+const Container = tw.div`h-screen grid grid-rows-layout`;
 
-const Main = tw.main`max-w-full py-0 pt-4 pb-2 shadow-2xl md:p-5 md:mt-2`;
+const Main = tw.main`p-5 container shadow-2xl mx-auto`;
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`

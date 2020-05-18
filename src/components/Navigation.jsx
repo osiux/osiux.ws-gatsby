@@ -13,10 +13,7 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = styled.nav`
-    ${tw`flex items-center p-3 flex-wrap border-b border-secondary transition-colors duration-500 ease-linear`}
-    box-shadow: 0 3px 5px -3px var(--color-secondary);
-`;
+const Nav = tw.nav`flex items-center p-3 flex-wrap border-b border-black h-auto transition-colors duration-500 ease-linear`;
 
 const DarkModeButton = tw.button`
     bg-transparent
@@ -32,14 +29,14 @@ const DarkModeButton = tw.button`
 `;
 
 const ToggleMenuButton = tw.button`
-    text-secondary inline-flex p-3 rounded lg:hidden ml-0 outline-none
+    text-secondary inline-flex p-3 rounded md:hidden ml-0 outline-none
     transition-colors
     duration-500 
     ease-linear
 `;
 
 const NavLink = styled(Link)`
-    ${tw`w-full px-3 py-2 text-secondary items-center justify-center hover:underline lg:inline-flex lg:w-auto 
+    ${tw`w-full px-3 py-2 text-secondary items-center justify-center hover:underline md:inline-flex md:w-auto 
     transition-colors
     duration-500 
     ease-linear`}
@@ -49,7 +46,7 @@ const NavLink = styled(Link)`
     }
 `;
 
-const LinksContainer = tw.div`w-full items-start flex flex-col lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto`;
+const LinksContainer = tw.div`w-full items-start flex flex-col md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center md:h-auto`;
 
 const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -58,7 +55,7 @@ const Navigation = ({ siteTitle }) => {
     const _toggleMenu = () => setMenuOpen((prev) => !prev);
 
     const NavList = styled.div`
-        ${tw`hidden w-full lg:inline-flex lg:flex-grow lg:w-auto`}
+        ${tw`hidden w-full md:inline-flex md:flex-grow md:w-auto`}
         display: ${menuOpen ? 'flex' : 'none'};
 
         .current {

@@ -4,7 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const FooterComponent = tw.footer`bg-secondary text-primary py-8 px-4 text-center transition-colors duration-500 ease-linear`;
+const FooterComponent = tw.footer`bg-black text-white py-8 px-4 text-center transition-colors duration-500 ease-linear`;
 
 const Footer = () => (
     <FooterComponent>
