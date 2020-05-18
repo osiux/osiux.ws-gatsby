@@ -1,19 +1,10 @@
 import React from 'react';
 import tw from 'twin.macro';
-import styled from '@emotion/styled';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const FooterComponent = styled.footer`
-    ${tw`text-center my-0 mx-auto flex-grow-0 md:flex-grow flex-shrink md:flex-shrink-0 pt-5 border-t border-dotted border-black`};
-    font-size: 14px;
-    flex-basis: 80%;
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        flex-basis: 100%;
-    }
-`;
+const FooterComponent = tw.footer`bg-secondary text-primary py-8 px-4 text-center transition-colors duration-500 ease-linear`;
 
 const Footer = () => (
     <FooterComponent>

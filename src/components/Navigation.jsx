@@ -13,54 +13,43 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = tw.nav`flex flex-row justify-start items-center flex-wrap mb-2 md:justify-end md:items-center w-full`;
+const Nav = styled.nav`
+    ${tw`flex items-center p-3 flex-wrap border-b border-secondary transition-colors duration-500 ease-linear`}
+    box-shadow: 0 3px 5px -3px var(--color-secondary);
+`;
 
 const DarkModeButton = tw.button`
     bg-transparent
-    p-0
-    border-0
-    order-2
+    inline-flex
+    p-3
+    ml-auto
     outline-none
-    m-0
-    mt-4
-    text-black
+    text-secondary
     transition-colors
     duration-500 
-    ease-linear 
+    ease-linear
     md:order-3
 `;
 
-const ToggleMenuButton = styled.button`
-    ${tw`text-black order-3 outline-none`}
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid ${(props) => props.theme.colors.text};
-    border-radius: 0.25rem;
-    cursor: pointer;
-    margin: 3px 10px 0 0;
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        display: none;
-    }
+const ToggleMenuButton = tw.button`
+    text-secondary inline-flex p-3 rounded lg:hidden ml-0 outline-none
+    transition-colors
+    duration-500 
+    ease-linear
 `;
-
-const NavListItem = tw.li`m-0 p-0 w-full text-center md:w-auto md:block`;
 
 const NavLink = styled(Link)`
-    ${tw`inline-block no-underline w-full text-black transition-colors duration-500 ease-linear`}
-    padding: 5px 0;
-    font-family: 'Oswald', sans-serif;
+    ${tw`w-full px-3 py-2 text-secondary items-center justify-center hover:underline lg:inline-flex lg:w-auto 
+    transition-colors
+    duration-500 
+    ease-linear`}
 
-    &:hover {
-        ${tw`underline`};
-    }
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        padding: 10px 15px;
+    .current {
+        ${tw`underline`}
     }
 `;
+
+const LinksContainer = tw.div`w-full items-start flex flex-col lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto`;
 
 const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -68,8 +57,8 @@ const Navigation = ({ siteTitle }) => {
 
     const _toggleMenu = () => setMenuOpen((prev) => !prev);
 
-    const NavList = styled.ul`
-        ${tw`list-none flex-wrap items-center m-0 p-0 w-full order-3 md:order-2 md:w-auto md:flex md:flex-wrap md:flex-row md:justify-end`}
+    const NavList = styled.div`
+        ${tw`hidden w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         display: ${menuOpen ? 'flex' : 'none'};
 
         .current {
@@ -81,14 +70,8 @@ const Navigation = ({ siteTitle }) => {
         <Nav>
             <Link
                 to="/"
-                css={(theme) => css`
-                    ${tw`self-start inline-block text-black text-5xl no-underline capitalize order-1 w-auto outline-none flex-grow transition-colors duration-500 ease-linear`}
-                    padding: 5px 0 0 10px;
-                    font-family: 'Oswald', sans-serif;
-
-                    ${theme.breakpoints.desktop} {
-                        padding: 5px 0 0;
-                    }
+                css={css`
+                    ${tw`text-xl text-secondary font-bold transition-colors duration-500 ease-linear`}
                 `}
             >
                 {siteTitle}
@@ -108,7 +91,7 @@ const Navigation = ({ siteTitle }) => {
                 <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
             </ToggleMenuButton>
             <NavList>
-                <NavListItem>
+                <LinksContainer>
                     <NavLink
                         to="/blog"
                         activeClassName="current"
@@ -116,8 +99,6 @@ const Navigation = ({ siteTitle }) => {
                     >
                         Blog
                     </NavLink>
-                </NavListItem>
-                <NavListItem>
                     <NavLink
                         to="/about"
                         activeClassName="current"
@@ -125,12 +106,10 @@ const Navigation = ({ siteTitle }) => {
                     >
                         About
                     </NavLink>
-                </NavListItem>
-                <NavListItem>
                     <NavLink to="/contact" activeClassName="current">
                         Contact
                     </NavLink>
-                </NavListItem>
+                </LinksContainer>
             </NavList>
         </Nav>
     );
