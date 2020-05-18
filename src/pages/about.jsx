@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import ReactHintFactory from 'react-hint';
-import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
@@ -13,14 +13,11 @@ import Me from '../components/images/me';
 
 const ReactHint = ReactHintFactory(React);
 
-const UnderlineSpan = styled.span`
-    text-decoration: underline dotted;
-    cursor: pointer;
-`;
+const UnderlineSpan = tw.span`cursor-pointer border-b border-secondary border-dotted transition-colors
+duration-500 
+ease-linear`;
 
-const ImageCaption = styled.p`
-    text-align: center;
-`;
+const ImageCaption = tw.p`text-center`;
 
 const onRenderContent = (target) => {
     const { rhImage } = target.dataset;

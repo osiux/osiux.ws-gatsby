@@ -12,7 +12,7 @@ import global from '../styles/global';
 
 const Container = tw.div`h-screen grid grid-rows-layout`;
 
-const Main = tw.main`p-5 container shadow-2xl mx-auto`;
+const Main = tw.main`p-5 container mx-auto shadow-2xl`;
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`

@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from 'emotion-theming';
-
-import theme from '../styles/theme';
 
 import useDarkMode from '../hooks/useDarkMode';
 
@@ -23,19 +20,15 @@ const DarkModeProvider = ({ children }) => {
         }
     }, [darkModeEnabled]);
 
-    const computedTheme = darkModeEnabled ? theme('dark') : theme('light');
-
     return (
-        <ThemeProvider theme={computedTheme}>
-            <DarkModeContext.Provider
-                value={{
-                    dark: darkModeEnabled,
-                    toggle: () => setDarkModeEnabled(!darkModeEnabled),
-                }}
-            >
-                {children}
-            </DarkModeContext.Provider>
-        </ThemeProvider>
+        <DarkModeContext.Provider
+            value={{
+                dark: darkModeEnabled,
+                toggle: () => setDarkModeEnabled(!darkModeEnabled),
+            }}
+        >
+            {children}
+        </DarkModeContext.Provider>
     );
 };
 

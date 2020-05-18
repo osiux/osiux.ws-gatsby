@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Img from 'gatsby-image';
-import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { StaticQuery, graphql } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
@@ -20,10 +20,7 @@ const NonStretchedImage = (props) => {
     return <Img {...normalizedProps} />;
 };
 
-const PhotoCredit = styled.p`
-    text-align: center;
-    font-size: 15px;
-`;
+const PhotoCredit = tw.p`text-center text-sm mb-3`;
 
 const Me = () => (
     <StaticQuery

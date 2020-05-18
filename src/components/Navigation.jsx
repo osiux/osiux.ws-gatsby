@@ -13,7 +13,7 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = tw.nav`flex items-center p-3 flex-wrap border-b border-black h-auto transition-colors duration-500 ease-linear`;
+const Nav = tw.nav`flex items-center bg-header p-3 flex-wrap border-b border-black h-auto transition-colors duration-500 ease-linear`;
 
 const DarkModeButton = tw.button`
     bg-transparent
@@ -56,7 +56,7 @@ const Navigation = ({ siteTitle }) => {
 
     const NavList = styled.div`
         ${tw`hidden w-full md:inline-flex md:flex-grow md:w-auto`}
-        display: ${menuOpen ? 'flex' : 'none'};
+        display: ${menuOpen ? 'block' : 'none'};
 
         .current {
             ${tw`underline`};

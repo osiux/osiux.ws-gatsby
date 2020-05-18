@@ -5461,15 +5461,6 @@ emojis-list@^3.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
 
-emotion-theming@^10.0.27:
-  version "10.0.27"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.27.tgz#1887baaec15199862c89b1b984b79806f2b9ab10"
-  integrity sha512-MlF1yu/gYh8u+sLUqA0YuA9JX0P4Hb69WlKc/9OLo+WCXuX6sy/KoIa+qJimgmr2dWqnypYKYPX37esjDBbhdw==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    "@emotion/weak-memoize" "0.2.5"
-    hoist-non-react-statics "^3.3.0"
-
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
@@ -14873,15 +14864,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-oswald@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/typeface-oswald/-/typeface-oswald-1.1.4.tgz#2025c5b11ba8b40475166edb80d921a707a1f627"
-  integrity sha512-3UxtnnFXc++Qf84KakDGpvQLis/n9KjZ29BRqkfN9HpVK/oMi+Nk0l5LMDSGtlzzAZ2sqbNJszkmIdr5r+zHmQ==
+typeface-open-sans@^0.0.75:
+  version "0.0.75"
+  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.75.tgz#20d0c330f14c0c40463c334adbedd6005389abe4"
+  integrity sha512-0lLmB7pfj113OP4T78SbpSmC4OCdFQ0vUxdSXQccsSb6qF76F92iEuC/DghFgmPswTyidk8+Hwf+PS/htiJoRQ==
 
-typeface-pt-sans@^0.0.72:
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/typeface-pt-sans/-/typeface-pt-sans-0.0.72.tgz#c47d198510b2ed1272ad6329cf1ae5f782ebf4cf"
-  integrity sha512-eDMv72dE+0dwjIDltzZAUusF+cDgOfZKazHZK08uKCOG/BEzY6oc/WqtQLN71j5/voTXFi5M4+nXNbZnCayDMQ==
+typeface-roboto@^0.0.75:
+  version "0.0.75"
+  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.75.tgz#98d5ba35ec234bbc7172374c8297277099cc712b"
+  integrity sha512-VrR/IiH00Z1tFP4vDGfwZ1esNqTiDMchBEXYY9kilT6wRGgFoCAlgkEUMHb1E3mB0FsfZhv756IF0+R+SFPfdg==
 
 ua-parser-js@^0.7.18:
   version "0.7.21"

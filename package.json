@@ -11,7 +11,6 @@
         "@fortawesome/free-brands-svg-icons": "^5.13.0",
         "@fortawesome/free-solid-svg-icons": "^5.13.0",
         "@fortawesome/react-fontawesome": "^0.1.9",
-        "emotion-theming": "^10.0.27",
         "gatsby": "^2.21.33",
         "gatsby-image": "^2.4.3",
         "gatsby-plugin-catch-links": "^2.3.1",
@@ -44,8 +43,8 @@
         "react-hint": "^3.2.0",
         "react-typography": "^0.16.19",
         "tailwindcss": "^1.4.6",
-        "typeface-oswald": "^1.1.4",
-        "typeface-pt-sans": "^0.0.72"
+        "typeface-open-sans": "^0.0.75",
+        "typeface-roboto": "^0.0.75"
     },
     "devDependencies": {
         "@babel/core": "^7.9.6",

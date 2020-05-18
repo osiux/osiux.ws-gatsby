@@ -10,38 +10,27 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const PaginationContainer = tw.nav`flex justify-center mb-5`;
+const PaginationContainer = tw.nav`flex justify-center my-5`;
 
 const Paginator = tw.ul`list-none m-0 p-0 flex`;
 
 const Item = styled.li`
-    margin: 0 5px;
+    ${tw`mx-1`}
 
     .disabled {
-        color: #ccc;
+        ${tw`text-gray-800`}
     }
 
     &.number {
-        display: none;
-
-        ${(props) => props.theme.breakpoints.desktop} {
-            display: inline-block;
-        }
+        ${tw`hidden md:inline-block`}
     }
 `;
 
 const ItemLink = styled(Link)`
-    text-decoration: none;
-    border: 1px solid ${(props) => props.theme.colors.text};
-    padding: 2px 2px;
-    min-width: 25px;
-    text-align: center;
-    font-size: 14px;
-    display: inline-block;
+    ${tw`no-underline text-center inline-block border border-solid border-secondary p-1 w-8 text-sm`}
 
     &.current {
-        background: ${(props) => props.theme.colors.text};
-        color: ${(props) => props.theme.colors.background};
+        ${tw`bg-secondary text-primary`}
     }
 `;
 
