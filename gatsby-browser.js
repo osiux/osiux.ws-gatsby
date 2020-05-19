@@ -1,11 +1,12 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
 
+import 'tailwindcss/dist/base.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'react-hint/css/index.css';
 import 'gatsby-remark-vscode/styles.css';
 
-import 'typeface-oswald';
-import 'typeface-pt-sans';
+import 'typeface-roboto';
+import 'typeface-open-sans';
 
 config.autoAddCss = false;
 

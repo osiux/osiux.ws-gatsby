@@ -37,7 +37,12 @@ module.exports = {
                 pedantic: true,
                 gfm: true,
                 plugins: [
-                    `gatsby-remark-autolink-headers`,
+                    {
+                        resolve: `gatsby-remark-autolink-headers`,
+                        options: {
+                            offsetY: 100,
+                        },
+                    },
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
@@ -48,13 +53,7 @@ module.exports = {
                         resolve: `gatsby-remark-vscode`,
                         options: {
                             injectStyles: false,
-                            theme: {
-                                default: 'Monokai Dimmed',
-                                parentSelector: {
-                                    '.use-light-theme': 'Solarized Light',
-                                    '.use-dark-theme': 'Monokai Dimmed',
-                                },
-                            },
+                            theme: 'Monokai',
                         },
                     },
                     `gatsby-remark-embedder`,
@@ -138,6 +137,13 @@ module.exports = {
             },
         },
         `gatsby-plugin-catch-links`,
+        {
+            resolve: `gatsby-plugin-canonical-urls`,
+            options: {
+                siteUrl: `https://www.osiux.ws`,
+                stripQueryString: true,
+            },
+        },
         `gatsby-plugin-offline`,
         {
             resolve: `gatsby-plugin-google-analytics`,

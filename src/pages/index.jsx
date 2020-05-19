@@ -1,18 +1,12 @@
-import React, { Fragment } from 'react';
-import styled from '@emotion/styled';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import React from 'react';
+import tw from 'twin.macro';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Post from '../components/posts/Post';
 
-const ArticleTitle = styled.h2`
-    margin: 5px 0;
-`;
-
-const Meta = styled.p`
-    font-size: 15px;
-    margin: 5px 0;
-`;
+const Title = tw.h1`text-3xl font-bold`;
 
 const IndexPage = () => {
     const latestPosts = useStaticQuery(graphql`
@@ -32,7 +26,7 @@ const IndexPage = () => {
                         fields {
                             slug
                         }
-                        excerpt(pruneLength: 100, truncate: false)
+                        excerpt(pruneLength: 300, truncate: false)
                     }
                 }
             }
@@ -42,19 +36,9 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <h1>Latests Blog Posts</h1>
+            <Title>Latests Blog Posts</Title>
             {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
-                return (
-                    <Fragment key={node.id}>
-                        <ArticleTitle>
-                            <Link to={`/blog/${node.fields.slug}`}>
-                                {node.frontmatter.title}
-                            </Link>
-                        </ArticleTitle>
-                        <Meta>Published on {node.frontmatter.date}</Meta>
-                        <p>{node.excerpt}</p>
-                    </Fragment>
-                );
+                return <Post key={node.id} node={node} />;
             })}
         </Layout>
     );

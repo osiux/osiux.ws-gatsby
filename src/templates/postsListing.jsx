@@ -1,19 +1,10 @@
-import React, { Fragment } from 'react';
-import styled from '@emotion/styled';
-import { graphql, Link } from 'gatsby';
+import React from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Pagination from '../components/Pagination';
-
-const ArticleTitle = styled.h2`
-    margin: 5px 0;
-`;
-
-const Meta = styled.p`
-    font-size: 15px;
-    margin: 10px 0;
-`;
+import Post from '../components/posts/Post';
 
 export const pageQuery = graphql`
     query ListingQuery($skip: Int!, $limit: Int!) {
@@ -33,7 +24,7 @@ export const pageQuery = graphql`
                     fields {
                         slug
                     }
-                    excerpt(pruneLength: 150, truncate: false)
+                    excerpt(pruneLength: 500, truncate: false)
                 }
             }
         }
@@ -47,17 +38,7 @@ const PostsListing = ({ data, pageContext }) => {
         <Layout>
             <SEO title={`Blog - Page ${currentPageNum}`} />
             {data.allMarkdownRemark.edges.map(({ node }) => {
-                return (
-                    <Fragment key={node.id}>
-                        <ArticleTitle>
-                            <Link to={`/blog/${node.fields.slug}`}>
-                                {node.frontmatter.title}
-                            </Link>
-                        </ArticleTitle>
-                        <Meta>Published on {node.frontmatter.date}</Meta>
-                        <p>{node.excerpt}</p>
-                    </Fragment>
-                );
+                return <Post key={node.id} node={node} />;
             })}
             <Pagination totalPages={pageCount} currentPage={currentPageNum} />
         </Layout>

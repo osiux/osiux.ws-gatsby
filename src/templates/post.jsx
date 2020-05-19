@@ -1,28 +1,19 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-import useDarkMode from '../hooks/useDarkMode';
+const Title = tw.h1`break-words`;
 
-const Meta = styled.p`
-    font-size: 15px;
-    margin: 5px 0 20px;
-`;
+const Meta = tw.p`text-sm`;
 
-const Nav = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-`;
+const Nav = tw.ul`flex flex-wrap justify-between list-none p-0`;
 
-const Content = styled.div`
-    text-align: justify;
-`;
+const Content = tw.div`text-justify max-w-full`;
+
+const Article = tw.article`max-w-full`;
 
 export const pageQuery = graphql`
     query PostBySlug($slug: String!) {
@@ -39,8 +30,6 @@ export const pageQuery = graphql`
 `;
 
 const Post = ({ data, pageContext }) => {
-    const [darkModeEnabled] = useDarkMode();
-
     const article = data.markdownRemark;
     const { previous, next } = pageContext;
 
@@ -48,14 +37,12 @@ const Post = ({ data, pageContext }) => {
         <Layout>
             <SEO title={article.frontmatter.title} />
 
-            <article
-                className={`use-${darkModeEnabled ? 'dark' : 'light'}-theme`}
-            >
-                <h1>{article.frontmatter.title}</h1>
+            <Article>
+                <Title>{article.frontmatter.title}</Title>
                 <Meta>Published on {article.frontmatter.date}</Meta>
 
                 <Content dangerouslySetInnerHTML={{ __html: article.html }} />
-            </article>
+            </Article>
 
             <Nav>
                 <li>

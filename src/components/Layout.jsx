@@ -1,35 +1,18 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import tw from 'twin.macro';
 import { Global } from '@emotion/core';
-import styled from '@emotion/styled';
-
-import mainStyles from '../styles/global';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Footer from './Footer';
 import Navigation from './Navigation';
 
 import { DarkModeProvider } from '../context/DarkModeContext';
 
-const Container = styled.div`
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
+import global from '../styles/global';
 
-    & > * {
-        flex: 1 100%;
-    }
-`;
+const Container = tw.div`h-screen grid grid-rows-layout`;
 
-const Main = styled.main`
-    padding: 0 15px 0 10px;
-    max-width: 100%;
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        margin-top: 10px;
-        padding: 0;
-    }
-`;
+const Main = tw.main`p-5 container mx-auto shadow-2xl`;
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -44,7 +27,7 @@ const Layout = ({ children }) => {
 
     return (
         <DarkModeProvider>
-            <Global styles={mainStyles} />
+            <Global styles={global} />
             <Container>
                 <Navigation siteTitle={data.site.siteMetadata.title} />
                 <Main>{children}</Main>

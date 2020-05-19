@@ -1,4 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import tw from 'twin.macro';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
@@ -12,134 +13,76 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = styled.nav`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+const Nav = tw.nav`flex items-center bg-header p-3 flex-wrap border-b border-black h-auto w-full z-10 transition-colors duration-500 ease-linear`;
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        justify-content: flex-end;
-        align-items: center;
-    }
+const DarkModeButton = tw.button`
+    bg-transparent
+    inline-flex
+    p-3
+    ml-auto
+    outline-none
+    text-secondary
+    transition-colors
+    duration-500 
+    ease-linear
+    md:order-3
 `;
 
-const DarkModeButton = styled.button`
-    background-color: transparent;
-    padding: 0;
-    margin: 0 1em 0 0;
-    border: 0;
-    order: 2;
-    outline: 0;
-    color: ${(props) => props.theme.colors.text};
-    transition: color ${(props) => props.theme.transition};
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        order: 3;
-    }
-`;
-
-const ToggleMenuButton = styled.button`
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid ${(props) => props.theme.colors.text};
-    border-radius: 0.25rem;
-    color: ${(props) => props.theme.colors.text};
-    cursor: pointer;
-    outline: 0;
-    order: 3;
-    margin: 3px 10px 0 0;
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        display: none;
-    }
-`;
-
-const NavListItem = styled.li`
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        width: auto;
-        display: block;
-    }
+const ToggleMenuButton = tw.button`
+    text-secondary inline-flex p-3 rounded md:hidden ml-0 outline-none
+    transition-colors
+    duration-500 
+    ease-linear
 `;
 
 const NavLink = styled(Link)`
-    display: inline-block;
-    text-decoration: none;
-    padding: 5px 0;
-    color: ${(props) => props.theme.colors.text};
-    font-family: 'Oswald', sans-serif;
-    width: 100%;
-    transition: ${(props) => `color ${props.theme.transition}`};
+    ${tw`w-full px-3 py-2 text-secondary items-center justify-center hover:underline md:inline-flex md:w-auto 
+    transition-colors
+    duration-500 
+    ease-linear`}
 
-    &:hover {
-        text-decoration: underline;
-    }
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        padding: 10px 15px;
+    .current {
+        ${tw`underline`}
     }
 `;
+
+const LinksContainer = tw.div`w-full items-start flex flex-col md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center md:h-auto`;
 
 const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { dark, toggle } = useContext(DarkModeContext);
 
+    const onScroll = () => {
+        if (window.scrollY > 20) {
+            document.documentElement.classList.add('scrolled');
+        } else {
+            document.documentElement.classList.remove('scrolled');
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll);
+
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
     const _toggleMenu = () => setMenuOpen((prev) => !prev);
 
-    const NavList = styled.ul`
-        list-style: none;
-        display: ${menuOpen ? 'flex' : 'none'};
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        order: 3;
-
-        ${(props) => props.theme.breakpoints.desktop} {
-            order: 2;
-            width: auto;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-end;
-        }
+    const NavList = styled.div`
+        ${tw`hidden w-full md:inline-flex md:flex-grow md:w-auto`}
+        display: ${menuOpen ? 'block' : 'none'};
 
         .current {
-            text-decoration: underline;
+            ${tw`underline`};
         }
     `;
 
     return (
-        <Nav>
+        <Nav id="header">
             <Link
                 to="/"
-                css={(theme) => css`
-                    align-self: flex-start;
-                    padding: 5px 0 0 10px;
-                    display: inline-block;
-                    color: ${theme.colors.text};
-                    font-size: 30px;
-                    text-decoration: none;
-                    text-transform: capitalize;
-                    font-family: 'Oswald', sans-serif;
-                    order: 1;
-                    width: auto;
-                    outline: none;
-                    flex-grow: 1;
-                    transition: color ${theme.transition};
-
-                    ${theme.breakpoints.desktop} {
-                        padding: 5px 0 0;
-                    }
+                css={css`
+                    ${tw`text-xl text-secondary font-bold transition-colors duration-500 ease-linear`}
                 `}
             >
                 {siteTitle}
@@ -159,7 +102,7 @@ const Navigation = ({ siteTitle }) => {
                 <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
             </ToggleMenuButton>
             <NavList>
-                <NavListItem>
+                <LinksContainer>
                     <NavLink
                         to="/blog"
                         activeClassName="current"
@@ -167,8 +110,6 @@ const Navigation = ({ siteTitle }) => {
                     >
                         Blog
                     </NavLink>
-                </NavListItem>
-                <NavListItem>
                     <NavLink
                         to="/about"
                         activeClassName="current"
@@ -176,12 +117,10 @@ const Navigation = ({ siteTitle }) => {
                     >
                         About
                     </NavLink>
-                </NavListItem>
-                <NavListItem>
                     <NavLink to="/contact" activeClassName="current">
                         Contact
                     </NavLink>
-                </NavListItem>
+                </LinksContainer>
             </NavList>
         </Nav>
     );

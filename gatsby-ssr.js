@@ -1,7 +1,22 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+const ModeScriptTag = () => {
+    const code = `(function () {
+        function wantsDarkMode () {
+            const persistedState = window.localStorage.getItem('dark-mode-enabled');
+    
+            if (persistedState !== 'undefined') return persistedState;
+    
+            const mql = window.matchMedia('(prefers-color-scheme: dark)');
+            const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+    
+            return hasMediaQueryPreference && mql.matches;
+        }
+    
+        if (wantsDarkMode()) {
+            document.documentElement.classList.add('theme-dark');
+        }
+    })();`;
 
-// You can delete this file if you're not using it
+    return <script dangerouslySetInnerHTML={{ __html: code }} />;
+};
+
+export const onRenderBody = ({ setPreBodyComponents }) => {};

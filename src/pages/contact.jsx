@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { css } from '@emotion/core';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,110 +16,50 @@ import {
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-const SocialNetworksList = styled.ul`
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    font-size: 2rem;
-`;
+const SocialNetworksList = tw.ul`list-none flex justify-center m-0 text-3xl`;
 
-const Form = styled.form`
-    display: flex;
-    width: 100%;
-    margin: 10px auto 0;
-    flex-direction: column;
+const Form = tw.form`flex w-full flex-col md:w-4/5 mx-auto`;
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        width: 80%;
-    }
-`;
+const Field = tw.div`flex justify-end mb-4 flex-col md:flex-row md:flex-wrap`;
 
-const Field = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-    flex-direction: column;
+const Label = tw.label`w-full mb-2 md:w-1/4 md:mt-1`;
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        flex-direction: row;
-    }
-`;
-
-const Label = styled.label`
-    flex: 1;
-    margin-bottom: 2px;
-
-    ${(props) => props.theme.breakpoints.desktop} {
-        flex: 1 0 30%;
-        margin-bottom: 0;
-    }
-`;
-
-const baseInput = (theme) => css`
-    padding: 5px;
-    border: 1px solid ${theme.colors.text};
-    flex: 1;
-    background-color: ${theme.colors.background};
-    color: ${theme.colors.text};
-    transition: background-color ${theme.transition}, color ${theme.transition},
-        border ${theme.transition};
-
-    ${theme.breakpoints.desktop} {
-        flex: 2 0 70%;
-    }
+const baseInput = css`
+    ${tw`w-full p-2 bg-primary text-secondary border border-solid border-secondary md:w-3/4`}
 `;
 
 const Input = styled.input`
-    ${(props) => baseInput(props.theme)}
+    ${baseInput}
 `;
 
 const TextArea = styled.textarea`
-    ${(props) => baseInput(props.theme)}
+    ${baseInput}
 `;
 
 const Button = styled.button`
-    background: ${(props) => props.theme.colors.text};
-    color: ${(props) => props.theme.colors.background};
-    border: 0;
-    padding: 10px;
-    width: 100%;
-    align-self: flex-end;
-    outline: 0;
-    transition: ${(props) =>
-            `background-color ${props.theme.transition}, color ${props.theme.transition}`}
-        &[disabled] {
-        background-color: #ccc;
-    }
+    ${tw`bg-secondary text-primary border border-solid border-secondary outline-none p-3 w-full self-end md:w-auto md:py-3 md:px-5`}
 
-    ${(props) => props.theme.breakpoints.desktop} {
-        width: auto;
-        padding: 10px 20px;
+    &[disabled] {
+        ${tw`bg-gray-600 opacity-50 border-0`}
     }
 `;
 
-const baseMessage = (theme) => css`
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px dotted;
-
-    ${theme.breakpoints.desktop} {
-        width: 80%;
-    }
+const baseMessage = css`
+    ${tw`w-full text-center mx-auto mb-2 p-2 border border-dotted md:w-4/5`}
 `;
 
 const Success = styled.p`
-    ${(props) => baseMessage(props.theme)}
+    ${baseMessage}
     color: #4f8a10;
     background: #dff2bf;
+    border: 1px solid #86bf27;
 `;
 
 const Error = styled.p`
-    ${(props) => baseMessage(props.theme)}
+    ${baseMessage}
     color: #d8000c;
     background: #ffd2d2;
+    border: 1px solid #800007;
 `;
 
 const Contact = () => {

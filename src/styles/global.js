@@ -1,40 +1,56 @@
-import normalize from 'normalize.css';
+import tw from 'twin.macro';
 import { css } from '@emotion/core';
 
-/**
- * Most of typography styles were taken from Elk Glen Typography.js theme:
- * https://github.com/KyleAMathews/typography.js/tree/master/packages/typography-theme-elk-glen
- */
-const global = (theme) => css`
-    ${normalize}
-
-    html {
-        font-size: 106.25%;
-        line-height: 1.45em;
-        box-sizing: border-box;
-        overflow-y: scroll;
+const global = css`
+    :root {
+        --color-header: #bfd7ea;
+        --color-footer: #020202;
+        --color-primary: #fafafa;
+        --color-secondary: #222831;
+        --color-tertiary: #0a0a0a;
+        --color-link: #ec003b;
     }
 
-    *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
+    .theme-dark {
+        --color-header: #212d40;
+        --color-footer: #020202;
+        --color-primary: #404040;
+        --color-secondary: #fafafa;
+        --color-tertiary: #0a0a0a;
+        --color-link: #7fdbff;
+
+        img:not([src*='.svg']) {
+            filter: grayscale(50%);
+        }
     }
 
     body {
-        background: ${theme.colors.background};
-        color: ${theme.colors.text};
-        font-family: ${theme.fonts.text};
-        font-weight: 400;
-        word-wrap: break-word;
-        font-kerning: normal;
-        font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-        transition: background-color ${theme.transition},
-            color ${theme.transition};
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+        font-family: 'Open Sans', sans-serif;
     }
 
-    img {
-        max-width: 100%;
+    a {
+        color: var(--color-link);
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+
+        &.anchor {
+            top: 17px !important;
+
+            svg {
+                fill: var(--color-link);
+            }
+        }
+    }
+
+    p {
+        line-height: 1.7rem;
+        margin-bottom: 1.1rem;
     }
 
     h1,
@@ -42,32 +58,23 @@ const global = (theme) => css`
     h3,
     h4,
     h5,
-    h6,
-    hgroup,
-    ul,
-    ol,
-    dl,
-    dd,
-    p,
-    figure,
-    pre,
-    table,
-    fieldset,
-    blockquote,
-    form,
-    noscript,
-    iframe,
-    img,
-    hr,
-    address {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
-        margin-bottom: ${theme.blockMarginBottom};
+    h6 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        text-rendering: optimizeLegibility;
+        margin-bottom: 1.1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
     }
 
     b,
@@ -77,18 +84,13 @@ const global = (theme) => css`
         font-weight: 700;
     }
 
-    hr {
-        color: ${theme.colors.link};
-        border: none;
-        height: 1px;
-        margin-bottom: calc(${theme.blockMarginBottom} - 1px);
-    }
-
     ol,
     ul {
+        list-style-type: disc;
         list-style-position: outside;
         list-style-image: none;
-        margin-left: 1.5rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
 
         li {
             padding-left: 0;
@@ -96,17 +98,15 @@ const global = (theme) => css`
     }
 
     li {
-        margin-bottom: calc(${theme.blockMarginBottom} / 2);
-
+        margin-bottom: calc(2rem / 2);
         p {
-            margin-bottom: calc(${theme.blockMarginBottom} / 2);
+            margin-bottom: calc(2rem / 2);
         }
-
         > ol,
         > ul {
-            margin-left: 1.5rem;
-            margin-bottom: calc(${theme.blockMarginBottom} / 2);
-            margin-top: calc(${theme.blockMarginBottom} / 2);
+            margin-left: 2rem;
+            margin-bottom: calc(2rem / 2);
+            margin-top: calc(2rem / 2);
         }
     }
 
@@ -116,37 +116,22 @@ const global = (theme) => css`
         margin-bottom: 0;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-top: 0.67em;
-        font-family: ${theme.fonts.headings};
-        font-weight: 700;
-        text-rendering: optimizeLegibility;
-    }
-
     blockquote {
-        border-left: 0.28125rem solid ${theme.colors.link};
-        color: ${theme.colors.text};
+        border-left: 0.28125rem solid var(--color-link);
+        color: var(--color-secondary);
         font-style: italic;
-        margin: 0 0 1.5rem -1.125rem;
+        margin: 0 0 1.5rem;
         padding: 0 0 0 0.84375rem;
         font-size: 1.1487rem;
         line-height: 1.5rem;
-
         > :last-child {
             margin-bottom: 0;
         }
-
         cite {
             font-size: 1rem;
             color: hsla(0, 0%, 0%, 0.8);
             font-style: 'normal';
             font-weight: 400;
-
             &:before {
                 content: '"— "';
             }
@@ -159,27 +144,22 @@ const global = (theme) => css`
     samp {
         font-size: 0.85rem;
     }
-
     abbr,
     acronym {
         border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
         cursor: help;
     }
-
     abbr[title] {
         text-decoration: none;
     }
-
     table {
         font-size: 1rem;
         border-collapse: collapse;
         width: 100%;
     }
-
     thead {
         text-align: left;
     }
-
     td,
     th {
         text-align: left;
@@ -189,16 +169,18 @@ const global = (theme) => css`
         padding-right: 1rem;
         padding-top: 0.75rem;
         padding-bottom: calc(0.75rem - 1px);
-
         &:first-of-type {
             padding-left: 0;
         }
-
         &:last-child {
             padding-right: 0;
         }
     }
-
+    pre {
+        white-space: pre-wrap;
+        overflow-x: auto;
+        max-width: 100%;
+    }
     tt,
     code {
         background-color: hsla(0, 0%, 0%, 0.04);
@@ -209,12 +191,10 @@ const global = (theme) => css`
         padding-top: 0.2em;
         padding-bottom: 0.2em;
     }
-
     pre code {
         background: none;
         line-height: 1.42;
     }
-
     code:before,
     code:after,
     tt:before,
@@ -222,14 +202,12 @@ const global = (theme) => css`
         letter-spacing: -0.2em;
         content: ' ';
     }
-
     pre code:before,
     pre code:after,
     pre tt:before,
     pre tt:after {
         content: '';
     }
-
     kbd {
         border: 1px solid #666;
         border-radius: 4px;
@@ -239,26 +217,13 @@ const global = (theme) => css`
         text-decoration: none;
     }
 
-    a {
-        color: ${theme.colors.link};
-        text-decoration: 'none';
-        transition: color ${theme.transition};
-
-        &.anchor svg {
-            fill: ${theme.colors.link};
-        }
-    }
-
-    ${theme.breakpoints.desktop} {
-        html {
-            font-size: 125%;
-            line-height: 1.5;
+    .scrolled {
+        #header {
+            ${tw`fixed shadow-md`}
         }
 
-        blockquote {
-            border-left-width: 0.5625rem;
-            padding-left: 0.9375rem;
-            margin-left: 0;
+        main {
+            ${tw`mt-32`}
         }
     }
 `;

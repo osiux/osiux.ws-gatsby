@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -9,47 +10,27 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const PaginationContainer = styled.nav`
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-`;
+const PaginationContainer = tw.nav`flex justify-center my-5`;
 
-const Paginator = styled.ul`
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-`;
+const Paginator = tw.ul`list-none m-0 p-0 flex`;
 
 const Item = styled.li`
-    margin: 0 5px;
+    ${tw`mx-1`}
 
     .disabled {
-        color: #ccc;
+        ${tw`text-gray-800`}
     }
 
     &.number {
-        display: none;
-
-        ${(props) => props.theme.breakpoints.desktop} {
-            display: inline-block;
-        }
+        ${tw`hidden md:inline-block`}
     }
 `;
 
 const ItemLink = styled(Link)`
-    text-decoration: none;
-    border: 1px solid ${(props) => props.theme.colors.text};
-    padding: 2px 2px;
-    min-width: 25px;
-    text-align: center;
-    font-size: 14px;
-    display: inline-block;
+    ${tw`no-underline text-center inline-block border border-solid border-secondary p-1 w-8 text-sm`}
 
     &.current {
-        background: ${(props) => props.theme.colors.text};
-        color: ${(props) => props.theme.colors.background};
+        ${tw`bg-secondary text-primary`}
     }
 `;
 
