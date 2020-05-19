@@ -78,7 +78,7 @@ const Navigation = ({ siteTitle }) => {
     `;
 
     return (
-        <Nav>
+        <Nav id="header">
             <Link
                 to="/"
                 css={css`

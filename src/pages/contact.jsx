@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { css } from '@emotion/core';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,48 +16,16 @@ import {
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-const SocialNetworksList = styled.ul`
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    font-size: 2rem;
-`;
+const SocialNetworksList = tw.ul`list-none flex justify-center m-0 text-3xl`;
 
-const Form = styled.form`
-    display: flex;
-    width: 100%;
-    margin: 10px auto 0;
-    flex-direction: column;
+const Form = tw.form`flex w-full flex-col md:w-4/5 mx-auto`;
 
-    /* width: 80%; */
-`;
+const Field = tw.div`flex justify-end mb-4 flex-col md:flex-row md:flex-wrap`;
 
-const Field = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-    flex-direction: column;
-
-    /* flex-direction: row; */
-`;
-
-const Label = styled.label`
-    flex: 1;
-    margin-bottom: 2px;
-
-    /* flex: 1 0 30%;
-        margin-bottom: 0; */
-`;
+const Label = tw.label`w-full mb-2 md:w-1/4 md:mt-1`;
 
 const baseInput = css`
-    padding: 5px;
-    border: 1px solid black;
-    flex: 1;
-    background-color: white;
-    color: black;
-
-        /* flex: 2 0 70%; */
+    ${tw`w-full p-2 bg-primary text-secondary border border-solid border-secondary md:w-3/4`}
 `;
 
 const Input = styled.input`
@@ -68,41 +37,29 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-    background: white;
-    color: black;
-    border: 0;
-    padding: 10px;
-    width: 100%;
-    align-self: flex-end;
-    outline: 0;
-        &[disabled] {
-        /* background-color: #ccc; */
-    }
+    ${tw`bg-secondary text-primary border border-solid border-secondary outline-none p-3 w-full self-end md:w-auto md:py-3 md:px-5`}
 
-        /* width: auto;
-        padding: 10px 20px; */
+    &[disabled] {
+        ${tw`bg-gray-600 opacity-50 border-0`}
+    }
 `;
 
 const baseMessage = css`
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px dotted;
-
-    /* width: 80%; */
+    ${tw`w-full text-center mx-auto mb-2 p-2 border border-dotted md:w-4/5`}
 `;
 
 const Success = styled.p`
     ${baseMessage}
     color: #4f8a10;
     background: #dff2bf;
+    border: 1px solid #86bf27;
 `;
 
 const Error = styled.p`
     ${baseMessage}
     color: #d8000c;
     background: #ffd2d2;
+    border: 1px solid #800007;
 `;
 
 const Contact = () => {

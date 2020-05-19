@@ -14,7 +14,7 @@ const global = css`
     .theme-dark {
         --color-header: #212d40;
         --color-footer: #020202;
-        --color-primary: #222222;
+        --color-primary: #404040;
         --color-secondary: #fafafa;
         --color-tertiary: #0a0a0a;
         --color-link: #7fdbff;
@@ -218,7 +218,7 @@ const global = css`
     }
 
     .scrolled {
-        nav:first-of-type {
+        #header {
             ${tw`fixed shadow-md`}
         }
 

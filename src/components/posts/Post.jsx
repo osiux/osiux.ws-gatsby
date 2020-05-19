@@ -1,17 +1,10 @@
 import React, { Fragment } from 'react';
-import styled from '@emotion/styled';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
 
-const ArticleTitle = styled.h2`
-    ${tw`text-2xl font-bold`};
-    margin: 5px 0;
-`;
+const ArticleTitle = tw.h2`text-2xl font-bold m-0 mt-1`;
 
-const Meta = styled.p`
-    ${tw`text-base`};
-    margin: 5px 0;
-`;
+const Meta = tw.p`text-sm m-0 mt-1`;
 
 const Post = ({ node }) => (
     <Fragment key={node.id}>
