@@ -50,8 +50,11 @@ const About = () => (
                     <UnderlineSpan data-rh="Laravel, React">
                         Full Stack Developer
                     </UnderlineSpan>{' '}
-                    living in Mexico City, currently looking for job
-                    opportunities (remote prefered).
+                    living in Mexico City, currently working as Web Engineer at{' '}
+                    <OutboundLink href="https://mav.farm/">
+                        MavFarm
+                    </OutboundLink>
+                    .
                 </p>
                 <p>
                     Proudly married to a great{' '}
