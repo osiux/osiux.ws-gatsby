@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Post from '../components/posts/Post';
 
-const Title = tw.h1`text-3xl font-bold`;
+const Div = tw.div`min-w-full`;
 
 const IndexPage = () => {
     const latestPosts = useStaticQuery(graphql`
@@ -36,10 +36,12 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <Title>Latests Blog Posts</Title>
-            {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
-                return <Post key={node.id} node={node} />;
-            })}
+            <Div className="prose">
+                <h1>Latests Blog Posts</h1>
+                {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
+                    return <Post key={node.id} node={node} />;
+                })}
+            </Div>
         </Layout>
     );
 };

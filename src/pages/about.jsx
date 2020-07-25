@@ -32,6 +32,8 @@ const onRenderContent = (target) => {
     );
 };
 
+const Section = tw.section`min-w-full`;
+
 const About = () => (
     <Fragment>
         <ReactHint autoPosition events />
@@ -43,11 +45,11 @@ const About = () => (
         />
         <Layout>
             <SEO title="About" />
-            <section>
+            <Section className="prose">
                 <Me />
                 <p>
                     Hi! I'm Eduardo.{' '}
-                    <UnderlineSpan data-rh="Laravel, React">
+                    <UnderlineSpan data-rh="Laravel, NodeJs, React">
                         Full Stack Developer
                     </UnderlineSpan>{' '}
                     living in Mexico City, currently working as Web Engineer at{' '}
@@ -83,7 +85,7 @@ const About = () => (
                 <p>
                     <Link to="/about/uses">My Uses page.</Link>
                 </p>
-            </section>
+            </Section>
         </Layout>
     </Fragment>
 );

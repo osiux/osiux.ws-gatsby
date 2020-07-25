@@ -1,15 +1,18 @@
 import React from 'react';
+import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
+const Section = tw.section`min-w-full`;
+
 const Uses = () => (
     <Layout>
         <SEO title="Uses" />
 
-        <section>
+        <Section className="prose">
             <h1>Uses</h1>
             <p>
                 Inspired by{' '}
@@ -81,7 +84,7 @@ const Uses = () => (
             <p>
                 <Link to="/about">← Back to About</Link>
             </p>
-        </section>
+        </Section>
     </Layout>
 );
 

@@ -62,6 +62,8 @@ const Error = styled.p`
     border: 1px solid #800007;
 `;
 
+const Section = tw.section`min-w-full`;
+
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -109,7 +111,7 @@ const Contact = () => {
         <Layout>
             <SEO title="Contact" />
 
-            <section>
+            <Section>
                 <p>
                     If you want to get in touch with me feel free to email me at{' '}
                     <a href="me@osiux.ws?subject=Hello!">me@osiux.ws</a>, send
@@ -224,7 +226,7 @@ const Contact = () => {
                         </Button>
                     </Field>
                 </Form>
-            </section>
+            </Section>
         </Layout>
     );
 };

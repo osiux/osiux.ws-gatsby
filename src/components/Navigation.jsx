@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import tw from 'twin.macro';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -13,38 +13,23 @@ import {
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
-const Nav = tw.nav`flex items-center bg-header p-3 flex-wrap border-b border-black h-auto w-full z-10 transition-colors duration-500 ease-linear`;
-
-const DarkModeButton = tw.button`
-    bg-transparent
-    inline-flex
-    p-3
-    ml-auto
-    outline-none
-    text-secondary
-    transition-colors
-    duration-500 
-    ease-linear
-    md:order-3
-`;
-
-const ToggleMenuButton = tw.button`
-    text-secondary inline-flex p-3 rounded md:hidden ml-0 outline-none
-    transition-colors
-    duration-500 
-    ease-linear
-`;
+const Nav = tw.nav`flex items-center bg-gray-900 text-gray-100 p-3 flex-wrap border-b border-black h-auto w-full z-10`;
 
 const NavLink = styled(Link)`
-    ${tw`w-full px-3 py-2 text-secondary items-center justify-center hover:underline md:inline-flex md:w-auto 
-    transition-colors
-    duration-500 
-    ease-linear`}
-
-    .current {
-        ${tw`underline`}
-    }
+    ${tw`w-full px-3 py-2 text-gray-100 items-center justify-center hover:underline md:inline-flex md:w-auto`}
 `;
+
+const NavList = styled.div(({ open }) => [
+    tw`hidden w-full md:inline-flex md:flex-grow md:w-auto`,
+    open && tw`block`,
+    `.current {
+        ${tw`underline`}
+    }`,
+]);
+
+const DarkModeButton = tw.button`bg-transparent inline-flex p-3 ml-auto outline-none text-gray-100 md:order-3`;
+
+const ToggleMenuButton = tw.button`inline-flex p-3 rounded md:hidden ml-0 outline-none transition-colors duration-500 ease-linear`;
 
 const LinksContainer = tw.div`w-full items-start flex flex-col md:inline-flex md:flex-row md:ml-auto md:w-auto md:items-center md:h-auto`;
 
@@ -52,48 +37,25 @@ const Navigation = ({ siteTitle }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { dark, toggle } = useContext(DarkModeContext);
 
-    const onScroll = () => {
-        if (window.scrollY > 20) {
-            document.documentElement.classList.add('scrolled');
-        } else {
-            document.documentElement.classList.remove('scrolled');
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', onScroll);
-
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-
     const _toggleMenu = () => setMenuOpen((prev) => !prev);
-
-    const NavList = styled.div`
-        ${tw`hidden w-full md:inline-flex md:flex-grow md:w-auto`}
-        display: ${menuOpen ? 'block' : 'none'};
-
-        .current {
-            ${tw`underline`};
-        }
-    `;
 
     return (
         <Nav id="header">
             <Link
                 to="/"
                 css={css`
-                    ${tw`text-xl text-secondary font-bold transition-colors duration-500 ease-linear`}
+                    ${tw`text-xl text-gray-100 font-bold`}
                 `}
             >
                 {siteTitle}
             </Link>
-            <DarkModeButton
+            {/* <DarkModeButton
                 role="button"
                 aria-label="Toggle Dark Mode"
                 onClick={toggle}
             >
                 <FontAwesomeIcon icon={dark ? faSun : faMoon} />
-            </DarkModeButton>
+            </DarkModeButton> */}
             <ToggleMenuButton
                 role="button"
                 aria-label="Toggle Menu"
@@ -101,7 +63,7 @@ const Navigation = ({ siteTitle }) => {
             >
                 <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
             </ToggleMenuButton>
-            <NavList>
+            <NavList open={menuOpen}>
                 <LinksContainer>
                     <NavLink
                         to="/blog"
