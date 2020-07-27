@@ -37,12 +37,12 @@ const Post = ({ data, pageContext }) => {
     const article = data.markdownRemark;
     const { previous, next } = pageContext;
 
-    const { html, frontmatter: { title, date, tags } } = article;
+    const {
+        html,
+        frontmatter: { title, date, tags },
+    } = article;
 
-    const formattedDate = format(
-        parseISO(date),
-        'MMM d, yyyy',
-    );
+    const formattedDate = format(parseISO(date), 'MMM d, yyyy');
 
     return (
         <Layout>

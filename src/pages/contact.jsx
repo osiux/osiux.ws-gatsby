@@ -126,10 +126,7 @@ const Contact = () => {
                 </p>
                 <SocialNetworksList>
                     <SocialNetworkItem>
-                        <a
-                            href="https://github.com/osiux"
-                            title="Github"
-                        >
+                        <a href="https://github.com/osiux" title="Github">
                             <FontAwesomeIcon icon={faGithub} fixedWidth />
                         </a>
                     </SocialNetworkItem>
@@ -153,10 +150,7 @@ const Contact = () => {
                         </a>
                     </SocialNetworkItem>
                     <SocialNetworkItem>
-                        <a
-                            href="https://twitter.com/osiux"
-                            title="Twitter"
-                        >
+                        <a href="https://twitter.com/osiux" title="Twitter">
                             <FontAwesomeIcon icon={faTwitter} fixedWidth />
                         </a>
                     </SocialNetworkItem>

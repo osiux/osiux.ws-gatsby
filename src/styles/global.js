@@ -2,7 +2,7 @@ import { css } from '@emotion/core';
 
 const global = css`
     :root {
-        --color-header: #3C366B;
+        --color-header: #3c366b;
         --color-footer: #020202;
         --color-primary: #fafafa;
         --color-secondary: #222831;

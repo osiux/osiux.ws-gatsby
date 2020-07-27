@@ -52,10 +52,7 @@ const About = () => (
                         Full Stack Developer
                     </UnderlineSpan>{' '}
                     living in Mexico City, currently working as Web Engineer at{' '}
-                    <a href="https://mav.farm/">
-                        MavFarm
-                    </a>
-                    .
+                    <a href="https://mav.farm/">MavFarm</a>.
                 </p>
                 <p>
                     Proudly married to a great{' '}

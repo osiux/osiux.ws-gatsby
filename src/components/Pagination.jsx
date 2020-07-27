@@ -24,7 +24,7 @@ const Item = styled.li`
     &.number {
         ${tw`hidden md:inline-block`}
     }
-    
+
     &::before {
         ${tw`hidden!`}
     }

@@ -12,7 +12,7 @@ import {
     faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 import { parse } from 'query-string';
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router';
 
 import { DarkModeContext } from '../context/DarkModeContext';
 
