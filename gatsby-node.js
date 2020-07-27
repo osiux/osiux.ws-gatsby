@@ -2,7 +2,7 @@ const path = require('path');
 const _ = require('lodash');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 10;
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
@@ -42,12 +42,6 @@ const makeBlogPages = async ({ actions, graphql }) => {
                 }
             ) {
                 nodes {
-                    frontmatter {
-                        title
-                        date(formatString: "MMM D, YYYY")
-                        category
-                        tags
-                    }
                     fields {
                         slug
                     }
@@ -99,5 +93,7 @@ const makeBlogPages = async ({ actions, graphql }) => {
 };
 
 exports.createPages = async ({ actions, graphql }) => {
-    await Promise.all([makeBlogPages({ actions, graphql })]);
+    await Promise.all([
+        makeBlogPages({ actions, graphql }),
+    ]);
 };

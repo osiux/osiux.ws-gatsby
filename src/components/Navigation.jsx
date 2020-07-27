@@ -26,7 +26,7 @@ const NavList = styled.div(({ open }) => [
     tw`hidden w-full md:inline-flex md:flex-grow md:w-auto`,
     open && tw`block`,
     `.current {
-        ${tw`underline`}
+        text-decoration: underline;
     }`,
 ]);
 

@@ -166,7 +166,7 @@ module.exports = {
                             id
                             frontmatter {
                                 title
-                                date(formatString: "MMM D, YYYY")
+                                date
                                 category
                                 tags
                             }
@@ -183,7 +183,7 @@ module.exports = {
                 normalizer: ({ data }) =>
                     data.allMarkdownRemark.nodes.map((node) => ({
                         id: node.id,
-                        slug: `/blog/${node.fields.slug}`,
+                        slug: node.fields.slug,
                         title: node.frontmatter.title,
                         body: node.rawMarkdownBody,
                         category: node.frontmatter.category,

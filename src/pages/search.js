@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import tw from 'twin.macro';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 import { useStaticQuery, graphql } from 'gatsby';
 import { parse } from 'query-string';
 import { useFlexSearch } from 'react-use-flexsearch';
@@ -10,11 +10,11 @@ import SEO from '../components/SEO';
 
 import useDebounce from '../hooks/useDebounce';
 
+import SimplePost from '../components/posts/SimplePost';
+
 const Section = tw.section`min-w-full`;
 
-const Form = tw.form`relative mx-auto text-gray-600`;
-
-const SearchInput = tw.input`border-2 border-gray-300 bg-gray-200 h-10 px-3 pr-8 rounded-lg text-sm focus:outline-none w-full`;
+const SearchInput = tw.input`border-2 border-gray-300 bg-gray-200 h-10 px-3 pr-8 rounded-lg text-sm focus:outline-none w-full mb-4`;
 
 const Search = ({ location }) => {
     const { q } = parse(location.search);
@@ -42,7 +42,7 @@ const Search = ({ location }) => {
             setQuery(searchTerm);
             navigate(`/search?q=${searchTerm}`);
         }
-    }, [debouncedQuery]);
+    }, [debouncedQuery, setQuery]);
 
     return (
         <Layout>
@@ -65,13 +65,7 @@ const Search = ({ location }) => {
 
                 {results.length > 0 &&
                     results.map((article) => (
-                        <article key={article.id}>
-                            <h2>
-                                <Link to={`${article.slug}`}>
-                                    {article.title}
-                                </Link>
-                            </h2>
-                        </article>
+                        <SimplePost key={article.id} {...article} />
                     ))}
             </Section>
         </Layout>
