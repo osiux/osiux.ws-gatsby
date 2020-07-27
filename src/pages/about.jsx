@@ -3,6 +3,7 @@ import ReactHintFactory from 'react-hint';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { useFlexSearch } from 'react-use-flexsearch';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
