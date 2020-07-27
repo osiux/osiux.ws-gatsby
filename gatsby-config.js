@@ -154,5 +154,43 @@ module.exports = {
                 respectDNT: true,
             },
         },
+        {
+            resolve: 'gatsby-plugin-local-search',
+            options: {
+                name: 'posts',
+                engine: 'flexsearch',
+                engineOptions: 'speed',
+                query: `query getAllPostsData {
+                    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+                        nodes {
+                            id
+                            frontmatter {
+                                title
+                                date(formatString: "MMM D, YYYY")
+                                category
+                                tags
+                            }
+                            fields {
+                                slug
+                            }
+                            rawMarkdownBody
+                        }
+                    }
+                }`,
+                ref: 'id',
+                index: ['title', 'body', 'tags', 'category'],
+                store: ['id', 'slug', 'title', 'tags', 'date'],
+                normalizer: ({ data }) =>
+                    data.allMarkdownRemark.nodes.map((node) => ({
+                        id: node.id,
+                        slug: `/blog/${node.fields.slug}`,
+                        title: node.frontmatter.title,
+                        body: node.rawMarkdownBody,
+                        category: node.frontmatter.category,
+                        tags: node.frontmatter.tags,
+                        date: node.frontmatter.date,
+                    })),
+            },
+        },
     ],
 };

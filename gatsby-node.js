@@ -8,7 +8,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === `MarkdownRemark`) {
         let slug = '';
-        if (_.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
+        if (_.has(node, 'frontmatter') && _.has(node.frontmatter, 'slug')) {
+            slug = node.frontmatter.slug;
+        } else if (
+            _.has(node, 'frontmatter') &&
+            _.has(node.frontmatter, 'title')
+        ) {
             slug = _.kebabCase(node.frontmatter.title.toLowerCase());
         } else {
             slug = createFilePath({ node, getNode, basePath: `posts` });
