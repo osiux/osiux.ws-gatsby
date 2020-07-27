@@ -2,13 +2,18 @@ const path = require('path');
 const _ = require('lodash');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 10;
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === `MarkdownRemark`) {
         let slug = '';
-        if (_.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
+        if (_.has(node, 'frontmatter') && _.has(node.frontmatter, 'slug')) {
+            slug = node.frontmatter.slug;
+        } else if (
+            _.has(node, 'frontmatter') &&
+            _.has(node.frontmatter, 'title')
+        ) {
             slug = _.kebabCase(node.frontmatter.title.toLowerCase());
         } else {
             slug = createFilePath({ node, getNode, basePath: `posts` });
@@ -37,12 +42,6 @@ const makeBlogPages = async ({ actions, graphql }) => {
                 }
             ) {
                 nodes {
-                    frontmatter {
-                        title
-                        date(formatString: "MMM D, YYYY")
-                        category
-                        tags
-                    }
                     fields {
                         slug
                     }

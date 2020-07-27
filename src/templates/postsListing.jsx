@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Pagination from '../components/Pagination';
-import Post from '../components/posts/Post';
+import SimplePost from '../components/posts/SimplePost';
+
+import { postsFromGraphql } from '../helpers';
 
 export const pageQuery = graphql`
     query ListingQuery($skip: Int!, $limit: Int!) {
@@ -14,18 +16,8 @@ export const pageQuery = graphql`
             skip: $skip
             filter: { frontmatter: { draft: { ne: true } } }
         ) {
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        date(formatString: "MMM D, YYYY")
-                        title
-                    }
-                    fields {
-                        slug
-                    }
-                    excerpt(pruneLength: 500, truncate: false)
-                }
+            nodes {
+                ...PostFields
             }
         }
     }
@@ -34,13 +26,24 @@ export const pageQuery = graphql`
 const PostsListing = ({ data, pageContext }) => {
     const { pageCount, currentPageNum } = pageContext;
 
+    const posts = useMemo(
+        () => postsFromGraphql(data.allMarkdownRemark.nodes),
+        [data],
+    );
+
     return (
         <Layout>
             <SEO title={`Blog - Page ${currentPageNum}`} />
-            {data.allMarkdownRemark.edges.map(({ node }) => {
-                return <Post key={node.id} node={node} />;
-            })}
-            <Pagination totalPages={pageCount} currentPage={currentPageNum} />
+            <div className="prose">
+                <h1>Archive</h1>
+                {posts.map((post) => {
+                    return <SimplePost key={post.id} {...post} />;
+                })}
+            </div>
+                <Pagination
+                    totalPages={pageCount}
+                    currentPage={currentPageNum}
+                />
         </Layout>
     );
 };
