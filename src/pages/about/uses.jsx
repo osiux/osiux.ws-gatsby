@@ -12,7 +12,7 @@ const Uses = () => (
     <Layout>
         <SEO title="Uses" />
 
-        <Section className="prose">
+        <Section>
             <h1>Uses</h1>
             <p>
                 Inspired by{' '}
@@ -63,22 +63,9 @@ const Uses = () => (
                     </OutboundLink>
                 </li>
                 <li>
-                    <OutboundLink href="https://keepassxc.org/">
-                        KeepassXC
-                    </OutboundLink>{' '}
-                    that gets synced with{' '}
-                    <OutboundLink href="https://www.dropbox.com/">
-                        Dropbox
-                    </OutboundLink>{' '}
-                    and{' '}
-                    <OutboundLink href="https://play.google.com/store/apps/details?id=keepass2android.keepass2android&hl=en_US">
-                        Keepass2Android
-                    </OutboundLink>{' '}
-                    on my cellphone. Trying{' '}
                     <OutboundLink href="https://bitwarden.com/">
                         Bitwarden
-                    </OutboundLink>{' '}
-                    to see if I like it.
+                    </OutboundLink>
                 </li>
             </ul>
             <p>

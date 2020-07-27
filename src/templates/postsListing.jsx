@@ -34,16 +34,11 @@ const PostsListing = ({ data, pageContext }) => {
     return (
         <Layout>
             <SEO title={`Blog - Page ${currentPageNum}`} />
-            <div className="prose">
-                <h1>Archive</h1>
-                {posts.map((post) => {
-                    return <SimplePost key={post.id} {...post} />;
-                })}
-            </div>
-                <Pagination
-                    totalPages={pageCount}
-                    currentPage={currentPageNum}
-                />
+            <h1>Archive</h1>
+            {posts.map((post) => {
+                return <SimplePost key={post.id} {...post} />;
+            })}
+            <Pagination totalPages={pageCount} currentPage={currentPageNum} />
         </Layout>
     );
 };

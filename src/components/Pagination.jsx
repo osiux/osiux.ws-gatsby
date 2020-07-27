@@ -15,7 +15,7 @@ const PaginationContainer = tw.nav`flex justify-center my-5`;
 const Paginator = tw.ul`list-none m-0 p-0 flex`;
 
 const Item = styled.li`
-    ${tw`mx-1`}
+    ${tw`mx-1 pl-3!`}
 
     .disabled {
         ${tw`text-gray-800`}
@@ -23,6 +23,10 @@ const Item = styled.li`
 
     &.number {
         ${tw`hidden md:inline-block`}
+    }
+    
+    &::before {
+        ${tw`hidden!`}
     }
 `;
 

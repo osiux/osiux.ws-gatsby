@@ -48,7 +48,7 @@ const Search = ({ location }) => {
         <Layout>
             <SEO title="Search results" />
 
-            <Section className="prose">
+            <Section>
                 <h1>
                     Search Results for: <strong>{debouncedQuery}</strong>
                 </h1>

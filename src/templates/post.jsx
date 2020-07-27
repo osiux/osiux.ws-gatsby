@@ -37,7 +37,7 @@ const Post = ({ data, pageContext }) => {
         <Layout>
             <SEO title={article.frontmatter.title} />
 
-            <Article className="prose">
+            <Article>
                 <Title>{article.frontmatter.title}</Title>
                 <Meta>Published on {article.frontmatter.date}</Meta>
 

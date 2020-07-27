@@ -9,7 +9,7 @@ const ArticleTitle = tw.h2`text-2xl font-bold m-0 mt-1`;
 const Meta = tw.p`text-sm m-0 mt-1`;
 
 const Post = ({ node }) => (
-    <Article className="prose" key={node.id}>
+    <Article key={node.id}>
         <ArticleTitle>
             <Link to={`/blog/${node.fields.slug}`}>
                 {node.frontmatter.title}

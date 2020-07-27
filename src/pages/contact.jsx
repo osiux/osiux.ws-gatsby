@@ -18,6 +18,13 @@ import SEO from '../components/SEO';
 
 const SocialNetworksList = tw.ul`list-none flex justify-center m-0 text-3xl`;
 
+const SocialNetworkItem = styled.li`
+    ${tw`pl-3!`}
+    &::before {
+        ${tw`hidden!`}
+    }
+`;
+
 const Form = tw.form`flex w-full flex-col md:w-4/5 mx-auto`;
 
 const Field = tw.div`flex justify-end mb-4 flex-col md:flex-row md:flex-wrap`;
@@ -119,23 +126,23 @@ const Contact = () => {
                     the contact form below.
                 </p>
                 <SocialNetworksList>
-                    <li>
+                    <SocialNetworkItem>
                         <OutboundLink
                             href="https://github.com/osiux"
                             title="Github"
                         >
                             <FontAwesomeIcon icon={faGithub} fixedWidth />
                         </OutboundLink>
-                    </li>
-                    <li>
+                    </SocialNetworkItem>
+                    <SocialNetworkItem>
                         <OutboundLink
                             href="https://www.linkedin.com/in/ereveles/"
                             title="Linkedin"
                         >
                             <FontAwesomeIcon icon={faLinkedin} fixedWidth />
                         </OutboundLink>
-                    </li>
-                    <li>
+                    </SocialNetworkItem>
+                    <SocialNetworkItem>
                         <OutboundLink
                             href="https://stackoverflow.com/users/717643/eduardo-reveles"
                             title="Stack Overflow"
@@ -145,31 +152,31 @@ const Contact = () => {
                                 fixedWidth
                             />
                         </OutboundLink>
-                    </li>
-                    <li>
+                    </SocialNetworkItem>
+                    <SocialNetworkItem>
                         <OutboundLink
                             href="https://twitter.com/osiux"
                             title="Twitter"
                         >
                             <FontAwesomeIcon icon={faTwitter} fixedWidth />
                         </OutboundLink>
-                    </li>
-                    <li>
+                    </SocialNetworkItem>
+                    <SocialNetworkItem>
                         <OutboundLink
                             href="https://www.instagram.com/oso96_2000/"
                             title="Instagram"
                         >
                             <FontAwesomeIcon icon={faInstagram} fixedWidth />
                         </OutboundLink>
-                    </li>
-                    <li>
+                    </SocialNetworkItem>
+                    <SocialNetworkItem>
                         <OutboundLink
                             href="https://www.last.fm/user/oso96_2000"
                             title="Last.fm"
                         >
                             <FontAwesomeIcon icon={faLastfm} fixedWidth />
                         </OutboundLink>
-                    </li>
+                    </SocialNetworkItem>
                 </SocialNetworksList>
 
                 {success && (

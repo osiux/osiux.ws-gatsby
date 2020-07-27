@@ -45,7 +45,7 @@ const About = () => (
         />
         <Layout>
             <SEO title="About" />
-            <Section className="prose">
+            <Section>
                 <Me />
                 <p>
                     Hi! I'm Eduardo.{' '}
@@ -60,7 +60,7 @@ const About = () => (
                 </p>
                 <p>
                     Proudly married to a great{' '}
-                    <OutboundLink href="https://www.instagram.com/melissacastillo_photo/">
+                    <OutboundLink href="https://unsplash.com/@melspadawan/">
                         photographer
                     </OutboundLink>
                     , we have{' '}

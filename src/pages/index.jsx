@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import tw from 'twin.macro';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -7,8 +6,6 @@ import SEO from '../components/SEO';
 import SimplePost from '../components/posts/SimplePost';
 
 import { postsFromGraphql } from '../helpers';
-
-const Div = tw.div`min-w-full`;
 
 const IndexPage = () => {
     const latestPosts = useStaticQuery(graphql`
@@ -33,12 +30,10 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <Div className="prose">
-                <h1>Latests Blog Posts</h1>
-                {posts.map((post) => (
-                    <SimplePost key={post.id} {...post} />
-                ))}
-            </Div>
+            <h1>Latests Blog Posts</h1>
+            {posts.map((post) => (
+                <SimplePost key={post.id} {...post} />
+            ))}
         </Layout>
     );
 };

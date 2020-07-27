@@ -9,7 +9,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { DarkModeContext } from '../context/DarkModeContext';
 
 const FooterComponent = styled.footer(({ dark }) => [
-    tw`text-gray-900 pt-5 pb-1 px-4 text-center transition-colors duration-500 ease-linear`,
+    tw`text-gray-900 pt-5 pb-1 px-4 text-center transition-colors duration-500 ease-linear prose max-w-none`,
     dark && tw`text-gray-100`,
 ]);
 
