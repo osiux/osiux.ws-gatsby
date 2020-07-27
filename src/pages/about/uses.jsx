@@ -1,7 +1,6 @@
 import React from 'react';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -16,56 +15,56 @@ const Uses = () => (
             <h1>Uses</h1>
             <p>
                 Inspired by{' '}
-                <OutboundLink href="https://wesbos.com/uses/">
+                <aside href="https://wesbos.com/uses/">
                     Wes Bos
-                </OutboundLink>
+                </aside>
                 , here is a list of hardware and software I use.
             </p>
             <h2>Hardware</h2>
             <ul>
                 <li>
                     Lenovo T450s running{' '}
-                    <OutboundLink href="https://www.archlinux.org/">
+                    <a href="https://www.archlinux.org/">
                         ArchLinux
-                    </OutboundLink>{' '}
+                    </a>{' '}
                     mainly for dev work.
                 </li>
                 <li>
                     Custom built PC with two monitors, dual boot Windows 10/
-                    <OutboundLink href="https://www.archlinux.org/">
+                    <a href="https://www.archlinux.org/">
                         ArchLinux
-                    </OutboundLink>{' '}
+                    </a>{' '}
                     that I use for gaming and work.
                 </li>
             </ul>
             <h2>Software</h2>
             <ul>
                 <li>
-                    <OutboundLink href="https://code.visualstudio.com/">
+                    <a href="https://code.visualstudio.com/">
                         VSCode
-                    </OutboundLink>
+                    </a>
                 </li>
                 <li>
-                    <OutboundLink href="https://code.launchpad.net/terminator">
+                    <a href="https://code.launchpad.net/terminator">
                         Terminator
-                    </OutboundLink>
+                    </a>
                 </li>
                 <li>
-                    <OutboundLink href="https://www.mozilla.org/en-US/firefox/developer/">
+                    <a href="https://www.mozilla.org/en-US/firefox/developer/">
                         Firefox Developer Edition
-                    </OutboundLink>
+                    </a>
                 </li>
                 <li>
-                    <OutboundLink href="https://www.zsh.org/">ZSH</OutboundLink>{' '}
+                    <a href="https://www.zsh.org/">ZSH</a>{' '}
                     and{' '}
-                    <OutboundLink href="https://github.com/sorin-ionescu/prezto">
+                    <a href="https://github.com/sorin-ionescu/prezto">
                         Prezto
-                    </OutboundLink>
+                    </a>
                 </li>
                 <li>
-                    <OutboundLink href="https://bitwarden.com/">
+                    <a href="https://bitwarden.com/">
                         Bitwarden
-                    </OutboundLink>
+                    </a>
                 </li>
             </ul>
             <p>

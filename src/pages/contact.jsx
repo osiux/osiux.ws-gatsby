@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
 import { css } from '@emotion/core';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faGithub,
@@ -127,23 +126,23 @@ const Contact = () => {
                 </p>
                 <SocialNetworksList>
                     <SocialNetworkItem>
-                        <OutboundLink
+                        <a
                             href="https://github.com/osiux"
                             title="Github"
                         >
                             <FontAwesomeIcon icon={faGithub} fixedWidth />
-                        </OutboundLink>
+                        </a>
                     </SocialNetworkItem>
                     <SocialNetworkItem>
-                        <OutboundLink
+                        <a
                             href="https://www.linkedin.com/in/ereveles/"
                             title="Linkedin"
                         >
                             <FontAwesomeIcon icon={faLinkedin} fixedWidth />
-                        </OutboundLink>
+                        </a>
                     </SocialNetworkItem>
                     <SocialNetworkItem>
-                        <OutboundLink
+                        <a
                             href="https://stackoverflow.com/users/717643/eduardo-reveles"
                             title="Stack Overflow"
                         >
@@ -151,31 +150,31 @@ const Contact = () => {
                                 icon={faStackOverflow}
                                 fixedWidth
                             />
-                        </OutboundLink>
+                        </a>
                     </SocialNetworkItem>
                     <SocialNetworkItem>
-                        <OutboundLink
+                        <a
                             href="https://twitter.com/osiux"
                             title="Twitter"
                         >
                             <FontAwesomeIcon icon={faTwitter} fixedWidth />
-                        </OutboundLink>
+                        </a>
                     </SocialNetworkItem>
                     <SocialNetworkItem>
-                        <OutboundLink
+                        <a
                             href="https://www.instagram.com/oso96_2000/"
                             title="Instagram"
                         >
                             <FontAwesomeIcon icon={faInstagram} fixedWidth />
-                        </OutboundLink>
+                        </a>
                     </SocialNetworkItem>
                     <SocialNetworkItem>
-                        <OutboundLink
+                        <a
                             href="https://www.last.fm/user/oso96_2000"
                             title="Last.fm"
                         >
                             <FontAwesomeIcon icon={faLastfm} fixedWidth />
-                        </OutboundLink>
+                        </a>
                     </SocialNetworkItem>
                 </SocialNetworksList>
 

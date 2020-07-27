@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import Img from 'gatsby-image';
 import tw from 'twin.macro';
 import { StaticQuery, graphql } from 'gatsby';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const NonStretchedImage = (props) => {
     let normalizedProps = props;
@@ -45,13 +44,13 @@ const Me = () => (
                 />
                 <PhotoCredit>
                     Photo by{' '}
-                    <OutboundLink href="https://unsplash.com/@melspadawan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                    <a href="https://unsplash.com/@melspadawan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
                         Melissa Castillo
-                    </OutboundLink>{' '}
+                    </a>{' '}
                     on{' '}
-                    <OutboundLink href="https://unsplash.com/@melspadawan/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                    <a href="https://unsplash.com/@melspadawan/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
                         Unsplash
-                    </OutboundLink>
+                    </a>
                 </PhotoCredit>
             </Fragment>
         )}

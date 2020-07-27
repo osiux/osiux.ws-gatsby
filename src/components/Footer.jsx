@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import tw from 'twin.macro';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -13,9 +12,7 @@ const FooterComponent = styled.footer(({ dark }) => [
     dark && tw`text-gray-100`,
 ]);
 
-const StyledLink = styled(OutboundLink)`
-    ${tw`transition-colors duration-500 ease-linear`};
-`;
+const StyledLink = tw.a`transition-colors duration-500 ease-linear`;
 
 const Footer = () => {
     const { dark } = useContext(DarkModeContext);

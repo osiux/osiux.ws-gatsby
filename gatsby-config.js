@@ -146,15 +146,6 @@ module.exports = {
         },
         `gatsby-plugin-offline`,
         {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: 'UA-130842966-1',
-                head: false,
-                anonymize: true,
-                respectDNT: true,
-            },
-        },
-        {
             resolve: 'gatsby-plugin-local-search',
             options: {
                 name: 'posts',

@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import ReactHintFactory from 'react-hint';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -53,16 +52,16 @@ const About = () => (
                         Full Stack Developer
                     </UnderlineSpan>{' '}
                     living in Mexico City, currently working as Web Engineer at{' '}
-                    <OutboundLink href="https://mav.farm/">
+                    <a href="https://mav.farm/">
                         MavFarm
-                    </OutboundLink>
+                    </a>
                     .
                 </p>
                 <p>
                     Proudly married to a great{' '}
-                    <OutboundLink href="https://unsplash.com/@melspadawan/">
+                    <a href="https://unsplash.com/@melspadawan/">
                         photographer
-                    </OutboundLink>
+                    </a>
                     , we have{' '}
                     <UnderlineSpan
                         data-rh-image="cats"
