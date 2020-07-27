@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import tw from 'twin.macro';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Post from '../components/posts/Post';
+import SimplePost from '../components/posts/SimplePost';
+
+import { postsFromGraphql } from '../helpers';
 
 const Div = tw.div`min-w-full`;
 
@@ -16,31 +18,26 @@ const IndexPage = () => {
                 limit: 3
                 filter: { frontmatter: { draft: { ne: true } } }
             ) {
-                edges {
-                    node {
-                        id
-                        frontmatter {
-                            date(formatString: "MMM D, YYYY")
-                            title
-                        }
-                        fields {
-                            slug
-                        }
-                        excerpt(pruneLength: 300, truncate: false)
-                    }
+                nodes {
+                    ...PostFields
                 }
             }
         }
     `);
+
+    const posts = useMemo(
+        () => postsFromGraphql(latestPosts.allMarkdownRemark.nodes),
+        [latestPosts],
+    );
 
     return (
         <Layout>
             <SEO title="Home" />
             <Div className="prose">
                 <h1>Latests Blog Posts</h1>
-                {latestPosts.allMarkdownRemark.edges.map(({ node }) => {
-                    return <Post key={node.id} node={node} />;
-                })}
+                {posts.map((post) => (
+                    <SimplePost key={post.id} {...post} />
+                ))}
             </Div>
         </Layout>
     );
