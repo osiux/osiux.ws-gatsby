@@ -12,13 +12,13 @@ const DarkModeContext = React.createContext(defaultContextData);
 const DarkModeProvider = ({ children }) => {
     const [darkModeEnabled, setDarkModeEnabled] = useDarkMode();
 
-    useEffect(() => {
-        if (darkModeEnabled) {
-            document.documentElement.classList.add('theme-dark');
-        } else {
-            document.documentElement.classList.remove('theme-dark');
-        }
-    }, [darkModeEnabled]);
+    // useEffect(() => {
+    //     if (darkModeEnabled) {
+    //         document.documentElement.classList.add('theme-dark');
+    //     } else {
+    //         document.documentElement.classList.remove('theme-dark');
+    //     }
+    // }, [darkModeEnabled]);
 
     return (
         <DarkModeContext.Provider
