@@ -9,12 +9,12 @@ import SimplePost from '../components/posts/SimplePost';
 import { postsFromGraphql } from '../helpers';
 
 export const pageQuery = graphql`
-    query ListingQuery($skip: Int!, $limit: Int!) {
+    query TagListingQuery($skip: Int!, $limit: Int!, $tag: [String]!) {
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
             limit: $limit
             skip: $skip
-            filter: { frontmatter: { draft: { ne: true } } }
+            filter: { frontmatter: { tags: { in: $tag }, draft: { ne: true } } }
         ) {
             nodes {
                 ...PostFields
@@ -23,8 +23,8 @@ export const pageQuery = graphql`
     }
 `;
 
-const PostsListing = ({ data, pageContext }) => {
-    const { pageCount, currentPageNum } = pageContext;
+const TagListing = ({ data, pageContext }) => {
+    const { tagPageCount, currentPageNum, tag } = pageContext;
 
     const posts = useMemo(
         () => postsFromGraphql(data.allMarkdownRemark.nodes),
@@ -33,14 +33,18 @@ const PostsListing = ({ data, pageContext }) => {
 
     return (
         <Layout>
-            <SEO title={`Archive - Page ${currentPageNum}`} />
-            <h1>Archive</h1>
+            <SEO title={`Archive - Tag: ${tag} - Page ${currentPageNum}`} />
+            <h1>Archive - Tag: <strong>{tag}</strong></h1>
             {posts.map((post) => {
                 return <SimplePost key={post.id} {...post} />;
             })}
-            <Pagination totalPages={pageCount} currentPage={currentPageNum} />
+            <Pagination
+                totalPages={tagPageCount}
+                currentPage={currentPageNum}
+                basePath={`/blog/tag/${tag}/`}
+            />
         </Layout>
     );
 };
 
-export default PostsListing;
+export default TagListing;

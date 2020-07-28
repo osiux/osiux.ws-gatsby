@@ -35,7 +35,7 @@ const global = css`
     a {
         color: var(--color-link);
         transition-property: background-color, border-color, color, fill, stroke;
-        transition-duration: 500ms;
+        transition-duration: 100ms;
         transition-timing-function: linear;
 
         &.anchor {

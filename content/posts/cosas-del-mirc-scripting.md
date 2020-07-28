@@ -1,6 +1,5 @@
 ---
 title: 'Cosas del mIRC Scripting'
-category: Programación
 date: 2008-04-02T05:27:44-0600
 tags:
     - development

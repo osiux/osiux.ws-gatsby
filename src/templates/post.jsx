@@ -13,8 +13,8 @@ import SEO from '../components/SEO';
 const Title = tw.h1`break-words mb-2!`;
 const Meta = tw.p`text-sm mb-0!`;
 const Date = tw.abbr`ml-2`;
-const Tag = styled.span`
-    ${tw`px-2 py-1 bg-gray-400 rounded-lg mr-2 hover:(bg-gray-600 text-gray-100)`}
+const Tag = styled(Link)`
+    ${tw`px-2 py-1 bg-gray-400 rounded-lg mr-2 hover:(bg-gray-600 text-gray-100) no-underline!`}
 `;
 const Content = tw.div`text-justify`;
 const Article = tw.article``;
@@ -62,7 +62,7 @@ const Post = ({ data, pageContext }) => {
                                 icon={faTags}
                             />{' '}
                             {tags.map((tag) => (
-                                <Tag key={tag}>{tag}</Tag>
+                                <Tag key={tag} to={`/blog/tag/${tag}`}>{tag}</Tag>
                             ))}
                         </Fragment>
                     )}

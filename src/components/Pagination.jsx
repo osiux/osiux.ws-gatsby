@@ -50,6 +50,8 @@ const Pagination = ({ basePath, prefix, totalPages, currentPage }) => {
         ? `${basePath}${prefix}${currentPage}`
         : `${basePath}${prefix}${currentPage + 1}`;
 
+    if (totalPages === 1) return null;
+
     return (
         <PaginationContainer>
             <Paginator>

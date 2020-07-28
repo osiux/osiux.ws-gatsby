@@ -1,6 +1,5 @@
 ---
 title: 'Felices Fiestas'
-category: Personal
 date: 2009-12-24T06:30:02-0600
 tags:
     - personal

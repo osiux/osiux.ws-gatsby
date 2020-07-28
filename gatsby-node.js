@@ -30,6 +30,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 const makeBlogPages = async ({ actions, graphql }) => {
     const postTemplate = path.resolve('src/templates/post.jsx');
     const postsListingTemplate = path.resolve('src/templates/postsListing.jsx');
+    const tagListingTemplate = path.resolve('src/templates/tagListing.jsx');
 
     const { errors, data } = await graphql(`
         query getAllPostsData {
@@ -44,6 +45,7 @@ const makeBlogPages = async ({ actions, graphql }) => {
                 nodes {
                     frontmatter {
                         title
+                        tags
                     }
                     fields {
                         slug
@@ -54,12 +56,13 @@ const makeBlogPages = async ({ actions, graphql }) => {
     `);
 
     if (errors) {
-        throw new Error(errors);
+        reporter.panicOnBuild(errors);
     }
 
     const { createPage } = actions;
 
     const posts = data.allMarkdownRemark.nodes;
+    const allTags = {};
 
     // Pagination
     const pageCount = Math.ceil(posts.length / POSTS_PER_PAGE);
@@ -79,9 +82,16 @@ const makeBlogPages = async ({ actions, graphql }) => {
 
     // Individual Article
     posts.forEach((post, index) => {
-        const previous =
-            index === posts.length - 1 ? null : posts[index + 1];
+        const previous = index === posts.length - 1 ? null : posts[index + 1];
         const next = index === 0 ? null : posts[index - 1];
+
+        post.frontmatter.tags.forEach((tag) => {
+            if (allTags[tag]) {
+                allTags[tag]++;
+            }else{
+                allTags[tag] = 1;
+            }
+        });
 
         createPage({
             path: `blog/${post.fields.slug}`,
@@ -93,8 +103,27 @@ const makeBlogPages = async ({ actions, graphql }) => {
             },
         });
     });
+
+    // Make tags pages
+    Object.keys(allTags).forEach((tag) => {
+        const tagPageCount = Math.ceil(allTags[tag] / POSTS_PER_PAGE);
+
+        [...Array(tagPageCount)].forEach((_val, pageNum) => {
+            createPage({
+                path: pageNum === 0 ? `/blog/tag/${tag}` : `/blog/tag/${tag}/page-${pageNum + 1}`,
+                component: tagListingTemplate,
+                context: {
+                    tag,
+                    limit: POSTS_PER_PAGE,
+                    skip: pageNum * POSTS_PER_PAGE,
+                    tagPageCount,
+                    currentPageNum: pageNum + 1,
+                },
+            });
+        });
+    });
 };
 
-exports.createPages = async ({ actions, graphql }) => {
-    await Promise.all([makeBlogPages({ actions, graphql })]);
+exports.createPages = async ({ actions, graphql, reporter }) => {
+    await Promise.all([makeBlogPages({ actions, graphql, reporter })]);
 };
