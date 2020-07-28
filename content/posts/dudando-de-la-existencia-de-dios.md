@@ -1,10 +1,8 @@
 ---
 title: 'Dudando de la existencia de Dios'
-category: Textos
 date: 2006-01-01T04:41:17-0600
 tags:
-    - Dios
-    - Reflexiones
+    - quote
 ---
 
 > Un hombre se fue a cortar el cabello y la barba. Como suele suceder, él y el barbero se pusieron a conversar sobre diversos asuntos hasta que – comentando una noticia del diario sobre niños abandonados – el barbero afirmó:

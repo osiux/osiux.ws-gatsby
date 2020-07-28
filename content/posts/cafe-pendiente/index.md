@@ -1,7 +1,9 @@
 ---
 title: 'Café Pendiente'
-category: Ocio/Humor
 date: 2014-01-17T04:38:16-0600
+tags:
+    - personal
+    - misc
 ---
 
 ![Café Pendiente](2d567354-a3e2-496f-847e-e1df79950fa1.png)

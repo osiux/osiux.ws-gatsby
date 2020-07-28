@@ -1,7 +1,8 @@
 ---
 title: 'An Egg'
-category: 'Citas'
 date: 2015-11-23T19:36:05-0600
+tags:
+    - quote
 ---
 
 > It was a car accident. Nothing particularly remarkable, but fatal nonetheless. You left behind a wife and two children. It was a painless death. The EMTs tried their best to save you, but to no avail. Your body was so utterly shattered you were better off, trust me.

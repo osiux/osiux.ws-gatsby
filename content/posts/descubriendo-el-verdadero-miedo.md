@@ -1,7 +1,8 @@
 ---
 title: 'Descubriendo el verdadero miedo'
-category: Textos
 date: 2005-11-27T04:22:25-0600
+tags:
+    - quote
 ---
 
 > Un sultán decidió hacer un viaje en barco con algunos de sus mejores cortesanos. Se embarcaron en el puerto de Dubai y zarparon en dirección al mar abierto.

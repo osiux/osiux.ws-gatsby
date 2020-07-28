@@ -1,10 +1,8 @@
 ---
 title: 'Recuerdos'
-category: Textos
 date: 2011-10-15T07:46:51-0500
 tags:
-    - After Dark
-    - Haruki Murakami
+    - quote
 ---
 
 > Kôrogi permanece allí plantada, de nuevo con el mando a distancia en la mano.

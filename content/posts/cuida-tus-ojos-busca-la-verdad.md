@@ -1,7 +1,8 @@
 ---
 title: 'Cuida tus ojos: busca la verdad'
-category: Textos
 date: 2009-10-14T07:25:47-0500
+tags:
+    - quote
 ---
 
 > La mayor parte de la gente no busca la verdad. Vive en un estrecho cercado en el que se siente a gusto. A la mayor parte de la gente le resulta más conveniente la mentira. Mucha gente vive vidas de porexpán en las que no hay nada real, son todo sombras. Mucha gente prefiere no saber.

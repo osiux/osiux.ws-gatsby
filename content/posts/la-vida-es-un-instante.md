@@ -1,11 +1,9 @@
 ---
 title: 'La vida es un instante'
-category: Textos
 date: 2005-12-26T04:37:25-0600
 tags:
-    - Muerte
-    - Reflexiones
-    - Saint Seiya
+    - writing
+    - quote
 ---
 
 _Lo citado aqui está sacado de el manga de Saint Seiya, lo demás es comentario mio._

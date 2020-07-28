@@ -1,11 +1,10 @@
 ---
 title: 'Colombia: Medellín'
-category: Viajes
 date: 2015-10-30T04:54:49-0600
 tags:
-    - Colombia
-    - Medellín
-    - Sudamérica 2015
+    - travel
+    - sudamerica-2015
+    - colombia
 ---
 
 Al comienzo no tenía pensado ir a Medellín, creía que me desviaba un poco de la ruta que necesitaba, pero no pasó ni un día que alguien me dijera: &#34;tienes que ir a Medellín&#34;, y pues hay que hacer caso de esas cosas. Para suerte mía, mientras estaba en Bogotá había recibido un mensaje de Daniel en Couchsurfing diciéndome que si iba para allá podía quedarme en su casa, y con mucho gusto acepté su ofrecimiento. Llegué por la mañana, con una vista privilegiada pues es un valle y el autobús va bajando dando vueltas alrededor, el clima hacia que hubiera un poco de neblina lo cual solo hacía que todo se viera hermoso.

@@ -6,7 +6,6 @@ export const postFields = graphql`
         frontmatter {
             title
             date
-            category
             tags
         }
         fields {

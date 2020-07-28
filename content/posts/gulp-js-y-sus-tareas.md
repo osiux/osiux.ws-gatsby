@@ -1,10 +1,10 @@
 ---
 title: 'gulp.js y sus tareas'
-category: Programación
 date: 2014-03-04T20:58:15-0600
 tags:
-    - Grunt
-    - gulp.js
+    - development
+    - grunt
+    - gulpjs
     - javascript
 ---
 

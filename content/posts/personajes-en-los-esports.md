@@ -1,11 +1,11 @@
 ---
 title: 'Personajes en los esports'
-category: Videos
 date: 2015-10-28T14:37:34-0600
 tags:
-    - CS:GO
-    - Dota 2
-    - eSports
+    - video
+    - csgo
+    - dota2
+    - esports
 ---
 
 Estoy viendo el torneo de CS:GO en [Dreamhack](http://www.twitch.tv/dreamhackcs) y han estado pasando perfiles de algunos jugadores, lo que me hizo recordar algo similar que hizo Valve para [The International 5](http://www.dota2.com/international/overview/). Aquí dejo algunos de mis favoritos, creo que son muy buenos pues todos tienen en común la pasión, esfuerzo y dedicación que los jugadores ponen en su trabajo, y a veces el como les ha cambiado la vida.

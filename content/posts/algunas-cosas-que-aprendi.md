@@ -1,7 +1,8 @@
 ---
 title: 'Algunas cosas que aprendí'
-category: Textos
 date: 2009-10-27T06:27:13-0600
+tags:
+    - quote
 ---
 
 Con esta son dos entradas sacadas de [El Sentido de la Vida](http://www.elsentidodelavida.net/), pero es que entre que no se me da escribir, y que últimamente tengo poco tiempo, pues.. ni modo xD

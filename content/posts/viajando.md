@@ -1,11 +1,11 @@
 ---
 title: 'Viajando'
-category: Personal
 date: 2011-03-28T06:45:51-0600
 tags:
-    - Couch Surfing
-    - Geocaching
-    - Viajes
+    - travel
+    - personal
+    - geocaching
+    - couchsurfing
 ---
 
 ![https://www.flickr.com/photos/inthesity/2844059346/](https://farm4.staticflickr.com/3246/2844059346_85047348fd_o.jpg)

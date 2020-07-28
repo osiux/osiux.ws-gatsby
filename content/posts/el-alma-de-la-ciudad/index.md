@@ -1,10 +1,10 @@
 ---
 title: 'El Alma de la ciudad'
-category: Personal
 date: 2012-05-08T07:51:19-0500
 tags:
-    - Burocracia Cósmica
-    - Música
+    - writing
+    - video
+    - music
 ---
 
 Venía platicando con Diana luego de una muy rica cena y caminata, casi todo el camino al son de Panchita Disco de el increíble grupo Burocracia Cósmica:

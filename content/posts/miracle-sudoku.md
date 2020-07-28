@@ -1,7 +1,9 @@
 ---
 title: Miracle Sudoku
-category: Videos
 date: 2020-06-05T02:10:00-0600
+tags:
+    - video
+    - sudoku
 ---
 
 I'm a big fan of Sudokus, is one of those things where it's possible to spend several hours and don't notice how much time has passed. The other day I stumbled upon this amazing Sudoku.

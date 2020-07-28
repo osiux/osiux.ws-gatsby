@@ -1,12 +1,10 @@
 ---
 title: 'Colombia: Cali e Ipiales'
-category: Viajes
 date: 2015-10-30T19:52:34-0600
 tags:
-    - Cali
-    - Colombia
-    - Ipiales
-    - Sudamérica 2015
+    - travel
+    - sudamerica-2015
+    - colombia
 ---
 
 ### Cali

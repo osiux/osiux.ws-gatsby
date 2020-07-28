@@ -3,8 +3,9 @@ title: 'Cosas del mIRC Scripting'
 category: Programación
 date: 2008-04-02T05:27:44-0600
 tags:
-    - Expresiones Regulares
-    - Mirc Scripting
+    - development
+    - regular-expressions
+    - mirc
 ---
 
 Mas que nada como recordatorio:

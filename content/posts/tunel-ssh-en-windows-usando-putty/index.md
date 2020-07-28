@@ -1,10 +1,9 @@
 ---
 title: 'Túnel SSH en windows usando Putty'
-category: Infórmatica
 date: 2009-02-09T06:08:39-0600
 tags:
-    - Putty
-    - SSH
+    - development
+    - ssh
 ---
 
 Bienvenidos a una entrega de &#34;Como pasarse las restricciones de la empresa por el arco del triunfo&#34;. Si hay una cosa que me moleste mucho es que me restrinjan cosas en la PC, y aún mas que me bloqueen sitios (o peor aún, palabras en la URL), ya que como soy de buscar mucho, de repente al encontrar algún artículo que me parece interesante me topo con una pantalla con un simpático mensaje: &#34;_**Access Denied:** Access control configuration prevents your request from being allowed at this time. Please contact your service provider if you feel this is incorrect._&#34; Agh, me dan ganas de tirar la PC por la ventana.

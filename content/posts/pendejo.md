@@ -1,7 +1,9 @@
 ---
 title: '¿Pendejo?'
-category: Textos
 date: 2006-04-09T06:09:11-0500
+tags:
+    - writing
+    - quote
 ---
 
 [Rodo](http://rodo.otaku-anime.com/) me mando un correo, que era más cadena, pero que me gustó =P

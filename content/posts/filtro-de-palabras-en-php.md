@@ -1,10 +1,10 @@
 ---
 title: 'Filtro de palabras en PHP'
-category: Programación
 date: 2008-04-29T06:29:24-0500
 tags:
-    - Expresiones Regulares
-    - PHP
+    - regular-expressions
+    - php
+    - development
 ---
 
 A raíz de un tema que vi en un foro, se me ocurrió hacer una pequeña función en PHP para censurar ciertas palabras en un texto. En realidad es bastante simple lo que hace, y gracias al poder de las [expresiones regulares](http://es.wikipedia.org/wiki/Expresi%C3%B3n_regular) tiene muchas posibilidades. Aqui dejo la función y después paso a comentarla.

@@ -1,11 +1,9 @@
 ---
 title: 'BarCamp México 5: Querétaro'
-category: Infórmatica
 date: 2010-04-12T07:32:49-0500
 tags:
-    - BarCamp
-    - México
-    - Querétaro
+    - confs
+    - travel
 ---
 
 ![BarCamp Logo](9c61f48c-bc33-4aa9-a452-9f69c5f8fc46.png)

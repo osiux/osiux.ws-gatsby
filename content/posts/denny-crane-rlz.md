@@ -1,10 +1,8 @@
 ---
 title: 'Denny Crane Rlz'
-category: Ocio/Humor
 date: 2007-02-12T05:14:28-0600
 tags:
-    - Boston Legal
-    - Series de TV
+    - funny
 ---
 
 El viernes vi un episodio de [Boston Legal](http://www.boston-legal.org/) que no había visto, y hubo una parte que me hizo morir de risa, y es esta:

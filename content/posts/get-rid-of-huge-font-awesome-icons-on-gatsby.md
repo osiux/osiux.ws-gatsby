@@ -1,8 +1,10 @@
 ---
 title: 'Get rid of huge Font Awesome icons on Gatsby'
-category: Development
 date: 2020-01-09
-tags: ['gatsbyjs', 'fontawesome']
+tags: 
+    - development
+    - gatsbyjs
+    - fontawesome
 draft: false
 ---
 

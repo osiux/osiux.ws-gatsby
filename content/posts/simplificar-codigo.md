@@ -1,10 +1,10 @@
 ---
 title: 'Simplificar código'
-category: Programación
 date: 2006-03-22T05:06:27-0600
 tags:
-    - Expresiones Regulares
-    - Mirc Scripting
+    - development
+    - regular-expressions
+    - mirc
 ---
 
 Me encanta programar, es algo que me divierte, pero ayer me di cuenta que me gusta mas cuando aprendo algo nuevo y cuando es una especie de reto lo que debo hacer. Ayer estaba como siempre en el mIRC, probando unas cosas en Scripting, tenia esto:

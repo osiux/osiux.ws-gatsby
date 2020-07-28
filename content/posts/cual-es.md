@@ -1,7 +1,8 @@
 ---
 title: '¿Cuál es...?'
-category: Citas
 date: 2008-03-04T05:25:23-0600
+tags:
+    - quote
 ---
 
 > El día más bello? Hoy

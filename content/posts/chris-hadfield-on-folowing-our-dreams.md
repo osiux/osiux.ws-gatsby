@@ -1,7 +1,8 @@
 ---
 title: 'Chris Hadfield on following our dreams'
-category: Citas
 date: 2015-10-23T21:47:14-0500
+tags:
+    - quote
 ---
 
 > Learn other languages, learn to fly, learn to scuba dive, learn medical training, always be pursuing new skills. There is no one specific path to becoming an astronaut. The best thing you can do is train yourself to enjoy building up the skills that end up defining who you are.

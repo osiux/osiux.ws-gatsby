@@ -1,11 +1,10 @@
 ---
 title: 'Colombia: Bogotá'
-category: Viajes
 date: 2015-10-28T16:46:14-0600
 tags:
-    - Bogotá
-    - Colombia
-    - Sudamérica 2015
+    - travel
+    - sudamerica-2015
+    - colombia
 ---
 
 Tenía muchos años planeando este viaje en mi cabeza. La principal razón (y el porque escogí los paises a visitar) es porque tenía muchas ganas de conocer en persona a varios de mis amigos que conocí hace años (entre 8-13, apróximadamente) de internet.

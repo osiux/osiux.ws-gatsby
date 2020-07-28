@@ -1,9 +1,9 @@
 ---
 title: '¿Cómo empecé a programar?'
-category: Infórmatica, Personal, Programación
 date: 2015-06-12T03:36:56-0500
 tags:
-    -  #MyCodingStory
+    - personal
+    - development
 ---
 
 Estoy aburrido y me topé con un [post](http://littlej.in/2015/06/mycodingstory-womenintech/) de [@juliettemaxwell](https://twitter.com/juliettemaxwell) sobre cómo fue que empezó a programar. Me gustó la idea, así que va mi historia.

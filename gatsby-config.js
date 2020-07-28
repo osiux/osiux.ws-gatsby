@@ -158,7 +158,6 @@ module.exports = {
                             frontmatter {
                                 title
                                 date
-                                category
                                 tags
                             }
                             fields {
@@ -169,7 +168,7 @@ module.exports = {
                     }
                 }`,
                 ref: 'id',
-                index: ['title', 'body', 'tags', 'category'],
+                index: ['title', 'body', 'tags'],
                 store: ['id', 'slug', 'title', 'tags', 'date'],
                 normalizer: ({ data }) =>
                     data.allMarkdownRemark.nodes.map((node) => ({
@@ -177,7 +176,6 @@ module.exports = {
                         slug: node.fields.slug,
                         title: node.frontmatter.title,
                         body: node.rawMarkdownBody,
-                        category: node.frontmatter.category,
                         tags: node.frontmatter.tags,
                         date: node.frontmatter.date,
                     })),

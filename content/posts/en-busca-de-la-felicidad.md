@@ -1,9 +1,10 @@
 ---
 title: 'En busca de la felicidad'
-category: Personal, Viajes
 date: 2015-07-29T20:05:37-0500
 tags:
-    - Sudamérica 2015
+    - sudamerica-2015
+    - personal
+    - travel
 ---
 
 Escribo esto desde [Aguas Calientes](<https://es.wikipedia.org/wiki/Aguas_Calientes_(Machupicchu)>), también conocido como Machu Picchu Pueblo, a casi un mes de haber comenzado una de la experiencias mas gratificantes que he tenido en mi vida, y de la cual aún queda un mes (o tal vez mas :P).

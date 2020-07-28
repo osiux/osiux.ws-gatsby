@@ -1,10 +1,10 @@
 ---
 title: 'Geocaching, un pasatiempo interesante'
-category: Ocio/Humor
 date: 2010-11-02T06:41:52-0600
 tags:
-    - Geocaching
-    - GPS
+    - misc
+    - travel
+    - geocaching
 ---
 
 Llevo aproximadamente dos meses en los cuales he estado vagando en la ciudad, merodeando y buscando cosas que la mayoría de la gente no sabe que están ahi. ¿Por qué? Bueno, todo es parte de un nuevo pasatiempo llamado Geocaching, el cual puede definirse, según el [sitio oficial](http://www.geocaching.com/), como:

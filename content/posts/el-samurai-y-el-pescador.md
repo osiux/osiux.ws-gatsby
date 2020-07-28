@@ -1,7 +1,8 @@
 ---
 title: 'El Samurai y el Pescador'
-category: Textos
 date: 2009-07-24T07:23:58-0500
+tags:
+    - quote
 ---
 
 > Durante la ocupación Satsuma de Okinawa, un Samurai que le había prestado dinero a un pescador, hizo un viaje para cobrarlo a la provincia Itoman, donde vivía el pescador. No siéndole posible pagar, el pobre pescador huyó y trató de esconderse del Samurai, que era famoso por su mal genio. El Samurai fue a su hogar y al no encontrarlo ahí, lo buscó por todo el pueblo. A medida que se daba cuenta de que se estaba escondiendo se iba enfureciendo. Finalmente, al atardecer, lo encontró bajo un barranco que lo protegía de la vista. En su enojo, desenvainó su espada y le gritó: ¿”Qué tienes para decirme”?.

@@ -1,10 +1,9 @@
 ---
 title: 'Útiles plugins para gulp'
-category: Programación
 date: 2014-12-12T00:30:42-0600
 tags:
-    - gulp.js
-    - plugins
+    - development
+    - gulpjs
 ---
 
 Cada día amo un poco más usar [gulp](http://gulpjs.com/). Poder automatizar un gran rango de tareas a un solo comando en la consola simplifica mucho el desarrollo. Aquí dejo una lista de plugins que estoy usando en casi todo proyecto:

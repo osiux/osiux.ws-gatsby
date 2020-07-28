@@ -1,7 +1,8 @@
 ---
 title: 'La sabiduría del águila'
-category: Textos
 date: 2009-03-03T06:22:48-0600
+tags:
+    - quote
 ---
 
 > El águila es el ave con mayor longevidad de esas especies. Llega a vivir 70 años, pero para llegar a esa edad, a los 40, debe tomar una seria y difícil decisión.

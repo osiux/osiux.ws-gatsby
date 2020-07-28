@@ -1,9 +1,8 @@
 ---
 title: 'Homero Simpson y yo'
-category: Ocio/Humor
 date: 2006-01-27T04:48:15-0600
 tags:
-    - Homero Simpson
+    - funny
 ---
 
 Cuando suelo aburrirme, me da por ponerme a vagar por la [Wikipedia](http://es.wikipedia.org) para leer lo que sea que encuentre. Esta vez llegue a la entrada sobre [Los Simpson](http://es.wikipedia.org/wiki/The_Simpsons), y mas específicamente a la de [Homero Simpson](http://es.wikipedia.org/wiki/Homer_Simpson). Estuve leyendo hasta que llegué a esta frase:

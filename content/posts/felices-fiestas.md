@@ -3,8 +3,7 @@ title: 'Felices Fiestas'
 category: Personal
 date: 2009-12-24T06:30:02-0600
 tags:
-    - Amigos
-    - Navidad
+    - personal
 ---
 
 ![https://www.flickr.com/photos/alfito_grc/2088576792/](https://farm3.staticflickr.com/2151/2088576792_ff26b4ec1d_z.jpg?zz=1)

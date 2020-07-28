@@ -1,7 +1,9 @@
 ---
 title: 'Detectar BloqMayus con Javascript'
-category: Programación
 date: 2007-10-12T06:18:14-0500
+tags:
+    - development
+    - javascript
 ---
 
 El otro día tuve una pequeña y sencilla entrevista de trabajo (en la que creo me fue bastante bien), y una de las cosas que me pidieron era que detectara si el usuario tenia la tecla BloqMayus activada, lo cual en dados momentos puede causar un error en un sistema de identificación de usuarios. En fin, eso no supe hacerlo (xD) pero aqui pongo lo que encontré despúes de buscar, ya que en el futuro me puede servir =P

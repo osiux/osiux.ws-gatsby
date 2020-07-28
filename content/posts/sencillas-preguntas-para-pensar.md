@@ -1,7 +1,8 @@
 ---
 title: 'Sencillas preguntas para pensar'
-category: Textos
 date: 2008-09-04T06:59:21-0500
+tags:
+    - quote
 ---
 
 **Pregunta 1** Si conocieras a una mujer embarazada, que padece de sífilis y tiene 8 hijos, 3 de ellos son sordos, 2 ciegos y uno tiene cierto retraso mental, ¿le recomendarías practicarse un aborto a esta mujer?

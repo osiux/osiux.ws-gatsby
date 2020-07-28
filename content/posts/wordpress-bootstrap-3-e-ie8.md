@@ -1,12 +1,12 @@
 ---
 title: 'Wordpress, Bootstrap 3 e IE8'
-category: Programación
 date: 2014-12-11T01:54:00-0600
 tags:
+    - development
     - bootstrap
     - ie8
     - respondjs
-    - windows
+    - wordpress
 ---
 
 Que horrible es desarrollar para Internet Explorer, sobretodo si es una versión tan vieja como la 8. Pero según los estudios de algunos clientes se sigue usando, así que por el mínimo porcentaje (que odio con toda mi alma) de gente que lo usa, hay que tenerlo en cuenta.

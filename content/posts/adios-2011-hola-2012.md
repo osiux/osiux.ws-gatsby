@@ -1,7 +1,8 @@
 ---
 title: 'Adiós 2011, Hola 2012'
-category: Personal
 date: 2011-12-31T06:49:17-0600
+tags:
+    - personal
 ---
 
 Es curioso que de taaaaanto que escribo en este lugar, las entradas de los últimos fines de año están en la misma página xD

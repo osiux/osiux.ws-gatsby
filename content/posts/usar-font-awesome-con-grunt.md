@@ -1,13 +1,13 @@
 ---
 title: 'Usar Font Awesome con Grunt'
-category: Programación
 date: 2013-12-28T00:34:58-0600
 tags:
-    - Bower
-    - Grunt
+    - development
+    - bower
+    - grunt
     - javascript
-    - Laravel
-    - PHP
+    - laravel
+    - php
 ---
 
 Parte de lo que ando haciendo últimamente con [Laravel](http://laravel.com/) incluye el manejo de assets, y aunque hay algunos paquetes para el manejo de estos dentro de Laravel, la mejor opción parece ser usar [Bower](http://bower.io/) y [Grunt](http://gruntjs.com/), y la verdad es una maravilla.

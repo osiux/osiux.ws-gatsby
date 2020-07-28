@@ -1,9 +1,9 @@
 ---
 title: 'Resize Images for phpBB3'
-category: Programación
 date: 2007-12-19T05:21:11-0600
 tags:
-    - phpBB
+    - development
+    - phpbb
 ---
 
 **English:** When I read the news about phpBB3, I start to view the MODs that are being developed, and found [this one](http://www.phpbb.com/community/viewtopic.php?f=70&t=577794), and when I was looking at it I think that I can make some improvements, for example, to take only the images on the post body.

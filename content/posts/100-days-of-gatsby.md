@@ -1,8 +1,8 @@
 ---
 title: '#100DaysOfGatsby'
 date: 2020-01-04
-category: Development
-tags: ['gatsbyjs']
+tags: 
+    - gatsbyjs
 draft: false
 ---
 
