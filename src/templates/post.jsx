@@ -14,7 +14,7 @@ const Title = tw.h1`break-words mb-2!`;
 const Meta = tw.p`text-sm mb-0!`;
 const Date = tw.abbr`ml-2`;
 const Tag = styled.span`
-    ${tw`px-2 py-1 bg-gray-200 rounded-lg mr-2`}
+    ${tw`px-2 py-1 bg-gray-400 rounded-lg mr-2 hover:(bg-gray-600 text-gray-100)`}
 `;
 const Content = tw.div`text-justify`;
 const Article = tw.article``;

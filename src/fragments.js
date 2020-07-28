@@ -13,5 +13,6 @@ export const postFields = graphql`
             slug
         }
         rawMarkdownBody
+        timeToRead
     }
 `;
